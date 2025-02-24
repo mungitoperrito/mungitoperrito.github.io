@@ -2,61 +2,10 @@
 
 This site gathers code snippets and notes. It covers commands, utilities and various odds and ends.
 
-Some of the entries are listed under the function description and the utility name.
+To make finding things easier, some entries are listed under their functional description and under the utility name as well.
 
-## [A](notes_pages/notes_a.md)
+Click on a letter to see an index for that page.
 
-## [B](notes_pages/notes_b.md)
-   - Backtraces
-   - Build C programs
+## [A](index_pages/index_a.md) [B](index_pages/index_b.md) [C](index_pages/index_c.md) [D](index_pages/index_d.md) [E](index_pages/index_e.md) [F](index_pages/index_f.md) [G](index_pages/index_g.md) [H](index_pages/index_h.md) [I](index_pages/index_i.md) [J](index_pages/index_j.md) [K](index_pages/index_k.md) [L](index_pages/index_l.md) [M](index_pages/index_m.md)
 
-## [C](notes_pages/notes_c.md)
-   - `catchsegv`
-
-## [D](notes_pages/notes_d.md)
-   - Display processes
-
-## [E](notes_pages/notes_e.md)
-
-## [F](notes_pages/notes_f.md)
-
-## [G](notes_pages/notes_g.md)
-
-## [H](notes_pages/notes_h.md)
-
-## [I](notes_pages/notes_i.md)
-
-## [J](notes_pages/notes_j.md)
-
-## [K](notes_pages/notes_k.md)
-
-## [L](notes_pages/notes_l.md)
-
-## [M](notes_pages/notes_m.md)
-
-## [N](notes_pages/notes_n.md)
-
-## [O](notes_pages/notes_o.md)
-
-## [P](notes_pages/notes_p.md)
-   - `pgrep`
-
-## [Q](notes_pages/notes_q.md)
-
-## [R](notes_pages/notes_r.md)
-
-## [S](notes_pages/notes_s.md)
-
-## [T](notes_pages/notes_t.md)
-
-## [U](notes_pages/notes_u.md)
-
-## [V](notes_pages/notes_v.md)
-
-## [W](notes_pages/notes_w.md)
-
-## [X](notes_pages/notes_x.md)
-
-## [Y](notes_pages/notes_y.md)
-
-## [Z](notes_pages/notes_z.md)
+## [N](index_pages/index_n.md)  [O](index_pages/index_o.md) [P](index_pages/index_p.md) [Q](index_pages/index_q.md) [R](index_pages/index_r.md) [S](index_pages/index_s.md)[T](index_pages/index_t.md) [U](index_pages/index_u.md) [V](index_pages/index_v.md) [W](index_pages/index_w.md) [X](index_pages/index_x.md) [Y](index_pages/index_y.md) [Z](index_pages/index_z.md)
