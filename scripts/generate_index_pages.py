@@ -9,7 +9,7 @@ INDEXES_PATH = os.path.join('..', 'index_pages')
 
 def write_index_page(headings_list, current_letter, output_target):
     o = output_target
-    o.write(f'Index for {current_letter.upper()}')
+    o.write(f'Index for [{current_letter.upper()}](../notes_pages/notes_{current_letter}.md)')
     o.write('\n\n')
     for heading in headings_list:
         o.write(heading)

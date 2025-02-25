@@ -1,3 +1,3 @@
-Index for O
+Index for [O](../notes_pages/notes_o.md)
 
 - `objdump`

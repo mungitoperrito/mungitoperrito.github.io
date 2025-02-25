@@ -1,4 +1,4 @@
-Index for D
+Index for [D](../notes_pages/notes_d.md)
 
 - `diff`
   - Show output side by side

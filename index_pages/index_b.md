@@ -1,4 +1,4 @@
-Index for B
+Index for [B](../notes_pages/notes_b.md)
 
 - Backtraces
   - Get a backtrace for a segmentation fault on linux

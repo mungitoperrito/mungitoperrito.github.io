@@ -1,2 +1,2 @@
-Index for T
+Index for [T](../notes_pages/notes_t.md)
 
