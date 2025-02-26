@@ -2,5 +2,23 @@ Index for [B](../notes_pages/notes_b.md)
 
 - Backtraces
   - Get a backtrace for a segmentation fault on linux
+- Bash environment
+  - List shell variables
+  - Show commands
+  - Warnings
+- Bash scripting
+  - Create an infinite loop
+  - Evaluate an expresion
+  - Initialize an array
+  - Multiple files
+  - Read a file into a script
+  - Read a file into a variable
+  - Redirect stderr, stout, stdin
+  - Special variables
+  - Variable matching
+- `.bashrc`
+  - Reread config file
+- `bc`
+  - Convert bases
 - Build C programs
   - Build and install a binary from source
