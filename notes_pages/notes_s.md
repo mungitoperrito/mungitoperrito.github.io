@@ -25,3 +25,19 @@ Remove unnecessary bytes from an executable.
 ``` bash
 strip someExe
 ```
+
+## `svn`
+
+### Check in a single file
+
+```bash
+svn commit -m "Some comments" master.cfg
+```
+
+### Check out a single file
+
+```bash
+svn co svn+ssh://svn/svn/branches/svn2git/buildbot --depth empty
+cd buildbot
+svn up master.cfg
+```

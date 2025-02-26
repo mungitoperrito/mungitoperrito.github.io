@@ -67,10 +67,40 @@ gcc -O2 source.c
     echo $LD_LIBRARY_PATH
     ```
 
-### Profiling
-
-Enable profiling
+### Enable profiling
 
 ``` bash
 gcc -a -g -c source.c -o object.o
+```
+
+## GitHub
+
+### Get git repos
+
+```bash
+curl -i -H 'Authorization: token <auth-token>' https://api.github.com/orgs/your-repo/repos | grep "html_url"
+```
+
+### Get last 100 commits
+
+```bash
+curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/commits?per_page=100
+```
+
+### Get commit activity
+
+```bash
+curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/stats/commit_activity
+```
+
+### Get commit stats
+
+```bash
+curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/stats/code_frequency
+```
+
+### Get a commit
+
+```bash
+curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/commits/<commit-id>
 ```
