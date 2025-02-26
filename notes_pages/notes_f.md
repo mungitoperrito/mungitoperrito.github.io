@@ -44,6 +44,15 @@ for fn in P?[LM]* ; do cp $fn prefix..${fn#PXL_}..postfix ; done
 ```
 
 
+## Forensics
+
+### Dump a dodgy website safely
+
+```bash
+curl -s http://someWebSite.com | hexdump -C|less
+```
+
+
 ## `free`
 
 Get memory information

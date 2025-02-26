@@ -6,6 +6,7 @@
 cat –n someFile.c
 ```
 
+
 ## `catchsegv`
 
 ### Get a backtrace for a segmentation fault on linux
@@ -14,8 +15,18 @@ cat –n someFile.c
 catchsegv  someBinaryThatSegFaults
 ```
 
+
 ## Convert bases
 
 ```bash
 echo 'obase=16; ibase=10; 255' | bc
+```
+
+
+## `curl`
+
+### Dump a dodgy website safely
+
+```bash
+curl -s http://someWebSite.com | hexdump -C|less
 ```
