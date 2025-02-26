@@ -42,3 +42,19 @@ ltrace -S -tt -r -f ./a.out
 ``` bash
 $pgrep -f program ; $sudocat/proc/<PROC ID>/stack
 ```
+
+## Duolingo web site volume
+
+Use dev-tools in the browser. Open the javascript console. Edit
+`Howler.volume()`.
+
+``` bash
+# Get current volume level
+Howler.volume();
+
+# Change volume to 50%
+Howler.volume(0.5);
+
+# Mute volume
+Howler.mute(true);
+```

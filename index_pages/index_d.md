@@ -9,3 +9,4 @@ Index for [D](../notes_pages/notes_d.md)
   - Trace libraries
 - Display processes
   - Display the process stack
+- Duolingo web site volume
