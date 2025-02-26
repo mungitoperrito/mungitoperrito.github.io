@@ -8,4 +8,10 @@ Index for [G](../notes_pages/notes_g.md)
   - Linking
   - Optimize the executable
   - PATH
-  - Profiling
+  - Enable profiling
+- GitHub
+  - Get git repos
+  - Get last 100 commits
+  - Get commit activity
+  - Get commit stats
+  - Get a commit

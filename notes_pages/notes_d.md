@@ -6,6 +6,7 @@
 diff -y --width 60 hello.c hello.c~
 ```
 
+
 ## Disassemble a binary
 
 ### Disassemble a binary and show source
@@ -35,6 +36,7 @@ binary.
 ltrace -S -tt -r -f ./a.out
 ```
 
+
 ## Display processes
 
 ### Display the process stack
@@ -42,6 +44,64 @@ ltrace -S -tt -r -f ./a.out
 ``` bash
 $pgrep -f program ; $sudocat/proc/<PROC ID>/stack
 ```
+
+
+## Docker
+
+### Get shell stdin, stdio from log file
+
+```bash
+docker logs CONTID
+```
+
+### List all containers, running and stopped
+
+```bash
+docker ps --all
+```
+
+### Open a shell inside a container
+
+```bash
+docker exec -it CONTID /bin/bash
+```
+
+### Remove a container
+
+```bash
+docker rm CONTID
+```
+
+### Run a single command in a container and exit
+
+```bash
+docker exec CONTID ls -l
+```
+
+### Run multiple commands in a container and exit
+
+```bash
+docker exec CONTID sh -c "cd X ; ls -l"
+```
+
+### Run a python script
+
+```bash
+docker run -it --rm --name my-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python the-script.py
+```
+
+### Start a container
+
+```bash
+docker start CONTID
+```
+
+### Stop a container
+
+```bash
+docker stop CONTID
+```
+
 
 ## Duolingo web site volume
 

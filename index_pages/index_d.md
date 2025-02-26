@@ -9,4 +9,14 @@ Index for [D](../notes_pages/notes_d.md)
   - Trace libraries
 - Display processes
   - Display the process stack
+- Docker
+  - Get shell stdin, stdio from log file
+  - List all containers, running and stopped
+  - Open a shell inside a container
+  - Remove a container
+  - Run a single command in a container and exit
+  - Run multiple commands in a container and exit
+  - Run a python script
+  - Start a container
+  - Stop a container
 - Duolingo web site volume
