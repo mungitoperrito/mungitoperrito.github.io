@@ -10,6 +10,31 @@ Interactively compare and merge two files.
 sdiff -w Number -l file1 file2:
 ```
 
+
+## `source`
+
+### Reread config file
+
+```bash
+source ~/.bashrc
+```
+
+## `stderr`, `stout`, `stdin`
+
+### Redirects
+
+```bash
+# Redirect stderr to stdout
+cmd 2>&1
+
+# Redirect stderr & stdout to file
+cmd &> fileName
+
+# Redirect stderr to stdout, and both to file
+cmd > fileName 2>&1
+```
+
+
 ## `strings`
 
 Show all the strings and file locations in a binary file.
@@ -18,6 +43,7 @@ Show all the strings and file locations in a binary file.
 strings -a -f someExe
 ```
 
+
 ## `strip`
 
 Remove unnecessary bytes from an executable.
@@ -25,6 +51,7 @@ Remove unnecessary bytes from an executable.
 ``` bash
 strip someExe
 ```
+
 
 ## `svn`
 
