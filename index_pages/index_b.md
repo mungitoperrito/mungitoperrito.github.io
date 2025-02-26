@@ -2,6 +2,9 @@ Index for [B](../notes_pages/notes_b.md)
 
 - Backtraces
   - Get a backtrace for a segmentation fault on linux
+- `base64`
+  - Encode
+  - Decode
 - Bash environment
   - List shell variables
   - Show commands
@@ -20,5 +23,7 @@ Index for [B](../notes_pages/notes_b.md)
   - Reread config file
 - `bc`
   - Convert bases
+- Browsers
+  - Export search history
 - Build C programs
   - Build and install a binary from source

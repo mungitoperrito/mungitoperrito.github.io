@@ -73,6 +73,7 @@ gcc -O2 source.c
 gcc -a -g -c source.c -o object.o
 ```
 
+
 ## GitHub
 
 ### Get git repos
@@ -103,4 +104,22 @@ curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your
 
 ```bash
 curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/commits/<commit-id>
+```
+
+## Google search
+
+### Export search history
+
+The history database file is likely to be soemwhere like this (Chrome):
+
+```
+~/Library/Application Support/Google/Chrome/Default\History
+%LocalAppData%\Google\Chrome\User Data\Default\History
+C:\Users\USERNAME\AppData\Local\Google\Chrome\User Data\Default
+```
+
+Extract the URLS to a text file.
+
+``` bash
+sqlite3 History "SELECT datetime(last_visit_time/1000000-11644473600,'unixepoch'), url FROM  urls ORDER BY last_visit_time desc" > history_urls.txt
 ```

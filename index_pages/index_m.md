@@ -4,4 +4,5 @@ Index for [M](../notes_pages/notes_m.md)
   - Convert bases
   - Evaluate an expresion
 - Memory
-  - Get memory information
+  - Get memory usage information
+  - Search RAM in clear text
