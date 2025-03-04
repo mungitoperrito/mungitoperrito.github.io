@@ -3,6 +3,18 @@
 ## Blog posts
 
 
+## Data analysis
+
+The files in this directory are an analysis and data visualization of gene
+mutions in cancer cells.
+
+The data analysis is mine.
+
+Dr. Juha P. Himamen did the original research and presented the results at the
+Second Congress on the Eph/Ephrin System in Parma, Italy in 2018.
+
+[Data visualization of genetic research](data_visualization)
+
 ## Python coding
 
 This is a link to a repo that has an assortment of Python projects and
