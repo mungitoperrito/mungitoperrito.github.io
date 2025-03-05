@@ -17,6 +17,16 @@ demo files.
 
 [Python projects](https://github.com/mungitoperrito/python-projects)
 
+## Jupyter notebooks
+
+These projects use Jupyter notebooks to combine explanatory text and code.
+
+- Crossword Puzzle Generators
+  - [Local, Ollama version](xword_ollama/crossword_ollama.md)
+  - [Online, Cohere API version](xword_online/crossword_online.md)
+- Tutorial Walkthrough
+  - [Weaviate multi-tenancy walkthrough](multi_tenant_walkthrough.ipynb)
+
 ## Tech notes
 
 These are links to tech notes. I gathered these notes over the years. They come
