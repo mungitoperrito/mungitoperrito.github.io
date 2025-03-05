@@ -1,18 +1,18 @@
 # Chewing on the Twitter Feed
 
-<img src="./img/birds..01.jpg" width="800" alt="Configure access policy">
+<p align="center"><img src="./img/birds..01.jpg" width="800"
+alt="Configure access policy"></p>
 
 Twitter streams millions of messages all day long. Have you ever wanted to use
 their feed to do your own analysis of streaming posts?
 
 If so, follow along. That's what this post is about.
 
-
 ## Background
 
 A few years ago, Assaf Mentzer put together a demonstration project, [Building a
-Near Real-Time Discovery Platform with AWS]
-(https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)
+Near Real-Time Discovery Platform with
+AWS](https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)
 to introduce readers to streaming data. Since then AWS has made changed some of
 the services he used.
 
@@ -48,10 +48,10 @@ project and you won’t have to modify your usual settings.
    use a smaller EC instance to host the Elasticsearch domain. The
   `t2.medium.Elasticsearch` instance type works well for simple experiments.
 1. Choose `Allow Open Access` as the domain policy. This is a poor security
-  practice and the console will complain about it. If you want to do more than
-  simple experimentation, configure a more restrictive security policy.
+   practice and the console will complain about it. If you want to do more than
+   simple experimentation, configure a more restrictive security policy.
 
-  <img src="./img/access-policy..01.jpg" width="800" alt="Configure access policy">
+   <img src="./img/access-policy..01.jpg" width="800" alt="Configure access policy">
 
 1. Choose `Confirm and Create`. It takes about 10 minutes to set up the domain.
 
