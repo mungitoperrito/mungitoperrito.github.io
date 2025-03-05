@@ -22,10 +22,10 @@ demo files.
 These projects use Jupyter notebooks to combine explanatory text and code.
 
 - Crossword Puzzle Generators
-  - [Local, Ollama version](xword_ollama/crossword_ollama.md)
-  - [Online, Cohere API version](xword_online/crossword_online.md)
+  - [Local, Ollama version](jupyter/xword_ollama/crossword_ollama.md)
+  - [Online, Cohere API version](jupyter/xword_online/crossword_online.md)
 - Tutorial Walkthrough
-  - [Weaviate multi-tenancy walkthrough](multi_tenant_walkthrough.ipynb)
+  - [Weaviate multi-tenancy walkthrough](jupyter/multi_tenant_walkthrough.ipynb)
 
 ## Tech notes
 
