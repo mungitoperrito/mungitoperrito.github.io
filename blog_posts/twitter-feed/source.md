@@ -11,7 +11,7 @@ If so, follow along. That's what this post is about.
 ## Background
 
 A few years ago, Assaf Mentzer put together a demonstration project, [Building a
-Near Real-Time Discovery Platform with AWS]]
+Near Real-Time Discovery Platform with AWS]
 (https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)
 to introduce readers to streaming data. Since then AWS has made changed some of
 the services he used.
