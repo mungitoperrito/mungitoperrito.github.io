@@ -2,7 +2,7 @@
 
 ## Blog posts
 
-[Chewing on the Twitter Feed](blog_posts\twitter-feed\source.md): Data
+[Chewing on the Twitter Feed](blog_posts/twitter-feed/source.md): Data
 exploration with Twitter, AWS Lambda, Elasticsearch, and Kibana.
 
 
