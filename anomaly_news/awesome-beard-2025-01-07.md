@@ -1,7 +1,7 @@
 ﻿# Awesome Beard
 <br>
-<kbd><img src="treaty-oak..willamor..01.jpg" align="center" alt="Treaty Oak
-Jacksonville"></kbd>
+<p  align="center"><kbd><img src="treaty-oak..willamor..01.jpg" alt="Treaty Oak
+  Jacksonville"></kbd></p>
 <br>
 
 Movember 2024, the month of mustaches, was a hit in Jacksonville. Anomaly

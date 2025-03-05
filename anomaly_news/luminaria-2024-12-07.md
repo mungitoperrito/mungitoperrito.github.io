@@ -1,10 +1,12 @@
 ﻿# (Il)uminaria
 <br>
-<kdb><img src="luminaria..2024-12-07.jpg" align="center" width="800"
-alt="Luminaria, Jacksonville"></kbd>
+<p align="center"><kbd><img src="luminaria..2024-12-07.jpg" width="800"
+  alt="Luminaria, Jacksonville"></kbd></p>
 <br>
 
-Riverside was born of fire. The flames took Jacksonville in 1901. Those who
+Riverside was born of fire.
+
+The flames took Jacksonville in 1901. Those who
 could, abandoned the downtown. The rich and powerful built the mansions and
 estates that line the river today. The really powerful placed the wards that
 protect the area today.
