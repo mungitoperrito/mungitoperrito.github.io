@@ -41,7 +41,7 @@ project and you won’t have to modify your usual settings.
    If you have used the Elasticsearch Console before, select, `Create a New
    Domain`.
 
-   <img src="./img/create-cluster..01.jpg" width="800" alt="Create elastic search cluster">
+   <img src="./img/create-cluster..01.jpg" width="800"  border="5" alt="Create elastic search cluster">
 
 1. Name your domain then click `Next`. This example uses: “es-twitter-demo”.
 1. Assaf recommends accepting the defaults on the next screen. It is cheaper to
