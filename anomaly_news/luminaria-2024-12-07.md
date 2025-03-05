@@ -1,7 +1,6 @@
 ﻿# (Il)uminaria
 <br>
-<p align="center"><img src="luminaria..2024-12-07.jpg" width="800",
-   alt="Luminaria, Jacksonville"></p>
+<kdb><img src="luminaria..2024-12-07.jpg" align="center", width="800", alt="Luminaria, Jacksonville"></kbd>
 <br>
 
 Riverside was born of fire. The flames took Jacksonville in 1901. Those who
