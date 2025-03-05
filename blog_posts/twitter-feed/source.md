@@ -233,11 +233,11 @@ update the project:
 ## What to expect
 
 The Kinesis Firehose processes the incoming feed data. It writes a file to S3
-every five minutes, or when the new data reaches a certain size.
+every five minutes or when the new data reaches a certain size.
 
 You should start to see files appearing in the S3 bucket very soon.
 
-When the file appears in S3, the Lambda function processes it. Expect to start
+When a file appears in S3, the Lambda function processes it. Expect to start
 seeing results about five minutes after you activate the project.
 
 Elasticsearch creates a Kibana URL when you confirm your domain. To see a
