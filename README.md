@@ -11,9 +11,8 @@ exploration with Twitter, AWS Lambda, Elasticsearch, and Kibana.
 
 ## Python coding
 
-This is a link to a repo that has an assortment of Python projects and
-code. There are practice exercises from learning sites, scripts, and some
-demo files.
+This repo has an assortment of Python projects and code samples. There
+are practice exercises from learning sites, scripts, and some demo files.
 
 [Python projects](https://github.com/mungitoperrito/python-projects)
 
