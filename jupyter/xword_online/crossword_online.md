@@ -14,16 +14,16 @@ The second notebook generates the puzzle.
 
 ## Prepare the LLM
 
-The [`crossword-setup.ipynb`](jupyter-notebooks/crossword-setup.ipynb) notebook
-uses the Simple English Wikipedia data set from Cohere. It does the following:
+The [`crossword-setup.ipynb`](crossword-setup.ipynb) notebook uses the Simple
+English Wikipedia data set from Cohere. It does the following:
 
 - Connects you to an LLM hosted by Cohere
 - Sets up a collection
 
 ## Generate the Puzzle
 
-The [`crossword-create-puzzle.ipynb`](jupyter-notebooks/crossword-create-puzzle.ipynb)
-notebook does these things:
+The [`crossword-create-puzzle.ipynb`](crossword-create-puzzle.ipynb) notebook
+does these things:
 
 - Creates a list of puzzle answers
 - Creates clues for each answer

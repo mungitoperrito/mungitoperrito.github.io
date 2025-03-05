@@ -15,8 +15,7 @@ The second notebook generates the puzzle.
 
 ## Prepare the LLM
 
-The [`crossword-setup.ipynb`](jupyter-notebooks/crossword-setup.ipynb) notebook
-does these things:
+The [`crossword-setup.ipynb`](crossword-setup.ipynb) notebook does these things:
 
 - Connects you to a locally hosted LLM
 - Gathers prerequisites
@@ -25,8 +24,8 @@ does these things:
 
 ## Generate the Puzzle
 
-The [`crossword-create-puzzle.ipynb`](jupyter-notebooks/crossword-create-puzzle.ipynb)
-notebook does these things:
+The [`crossword-create-puzzle.ipynb`](crossword-create-puzzle.ipynb) notebook
+does these things:
 
 - Creates a list of puzzle answers
 - Creates clues for each answer
