@@ -1,9 +1,12 @@
 ﻿# Awesome Beard
+<br>
+<p align="center"><img src="treaty-oak..willamor..01" alt="Treaty Oak,
+   Jacksonville"></p>
+<br>
 
 Movember 2024, the month of mustaches, was a hit in Jacksonville. Anomaly
 Periodic News dispatched senior whiskers reporter Bo Brummel to report on the
 happenings.
-
 
 Brummel began his tour in the Five Points, taking note of the fine facial hair
 the boys and girls sported there. Sadly, his trip through Springfield was a
