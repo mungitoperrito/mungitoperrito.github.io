@@ -22,7 +22,7 @@ These files are PDF versions of my rough, working copies of the notebooks.
 - [Data set 2017: Data cleaning and transformation](040..2017-07-26.pdf)
 - [Data set 2017: Total Number x Total Area](050..2017-07-26.pdf)
 - [Data set 2017: Total Number x Total Intensity](060..2017-07-26.pdf)
-- [Data set 2017: Total Intensity by Total Area]070..2017-07-26.pdf)
+- [Data set 2017: Total Intensity by Total Area](070..2017-07-26.pdf)
 - [Data sets 2016, 2017: Total Number x Total Area](080..2017-07-26.pdf)
 - [Data sets 2016, 2017: Total Number x Total Intensity](090..2017-07-26.pdf)
 
