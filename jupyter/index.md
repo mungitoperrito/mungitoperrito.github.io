@@ -22,4 +22,4 @@ This project is a guided walkthrough of the Weaviate Multi-tenancy tutorial. It
 expands on the tutorial to provide background and examples that are missing from
 the original.
 
-- [Tutorial walkthrough](multi_tenant_walkthrough.ipynb)
+- [Weaviate multi-tenancy walkthrough](multi_tenant_walkthrough.ipynb)
