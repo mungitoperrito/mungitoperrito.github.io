@@ -5,7 +5,6 @@
 [Chewing on the Twitter Feed](blog_posts/twitter-feed/source.md): Data
 exploration with Twitter, AWS Lambda, Elasticsearch, and Kibana.
 
-
 ## Data analysis
 
 [Data visualizations for genetic research](data_visualization)
@@ -41,4 +40,4 @@ Jacksonville, Florida.
 
 - [Awesome Beard](anomaly_news/awesome-beard-2025-01-07.txt)
 - [Luminaria](anomaly_news/luminaria-2024-12-07.txt)
-- [The Storm](anomaly_news/the-storm 2024-12-17.txt)
+- [The Storm](anomaly_news/the-storm-2024-12-17.txt)
