@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Avatar, data mining with Skype</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Avatar, data mining with Skype</h1>
+</header>
+<section data-field="description" class="p-summary">
+Manipulate Skype’s backend data to find contact pictures.
+</section>
+<section data-field="body" class="e-content">
+<section name="f7e2" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><figure name="9b12" id="9b12" class="graf graf--figure graf--leading"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 239px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 34.2%;"></div><img class="graf-image" data-image-id="1*NQeUJTdxlIQicKmjAjM5NA.jpeg" data-width="2992" data-height="1023" src="https://cdn-images-1.medium.com/max/800/1*NQeUJTdxlIQicKmjAjM5NA.jpeg"></div></figure><h3 name="d543" id="d543" class="graf graf--h3 graf-after--figure graf--title">Avatar, data mining with Skype</h3><p name="530d" id="530d" class="graf graf--p graf-after--h3">There is a lot of useful information within the files that make up a Skype account. You just need to prospect a bit to find the gems. Skype’s storage backend is really just a series of sqlite databases so with a little digging and some SQL it isn’t too difficult to mine that data and pull out whatever nugget you’re looking for. In this post we’ll see how to manipulate the database and use that knowledge to collect pictures of the people in your Skype contact list.</p><h3 name="1dd1" id="1dd1" class="graf graf--h3 graf-after--p">Find the database</h3><p name="3d09" id="3d09" class="graf graf--p graf-after--h3">Skype’s data is kept in a few different databases on disk. They are all stored together in the same directory. On Windows the path will be something like:</p><pre name="a744" id="a744" class="graf graf--pre graf-after--p">C:\Users\USERNAME\AppData\Roaming\Skype\SKYPE_NAME</pre><p name="6152" id="6152" class="graf graf--p graf-after--pre">These are mostly SQLite databases. Unlike MySQL or PostgreSQL, SQLite stores all of each database within a single file. The database and tables we will need for this exercise are in the file named <code class="markup--code markup--p-code">main.db</code>.</p><h3 name="046c" id="046c" class="graf graf--h3 graf-after--p">Determine the structure of <code class="markup--code markup--h3-code">main.db</code></h3><p name="a6e2" id="a6e2" class="graf graf--p graf-after--h3">Let’s see what the tables look like inside. Open up the SQLite command line tool, <code class="markup--code markup--p-code">sqlite3</code>. Then query the SQLite metadata to get a list of the tables in this database file.</p><pre name="7225" id="7225" class="graf graf--pre graf-after--p">skype&gt; sqlite3 main.db<br>      SQLite version 3.8.7.4 2014-12-09 01:34:36<br>      Enter &quot;.help&quot; for usage hints.<br>      sqlite&gt; SELECT name FROM sqlite_master WHERE type=&#39;table&#39;;<br>            DbMeta<br>            AppSchemaVersion<br>            Contacts<br>            &lt;Many more tables not listed here&gt;</pre><p name="047e" id="047e" class="graf graf--p graf--startsWithSingleQuote graf-after--pre">‘Contacts’ looks is a likely spot to store information on the avatars. Take a look at the fields by running the SQLite <code class="markup--code markup--p-code">.schema</code> dot command. (The command output has been shortened for clarity.)</p><pre name="5824" id="5824" class="graf graf--pre graf-after--p">sqlite&gt; .schema contacts<br>CREATE TABLE Contacts (id INTEGER NOT NULL PRIMARY KEY, is_permanent INTEGER, type INTEGER, skypename TEXT, pstnnumber TEXT, aliases TEXT, fullname TEXT, birthday INTEGER, gender INTEGER, languages TEXT, country TEXT, <br>   &lt;many more columns&gt;<br>, avatar_url TEXT, avatar_url_new TEXT, avatar_hiresurl TEXT, avatar_hiresurl_new TEXT,   <br>   &lt;many more columns&gt;);<br>CREATE INDEX IX_Contacts_skypename ON Contacts (skypename);<br>CREATE INDEX IX_Contacts_buddystatus ON Contacts (buddystatus);<br>CREATE INDEX IX_Contacts_type ON Contacts (type);<br>CREATE INDEX IX_Contacts_displayname_skypename ON Contacts (displayname COLLATE NOCASE, skypename);</pre><h3 name="7d4d" id="7d4d" class="graf graf--h3 graf-after--pre">Get the URL list</h3><p name="604d" id="604d" class="graf graf--p graf-after--h3">Tucked away towards the end of the column list is one which sounds promising: <code class="markup--code markup--p-code">avatar_url</code>. The values for that field can be inspected by running a simple SQL query:</p><pre name="33d7" id="33d7" class="graf graf--pre graf-after--p">SELECT avatar_url FROM contacts WHERE avatar_url != &#39;None&#39;;</pre><p name="c8d2" id="c8d2" class="graf graf--p graf-after--pre">Depending on your contact list there could be a lot of urls. To output the list to a file called ‘urllist’ first run a little data output setup step in SQLite and then rerun the query.</p><pre name="7068" id="7068" class="graf graf--pre graf-after--p">sqlite&gt; .mode csv<br>sqlite&gt; .output urllist<br>sqlite&gt; SELECT avatar_url FROM contacts WHERE avatar_url != &#39;None&#39;;<br>sqlite&gt;</pre><h3 name="7219" id="7219" class="graf graf--h3 graf-after--pre">Fetch the avatar files</h3><p name="babc" id="babc" class="graf graf--p graf-after--h3">Now that you have the list of urls, the quickest way to fetch the files is to pass the output file into wget like this:</p><pre name="dbf9" id="dbf9" class="graf graf--pre graf-after--p">wget -i urllist</pre><p name="b4c1" id="b4c1" class="graf graf--p graf-after--pre">NOTE: Depending on how many avatar files there are, it is probably a good idea to first create a subdirectory to hold them all before running wget.</p><h3 name="72f9" id="72f9" class="graf graf--h3 graf-after--p">Clean up the file names</h3><p name="fb89" id="fb89" class="graf graf--p graf-after--h3">When <code class="markup--code markup--p-code">wget</code> retrieves an avatar file it gives it a name that is based on the URL used to fetch the picture. The names take two forms and look something like this list of examples:</p><pre name="a7b9" id="a7b9" class="graf graf--pre graf-after--p">a_skype_name@auth_key=22222222<br>another_skype_name@auth_key=12345678<br>public <br>public.1 <br>really_yet_another_skype_name@auth_key=234567890</pre><p name="6624" id="6624" class="graf graf--p graf-after--pre">These names aren’t ideal to work with, but it is easy to to clean them up a bit with a couple of lines of <code class="markup--code markup--p-code">bash</code> script.</p><p name="b1f7" id="b1f7" class="graf graf--p graf-after--p">First add the ‘jpg’ extension to the public* files:</p><pre name="6772" id="6772" class="graf graf--pre graf-after--p">for f in $(ls pub*) ; do mv ${f} ${f}.jpg ; done</pre><p name="55ba" id="55ba" class="graf graf--p graf-after--pre">Then, chop off the “@auth_key=” from the other files and give them the ‘jpg’ extension too.</p><pre name="0e74" id="0e74" class="graf graf--pre graf-after--p">for f in $(ls *@*) ; do mv ${f} $(ls ${f}|cut -d&#39;@&#39; -f1).jpg ; done</pre><p name="3575" id="3575" class="graf graf--p graf-after--pre">All that’s left is to take a look at the pictures and delete the ones which you don’t like. Of course, it’s never to soon to see if there are more useful bits of data in the other database files …</p><h3 name="b721" id="b721" class="graf graf--h3 graf-after--p graf--trailing">Happy hunting!</h3></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@dave.cuthbert" class="p-author h-card">Dave Cuthbert</a> on <a href="https://medium.com/p/8a678d774a7"><time class="dt-published" datetime="2019-02-15T23:30:07.849Z">February 15, 2019</time></a>.</p><p><a href="https://medium.com/@dave.cuthbert/lucy-in-the-skype-with-diamonds-8a678d774a7" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 12, 2019.</p></footer></article></body></html>
