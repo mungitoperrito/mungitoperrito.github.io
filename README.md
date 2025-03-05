@@ -48,6 +48,6 @@ These are contributions to a local zine. The theme is an underground
 newspaper that reports on weird, mysterious, and occult happenings in and near
 Jacksonville, Florida.
 
-- [Awesome Beard](anomaly_news/awesome-beard-2025-01-07.txt)
-- [Luminaria](anomaly_news/luminaria-2024-12-07.txt)
-- [The Storm](anomaly_news/the-storm-2024-12-17.txt)
+- [Awesome Beard](anomaly_news/awesome-beard-2025-01-07.md)
+- [Luminaria](anomaly_news/luminaria-2024-12-07.md)
+- [The Storm](anomaly_news/the-storm-2024-12-17.md)
