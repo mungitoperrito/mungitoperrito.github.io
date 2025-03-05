@@ -20,10 +20,10 @@ are practice exercises from learning sites, scripts, and some demo files.
 
 These projects use Jupyter notebooks to combine explanatory text and code.
 
-- Crossword Puzzle Generators
+- Crossword puzzle generators
   - [Local, Ollama version](jupyter/xword_ollama/crossword_ollama.md)
   - [Online, Cohere API version](jupyter/xword_online/crossword_online.md)
-- Tutorial Walkthrough
+- Tutorial walkthrough
   - [Weaviate multi-tenancy walkthrough](jupyter/multi_tenant_walkthrough.ipynb)
 
 ## Tech notes
