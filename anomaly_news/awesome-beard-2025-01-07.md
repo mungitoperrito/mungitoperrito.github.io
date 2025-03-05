@@ -1,6 +1,6 @@
 ﻿# Awesome Beard
 <br>
-<p align="center"><img src="treaty-oak..willamor..01" alt="Treaty Oak,
+<p align="center"><img src="treaty-oak..willamor..01.jpg" alt="Treaty Oak,
    Jacksonville"></p>
 <br>
 
