@@ -1,5 +1,7 @@
 # Chewing on the Twitter Feed
 
+<img src="./img/birds..01.jpg" width="800" alt="Configure access policy">
+
 Twitter streams millions of messages all day long. Have you ever wanted to use
 their feed to do your own analysis of streaming posts?
 
@@ -39,7 +41,7 @@ project and you won’t have to modify your usual settings.
    If you have used the Elasticsearch Console before, select, `Create a New
    Domain`.
 
-   <img src="./img/create-cluster..01.jpg" width="1000" alt="Create elastic search cluster">
+   <img src="./img/create-cluster..01.jpg" width="800" alt="Create elastic search cluster">
 
 1. Name your domain then click `Next`. This example uses: “es-twitter-demo”.
 1. Assaf recommends accepting the defaults on the next screen. It is cheaper to
@@ -53,17 +55,17 @@ project and you won’t have to modify your usual settings.
 
 1. Choose `Confirm and Create`. It takes about 10 minutes to set up the domain.
 
-   <img src="./img/confirm..01.jpg" width="1000" alt="Create domain confirmation dialog">
+   <img src="./img/confirm..01.jpg" width="800" alt="Create domain confirmation dialog">
 
 1. To confirm your domain configuration, click on the endpoint when it is active.
 
-   <img src="./img/elastic-search..01.jpg" width="1000" alt="Elasticsearch service dashboard">
+   <img src="./img/elastic-search..01.jpg" width="800" alt="Elasticsearch service dashboard">
 
 1. The service console displays configuration details for the new endpoint. Save
    this information down for later. Be sure to make a note of the Elasticsearch
    service endpoint and the Kibana URL.
 
-   <img src="./img/console..01.jpg" width="1000" alt="Elasticsearch configuration details">
+   <img src="./img/console..01.jpg" width="800" alt="Elasticsearch configuration details">
 
 ## Create an IAM role for Firehose
 
@@ -79,12 +81,12 @@ feed.
 
 1. Edit the `s3-rw-policy.json` file to use your S3 bucket.
 
-   <img src="./img/iam-role..01.jpg" width="1000" alt="S3 configuration">
+   <img src="./img/iam-role..01.jpg" width="800" alt="S3 configuration">
 
 1. To upload the policy files, use the AWS CLI client.
 1. Verify that the policy is in place.
 
-   <img src="./img/iam-role..02.jpg" width="1000" alt="Verify access policy">
+   <img src="./img/iam-role..02.jpg" width="800" alt="Verify access policy">
 
 ## Create a Lambda function
 
@@ -98,7 +100,7 @@ post was published in 2015.
    the value of `es_host` matches the Elasticsearch Service endpoint for your
    domain.
 
-   <img src="./img/lambda..01.jpg" width="1000" alt="Edit config file">
+   <img src="./img/lambda..01.jpg" width="800" alt="Edit config file">
 
 1. Zip the folder content in your local environment. This example uses
    `my-s3-twitter-to-es-python.zip`
@@ -112,16 +114,16 @@ post was published in 2015.
 1. Select `Configure triggers` from the list of choices at top left of the
    screen.
 
-   <img src="./img/lambda..02.jpg" width="1000" alt="Configure lambda triggers">
+   <img src="./img/lambda..02.jpg" width="800" alt="Configure lambda triggers">
 
 1. To select a storage location, click inside the dotted lines and select `S3`
    from the drop down list.
 
-   <img src="./img/lambda..03.jpg" width="1000" alt="Select storage location">
+   <img src="./img/lambda..03.jpg" width="800" alt="Select storage location">
 
 1. Enter your S3 bucket name. Verify that `Enable trigger` checked.
 
-   <img src="./img/lambda..04.jpg" width="1000" alt="S3 bucket name">
+   <img src="./img/lambda..04.jpg" width="800" alt="S3 bucket name">
 
 1. Use these values to update the variables on the next screen:
 
@@ -145,18 +147,18 @@ post was published in 2015.
    Timeout: '2 minutes'
    ```
 
-   <img src="./img/function..01.jpg" width="1000" alt="Lambda function configuration">
+   <img src="./img/function..01.jpg" width="800" alt="Lambda function configuration">
 
-   <img src="./img/function..02.jpg" width="1000" alt="Additional lambda configuration">
+   <img src="./img/function..02.jpg" width="800" alt="Additional lambda configuration">
 
 1. Create the function.
 1. Verify that the role was created properly.
 
-   <img src="./img/function..03.jpg" width="1000" alt="Verify lambda role">
+   <img src="./img/function..03.jpg" width="800" alt="Verify lambda role">
 
 1. Verify the S3 bucket has permissions set properly.
 
-   <img src="./img/function..04.jpg" width="1000" alt="Verify S3 permissions">
+   <img src="./img/function..04.jpg" width="800" alt="Verify S3 permissions">
 
 ## Stream data from Twitter to AWS
 
@@ -179,7 +181,7 @@ This modification sends a LOT of additional data.
 1. Change to the `twitter-streaming-firehose-nodejs` directory.
 1. Edit `config.js to` comment out the regional filter.
 
-   <img src="./img/config-js..01.jpg" width="1000" alt="Edit config.js">
+   <img src="./img/config-js..01.jpg" width="800" alt="Edit config.js">
 
 1. Restart the `node.js` server.
 
@@ -197,7 +199,7 @@ it. To change the data the function captures, follow these steps.
    Rob Johnson has compiled a list of the [fields that are available]
    (https://gist.github.com/robjohnson/702360).
 
-   <img src="./img/fields..01.jpg" width="1000" alt="Edit metadata fields">
+   <img src="./img/fields..01.jpg" width="800" alt="Edit metadata fields">
 
 1. Zip up the local directory.
 1. In the Lambda Management console, upload the new `.zip` file. The file
@@ -208,7 +210,7 @@ it. To change the data the function captures, follow these steps.
    These logs are very useful to debug any errors that you may have in your
    python script.
 
-   <img src="./img/console-activity..01.jpg" width="1000" alt="Verify
+   <img src="./img/console-activity..01.jpg" width="800" alt="Verify
    new function">
 
 ## Add indexes to Kibana
@@ -223,7 +225,7 @@ update the project:
    example.
 1. Edit `twitter_to_es.py` to update the index name.
 
-   <img src="./img/kibana..01.jpg" width="1000" alt="Update Kabana">
+   <img src="./img/kibana..01.jpg" width="800" alt="Update Kabana">
 
 1. Zip up the local directory.
 1. In the Lambda Management console, upload the new `.zip` file.
