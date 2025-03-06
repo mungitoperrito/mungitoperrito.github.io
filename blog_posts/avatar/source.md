@@ -1,4 +1,4 @@
-# Avatar: Data mining from Skype
+# Avatar: Data mining Skype
 <br>
 <p  align="center"><kbd><img src="hero..01.jpg" alt="Abstract image"></kbd></p>
 <br>
@@ -155,3 +155,6 @@ If there are images you don't recognize, you can use the filenames to query the 
 database for the `skypename` or `fullname` fields to find the owner.
 
 Of course, you may want other details too, have fun exploring!
+
+Originally posted to [Medium](https://medium.com/) on January 19, 2019.
+Updated December, 15 2024.
