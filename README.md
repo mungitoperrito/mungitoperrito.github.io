@@ -2,9 +2,9 @@
 
 ## Blog posts
 
-[Avatar: Data mining Skype](blog_posts/avatar/source.md) Data mining the Skype
+- [Avatar: Data mining Skype](blog_posts/avatar/source.md) Data mining the Skype
 profile SQLite databases.
-[Chewing on the Twitter Feed](blog_posts/twitter-feed/source.md): Data
+- [Chewing on the Twitter Feed](blog_posts/twitter-feed/source.md): Data
 exploration with Twitter, AWS Lambda, Elasticsearch, and Kibana.
 
 ## Data analysis
