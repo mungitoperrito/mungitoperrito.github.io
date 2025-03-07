@@ -1,26 +1,15 @@
 # Ticket to Ride
 
-<p align="center"><kbd><img src="./img/birds..01.jpg" border="5" width="800"
-alt="Configure access policy"></kbd></p>
+<p align="center"><kbd><img src="./img/hero.jpg" border="5" width="800"
+alt="An open highway and a lego figure."></kbd></p>
 
+It's the end of the month and I have a long drive ahead of me. Will the police
+out in force trying to meet monthly ticket quotas?
 
+Do the police really have ticket quotas? They say they don't. Most people don't
+believe them.
 
-
-
-
-
-
-Ticket to ride? Data study on the road.
-Dave Cuthbert
-Jan 19 · 10 min read
-It’s nearly the end of the month as I write this. A long drive awaits. Will
-the police be on the road, out in force to meet monthly ticket quotas?
-Do police departments really have ticket quotas leading to increased
-traffic stops for unhappy motorists? It’s an age old question. Google
-quickly provides strong statements from believers and skeptics on both
-sides of the debate.
-There’s opinion, and there’s also some data too, and that’s the real
-subject of this post. The state Maryland has contributed a collection of
+Luckily, there’s some data. The state Maryland has contributed a collection of
 traffic violation data to data.gov. It’s just one data set among more than
 160,000 others on that site that are freely available for the curious. The
 Maryland Traffic Data does shed light on the opening question. More
@@ -263,3 +252,5 @@ Year SUM(Alcohol)
 sqlite>
 Thanks for reading this far, I hope these notes prove useful!
 
+Originally posted to [Medium](https://medium.com/) on February 9, 2019.
+Updated December, 20 2024.
