@@ -1,264 +1,265 @@
-# Chewing on the Twitter Feed
+# Ticket to Ride
 
 <p align="center"><kbd><img src="./img/birds..01.jpg" border="5" width="800"
 alt="Configure access policy"></kbd></p>
 
-Twitter streams millions of messages all day long. Have you ever wanted to use
-their feed to do your own analysis of streaming posts?
 
-If so, follow along. That's what this post is about.
 
-## Background
 
-A few years ago, Assaf Mentzer put together a demonstration project, [Building a
-Near Real-Time Discovery Platform with
-AWS](https://aws.amazon.com/blogs/big-data/building-a-near-real-time-discovery-platform-with-aws/)
-to introduce readers to streaming data. Since then AWS has made changed some of
-the services he used.
 
-This page updates Assaf’s instructions and adds a few additional tips for anyone
-who wants to get started analyzing the Twitter feed.
 
-The steps on this page extend Assaf’s post. For additional context, open Assaf’s
-page in another browser tab so you can refer to his post too.
 
-## Prerequisites
 
-You need an AWS account and a Twitter account.
+Ticket to ride? Data study on the road.
+Dave Cuthbert
+Jan 19 · 10 min read
+It’s nearly the end of the month as I write this. A long drive awaits. Will
+the police be on the road, out in force to meet monthly ticket quotas?
+Do police departments really have ticket quotas leading to increased
+traffic stops for unhappy motorists? It’s an age old question. Google
+quickly provides strong statements from believers and skeptics on both
+sides of the debate.
+There’s opinion, and there’s also some data too, and that’s the real
+subject of this post. The state Maryland has contributed a collection of
+traffic violation data to data.gov. It’s just one data set among more than
+160,000 others on that site that are freely available for the curious. The
+Maryland Traffic Data does shed light on the opening question. More
+importantly, working with this data set also provided useful lessons and
+reminders for researchers working with any data set.
+Getting Started
+Any good study begins with a question. In this case let’s start with the
+obvious one, ‘are there more tickets issued at the end of the month’? If
+so that suggests police officers could be playing catch up for quotas. It
+would also confirm anecdotal stories about when tickets are issued.
+OK, we have a good question. Now it’s time to hunt for a good data set
+to shed light on it. Data.gov, mentioned above, has a massive collection
+of data sets on many different topics. Fortunately along with the data
+itself, data.gov provides a little meta-data for each dataset. The
+metadata varies, but generally it provides some useful information
+about the contents of each collection of data. In this case the metadata
+tells us that there is a csv file from Montgomery County in the state of
+Maryland that reportedly “contains traffic violation information from
+all electronic traffic violations issued in the County”.
+Great! Now it’s time to download the file and rename it to something
+more convenient. Once we have the file, the next step, a key step in
+every data analysis, is to validate the data. It’s a big data set and stored
+as a giant csv table so I decided to load it up into an SQLite database to
+make checking the data and working with it more convenient. In order
+to do convert the file from cvs to a database, I had to first inspect the
+file format and prepare some scripts to clean and load the data.
+The datafile is about 375MB in size has just under 1.1 million rows, so
+lots of data to work with! The linux head command revealed a header
+row and some variety in the data encoded in the file.
+Running a few checks with grep highlighted some problems with the
+data. The file was uploaded in 2015, which made it easy to see that the
+year field contained thousands of entries with obviously bad dates.
+There were missing dates, very early dates and too late dates. Rather
+than simply drop rows with improbable dates, I added some WHERE
+clauses to my SQL queries to restrict the results to ranges of dates that
+were at least plausible.
+There were other problems with the raw data. This was a csv file. The
+extension ‘csv’ (mostly) means ‘character separated values’ but often
+people change the ‘c’ to mean ‘comma’. When that happens, commas
+are considered reserved characters that are only used to separate the
+fields in each row. In this file, that didn’t happen. Commas were used
+both within fields as normal punctuation and as field separators. Even
+worse, use of commas within fields was inconsistent. That created a
+real mess for parsing the file. For example, in some rows the subagency (usually a geographic designation) had a comma in its name.
+Other fields occasionally had internal commas too. When they were
+present in a row, geographic coordinates were recorded as “(latitude,
+longitude)”
+And there were other problems. Many rows were too sparse, they were
+missing values in lots of fields. Rather than trying to guess what data
+should have been present in these cases, the rows with missing fields
+were just dropped. Here is the script that was used to set up the
+database, clean the incoming lines from the csv file, and then insert the
+rows into the database. After running the script to clean up the csv file,
+all but 1818 rows (about .1%) were successfully imported into the
+database.
+Working with the data—determining a
+date range
+How recent was this data? Did it cover a significant period of time?
+Some of the values for the year field were bad, so I had to define a
+range of data that looked reasonable before I could address the
+underlying question of ticket quotas. Since the file was last updated in
+2015, 2015 was a clear upper bound. Any dates that we more recent
+had to be errors. At the lower end of the range, the number of rows per
+year dropped off sharply before 1994, but there were still significant
+numbers going back to the early 1990’s. The period from 1990 to 2015
+was chosen as most likely to hold accurate values.
+sqlite> SELECT year, count(year) FROM alldata GROUP BY year;
+0 809
+4 3
+5 1
+6 3
+--- SNIP ---
+1986 778
+1987 1119
+1988 1509
+1989 1689
+1990 3005
+1991 3659
+1992 5651
+1993 6881
+1994 12017
+1995 16694
+1996 18729
+1997 25766
+1998 30632
+1999 39528
+2000 51483
+2001 51493
+2002 59170
+2003 64478
+2004 66794
+2005 67255
+2006 68922
+2007 68032
+2008 59877
+2009 44734
+2010 53482
+2011 54611
+2012 57094
+2013 51225
+2014 39097
+2015 29480
+2016 14522
+2017 2022
+2018 4
+2019 12
+2020 4
+--- SNIP ---
+9382 1
+9510 1
+9563 1
+9867 1
+9999 29
+Parsing the date field into subfields
+When the Maryland released the citation data, the date was reported as
+a single field using the format: ‘mm/dd/yyyy’. That format was too
+coarse to answer my question. After adding additional columns for
+‘year’, ‘month’, ‘day’, and ‘day of the week’ to the data tables, it was easy
+to get a more granular view of events by parsing the original date field
+during import to split it into component pieces.
+Back to the question at hand …
+Now that it was possible to view the ticket data by day of the month, I
+could plot that to see if there were any obvious trends. If the police
+really do issue more citations at the end of the month to ‘meet quota’
+then the the graph should show an uptick in reported citations as the
+month progress. However, a first glance shows just the opposite, a
+serious drop at the end of the month.
+What’s going on? Well one reason is that while all months have 28 days
+in them, only some months have 29 or more. Here is another view that
+has been adjusted to eliminate that artifact by showing the number of
+citations per month-day.
+The second graph is more balanced in terms of tickets per day. Men
+hover around 76.5 citations per day over the 15 years from 1990 to
+2015. Women average slightly more than half that figure, just 37.9
+citations per day. Both averages are pretty consistent throughout the
+month, however, even with this frequency weighted view, the number
+of citations per day drops off towards the end of the month. That result
+is the opposite of popular opinion and supports the oft repeated
+statement from law enforcement that there are no quotas. “But”, asks
+the skeptic in the room, “perhaps there is a yearly quota?”
+“Or a weekly one?”
+The data doesn’t support either of those suggestions. In all cases: day of
+the month, day of the week, and month of the year, there are more
+citations given out toward the beginning of the period rather than
+towards the end. Given these figures it is hard to conclude that there is
+a last minute drive to meet a quota each month.
+That settles the argument then. The data doesn’t lie. Or does it? It turns
+out there are some difficulties with the data set.
+Difficulties with the data
+Even a cursory look at these numbers show men consistently getting
+twice as many citations as women over the entire 15 year period which
+is a surprising result. People may debate just how surprising it is that
+men get more tickets than women, but it is at least a little surprising
+that men would be cited twice as often as women. The US Census
+website reports that Maryland has a slightly large proportion of females
+(51.5%) than males (48.5%).
+With roughly equal numbers of men and women, it seems reasonable to
+assume roughly equal numbers of male and female drivers. Perhaps
+there was an unreported selection process that skewed the data set. A
+few more queries and a closer look at the data indicate that there was,
+in fact, an additional selection criterion. All of the citations in the data
+set are related to traffic accidents.
+It is certainly interesting to see that men are ticketed in accidents twice
+as often as women, and that accident rates appear to be skewed
+towards the early parts of each week and month. Unfortunately since
+this data set only lists citations related to accidents and is silent on nonaccident ticket rates, it means that this data set, as attractive as it may
+be, is insufficient to answer the original question. Additional data on
+non-accident related tickets is required to see if non-accident related
+citations are also issued at the same rate as accident related tickets.
+Sadly, we don’t have that data.
+Unanswered questions
+So we don’t have much insight into the original question, “are there
+ticket quotas”. On the other hand we now have a few more topics for
+investigation. Do men really have twice as many accidents as women or
+do they just get ticketed twice as much for accidents they are involved
+in? Why are there spikes in the accident rate at the beginning of the
+week? Is there a significant number of accidents where tickets aren’t
+issued? Is there a way to determine how many people and or vehicles
+were involved in a given accident? And perhaps the biggest question for
+this audience—where can researchers find the data needed to answer
+these questions?
+Conclusion
+The Maryland data set is rich and can provide many interesting avenues
+of research. Unfortunately it only contains a subset of all citations
+issued and so it is insufficient to answer the question about quotas.
+However, working with this dataset has been a useful exercise, and it
+was especially valuable as an illustration of why it is critical to check
+data integrity, to clean incoming data, and to validate assumptions
+about the dataset before drawing conclusions from it.
+Additional notes and details
+For those curious about some of the more mechanical details of this
+investigation, the next sections discuss one or two points that didn’t
+really fit in the story but that may be of some interest.
+How to configure sqlite3 output
+The default output style in sqlite3 works for some parsing tasks, but it is
+not ideal for all purposes. When exploring data it may be helpful to
+change the output to columnar form and to add a header row.
+Use of SUM or COUNTin data assessment
+COUNT works well when field values are easily filtered. On the other
+hand, if the values in the dataset are encoded as 1s and 0s then using
+SUM can be better quick way to get an aggregate count over a field.
+There are two benefits to using SUM like this. The SQL is more compact
+with SUM (there’s no where clause) and rows are returned when the
+sum equals zero (COUNT doesn’t return the output row in sqlite).
+Here’s an example counting alcohol related citations issued to Male
+drivers.
+sqlite> SELECT year, COUNT(Alcohol)
+...> FROM alldata
+...> WHERE (year > '1989') AND (year < '2001')
+AND gender = 'M' AND alcohol = 1
+...> GROUP BY year;
+Year COUNT(Alcohol)
+---------- --------------
+1992 31
+1993 42
+1994 44
+1996 44
+1997 48
+1998 35
+1999 43
+2000 103
+sqlite> SELECT year, SUM(Alcohol)
+...> FROM alldata
+...> WHERE (year > '1989') AND (year < '2001')
+AND gender = 'M'
+...> GROUP BY year;
+Year SUM(Alcohol)
+---------- ------------
+1990 0
+1991 0
+1992 31
+1993 42
+1994 44
+1995 0
+1996 44
+1997 48
+1998 35
+1999 43
+2000 103
+sqlite>
+Thanks for reading this far, I hope these notes prove useful!
 
-Consider creating a new Twitter account for this project instead of
-reusing your usual one (if you already have one). The advantage of a new account
-is that you can use different preferences and settings for this data exploration
-project and you won’t have to modify your usual settings.
-
-## Create an Amazon Elasticsearch Service cluster
-
-### Sign in to the Elasticsearch Service Console.
-
-1. If this is your first sign in to the Elasticsearch Console, select `Get
-   Started`.
-
-   If you have used the Elasticsearch Console before, select, `Create a New
-   Domain`.
-
-   <kbd><img src="./img/create-cluster..01.jpg" border="5" width="800" alt="Create elastic search cluster"><kbd>
-
-1. Name your domain then click `Next`. This example uses: “es-twitter-demo”.
-1. Assaf recommends accepting the defaults on the next screen. It is cheaper to
-   use a smaller EC instance to host the Elasticsearch domain. The
-  `t2.medium.Elasticsearch` instance type works well for simple experiments.
-1. Choose `Allow Open Access` as the domain policy. This is a poor security
-   practice and the console will complain about it. If you want to do more than
-   simple experimentation, configure a more restrictive security policy.
-
-   <kbd><img src="./img/access-policy..01.jpg" border="5" width="800" alt="Configure access policy"></kbd>
-
-1. Choose `Confirm and Create`. It takes about 10 minutes to set up the domain.
-
-   <kbd><img src="./img/confirm..01.jpg" border="5" width="800" alt="Create domain confirmation dialog"></kbd>
-
-1. To confirm your domain configuration, click on the endpoint when it is active.
-
-   <kbd><img src="./img/elastic-search..01.jpg" border="5" width="800" alt="Elasticsearch service dashboard"></kbd>
-
-1. The service console displays configuration details for the new endpoint. Save
-   this information down for later. Be sure to make a note of the Elasticsearch
-   service endpoint and the Kibana URL.
-
-   <kbd><img src="./img/console..01.jpg" border="5" width="800" alt="Elasticsearch configuration details"></kbd>
-
-## Create an IAM role for Firehose
-
-In this section, you create a role in AWS to work with the Twitter Firehouse
-feed.
-
-1. On your desktop, create two policy files.
-
-   NOTE: If you cut and paste the configuration from original post, you may get
-   hidden artifacts in the policy files. The uploads fails if the artifacts are
-   there. If that happens, just retype the files manually. The syntax in the
-   original article is correct.
-
-1. Edit the `s3-rw-policy.json` file to use your S3 bucket.
-
-   <kbd><img src="./img/iam-role..01.jpg" border="5" width="800" alt="S3 configuration"></kbd>
-
-1. To upload the policy files, use the AWS CLI client.
-1. Verify that the policy is in place.
-
-   <kbd><img src="./img/iam-role..02.jpg" border="5" width="800" alt="Verify access policy"></kbd>
-
-## Create a Lambda function
-
-This section makes a lot of updates to the original post. The Lambda function
-setup and the configuration process have changed considerably since Assaf's blog
-post was published in 2015.
-
-1. Download the deployment package.
-1. Unzip the package to your project folder (`s3-twitter-to-es-python`).
-1. Modify the `s3-twitter-to-es-python/config.py` file. Edit the file so that
-   the value of `es_host` matches the Elasticsearch Service endpoint for your
-   domain.
-
-   <kbd><img src="./img/lambda..01.jpg" border="5" width="800" alt="Edit config file"></kbd>
-
-1. Zip the folder content in your local environment. This example uses
-   `my-s3-twitter-to-es-python.zip`
-
-   It is important to zip the entire folder contents. Don't zip up the folder by
-   itself.
-1. Sign in to the Lambda console.
-1. If this is your first time using Lambda, select `Get started now`.
-
-   If you have used Lambda before, select `Create a Lambda function`.
-1. Select `Configure triggers` from the list of choices at top left of the
-   screen.
-
-   <kbd><img src="./img/lambda..02.jpg" border="5" width="800" alt="Configure lambda triggers"></kbd>
-
-1. To select a storage location, click inside the dotted lines and select `S3`
-   from the drop down list.
-
-   <kbd><img src="./img/lambda..03.jpg" border="5" width="800" alt="Select storage location"></kbd>
-
-1. Enter your S3 bucket name. Verify that `Enable trigger` checked.
-
-   <kbd><img src="./img/lambda..04.jpg" border="5" width="800" alt="S3 bucket name"></kbd>
-
-1. Use these values to update the variables on the next screen:
-
-   ```
-   # Your project name
-   Name: 's3-twitter-to-es-python
-
-   Runtime: 'Python2.7'
-
-   Code entry: 'Upload a .ZIP file'
-   # Click the button to upload the .zip file you created earlier
-
-   Handler: 'lambda_function.lambda_handler'
-
-   Role: 'Create new role from templates(s)'
-
-   Role name: 'lamdba_s3_exec_role'
-
-   Memory: 128
-
-   Timeout: '2 minutes'
-   ```
-
-   <kbd><img src="./img/function..01.jpg" border="5" width="800" alt="Lambda function configuration"></kbd>
-
-   <kbd><img src="./img/function..02.jpg" border="5" width="800" alt="Additional lambda configuration"></kbd>
-
-1. Create the function.
-1. Verify that the role was created properly.
-
-   <kbd><img src="./img/function..03.jpg" border="5" width="800" alt="Verify lambda role"></kbd>
-
-1. Verify the S3 bucket has permissions set properly.
-
-   <kbd><img src="./img/function..04.jpg" border="5" width="800" alt="Verify S3 permissions"></kbd>
-
-## Stream data from Twitter to AWS
-
-Congratulations! You're nearly ready to try out the feed.
-
-Assaf's configuration limits the Twitter feed to US data. It only sends a few of
-the available fields. That's ok to get started.
-
-The `t2.micro` server instance that hosts `node.js` host works well for Assaf's
-demo. Later on, if you decide to pull in lots of data, you may want to upgrade
-your server instance.
-
-Here are some tips to reconfigure the data stream.
-
-### Add countries from outside the US
-
-This modification sends a LOT of additional data.
-
-1. Connect to your node.js host.
-1. Change to the `twitter-streaming-firehose-nodejs` directory.
-1. Edit `config.js to` comment out the regional filter.
-
-   <kbd><img src="./img/config-js..01.jpg" border="5" width="800" alt="Edit config.js"></kbd>
-
-1. Restart the `node.js` server.
-
-### Add fields to the Twitter stream
-
-Tweets have a lot of metadata. The Lambda function only captures a small part of
-it. To change the data the function captures, follow these steps.
-
-1. Go to the project directory, `s3-twitter-to-es-python directory` in this
-   example.
-
-1. Edit `tweet_utils.py` to change the fields in the `get_tweets()`
-   function.
-
-   Rob Johnson has compiled a list of the [fields that are available]
-   (https://gist.github.com/robjohnson/702360).
-
-   <kbd><img src="./img/fields..01.jpg" border="5" width="800" alt="Edit metadata fields"></kbd>
-
-1. Zip up the local directory.
-1. In the Lambda Management console, upload the new `.zip` file. The file
-   replaces the old function.
-1. To verify your changes, go to the monitoring tab and click on 'View logs in
-   CloudWatch'.
-
-   These logs are very useful to debug any errors that you may have in your
-   python script.
-
-   <kbd><img src="./img/console-activity..01.jpg" border="5" width="800" alt="Verify
-   new function"></kbd>
-
-## Add indexes to Kibana
-
-Kibana helps you to explore your data. If you change the data collection, you
-should add new indexes to work with the new information stream.
-
-To add an index, first create a new index in Kabana, then follow these steps to
-update the project:
-
-1. Go to the project directory, `s3-twitter-to-es-python directory` in this
-   example.
-1. Edit `twitter_to_es.py` to update the index name.
-
-   <kbd><img src="./img/kibana..01.jpg" border="5" width="800" alt="Update Kabana"></kbd>
-
-1. Zip up the local directory.
-1. In the Lambda Management console, upload the new `.zip` file.
-1. Verify that the new index is listed in the `Indices` tab for your
-   Elasticsearch domain.
-
-## What to expect
-
-The Kinesis Firehose processes the incoming feed data. It writes a file to S3
-every five minutes or when the new data reaches a certain size.
-
-You should start to see files appearing in the S3 bucket very soon.
-
-When a file appears in S3, the Lambda function processes it. Expect to start
-seeing results about five minutes after you activate the project.
-
-Elasticsearch creates a Kibana URL when you confirm your domain. To see a
-visualization of your data, open the URL in a browser.
-
-The page link isn't very interesting at first. Kabana only starts to update
-after the Lambda function processes the first set of data. Let the stream run
-for a while to generate some data, then start exploring.
-
-Happy prospecting!
-
-## Trouble shooting
-
-If you don’t see any output from the lambda function, first verify that data is
-being written to S3. Then, check that the S3 bucket permissions are correct for
-reading.
-
-The bucket permissions can be configured to be world readable since the data in
-the bucket is already publicly available. If you are working with sensitive or
-restricted data, use more restrictive access permissions.
-
-Originally posted to [Medium](https://medium.com/) on January 9, 2019.
