@@ -1,10 +1,10 @@
 # Avatar: Data mining Skype
 <br>
-<p  align="center"><kbd><img src="hero..01.jpg" alt="Abstract image"></kbd></p>
+<p  align="center"><kbd><img src="img/hero..01.jpg" alt="Abstract image"></kbd></p>
 <br>
 
 
-Your SKype profile stores a lot of useful information. All it takes is a little
+Your Skype profile stores a lot of useful information. All it takes is a little
 data mining to find the gems. Read on for an introduction to what's there.
 
 This post shows you how to manipulate the database behind your profile so you
