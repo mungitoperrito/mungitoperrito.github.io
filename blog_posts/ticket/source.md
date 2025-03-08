@@ -266,38 +266,7 @@ initial hypothesis.
 
 That's disappointing.
 
-If you have a good set of ticket data, please share!
-
-## Last thoughts
-
-The next sections discuss one or two points that didn't fit in the story.
-
-### Configure the sqlite3 output
-
-To see the difference between `SUM` and `COUNT` run this code:
-
-Count:
-
-```sql
-SELECT year, COUNT(Alcohol)
-FROM alldata
-WHERE (year > '1989') AND (year < '2001')
-AND gender = 'M' AND alcohol = 1
-GROUP BY year;
-Year COUNT(Alcohol)
----------- --------------
-
-Sum:
-
-```sql
-SELECT year, SUM(Alcohol)
-FROM alldata
-WHERE (year > '1989') AND (year < '2001')
-AND gender = 'M'
-GROUP BY year;
-Year SUM(Alcohol)
-```
-
+---
 
 Originally posted to [Medium](https://medium.com/) on February 9, 2019.
 Updated December, 20 2024.
