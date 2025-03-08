@@ -10,34 +10,46 @@ Do the police really have ticket quotas? They say they don't. Most people don't
 believe them.
 
 Luckily, there’s some data. The state Maryland has contributed a collection of
-traffic violation data to data.gov. It’s just one data set among more than
-160,000 others on that site that are freely available for the curious. The
-Maryland Traffic Data does shed light on the opening question. More
-importantly, working with this data set also provided useful lessons and
-reminders for researchers working with any data set.
-Getting Started
-Any good study begins with a question. In this case let’s start with the
-obvious one, ‘are there more tickets issued at the end of the month’? If
-so that suggests police officers could be playing catch up for quotas. It
-would also confirm anecdotal stories about when tickets are issued.
-OK, we have a good question. Now it’s time to hunt for a good data set
-to shed light on it. Data.gov, mentioned above, has a massive collection
-of data sets on many different topics. Fortunately along with the data
-itself, data.gov provides a little meta-data for each dataset. The
-metadata varies, but generally it provides some useful information
-about the contents of each collection of data. In this case the metadata
-tells us that there is a csv file from Montgomery County in the state of
-Maryland that reportedly “contains traffic violation information from
-all electronic traffic violations issued in the County”.
-Great! Now it’s time to download the file and rename it to something
-more convenient. Once we have the file, the next step, a key step in
-every data analysis, is to validate the data. It’s a big data set and stored
-as a giant csv table so I decided to load it up into an SQLite database to
-make checking the data and working with it more convenient. In order
-to do convert the file from cvs to a database, I had to first inspect the
-file format and prepare some scripts to clean and load the data.
-The datafile is about 375MB in size has just under 1.1 million rows, so
-lots of data to work with! The linux head command revealed a header
+traffic violation data to [data.gov](https://data.gov/). It’s one of 300,000
+data sets that you can explore for free.
+
+Follow along and explore Maryland's Traffic Data.
+
+## Getting Started
+
+A good study needs a hypothesis.
+
+**Hypothesis**: The police issue more tickets at the end of the month because
+they are trying to meet quotas.
+
+One way to check this hypothesis is to check the ticket-issue rate over several
+months. Data.gov has searchable metadata for the data sets in its collection.
+The metadata for the [Traffic
+Violations](https://catalog.data.gov/dataset/traffic-violations) dataset says it
+is a csv file from Montgomery County that "contains traffic violation
+information from all electronic traffic violations issued in the County".
+
+<p align="center"><kbd><img src="./img/csv_web_page.jpg" border="5" width="800"
+alt="Dataset description page."></kbd></p>
+
+## Prepare the data
+
+Download the [csv
+file](https://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv?accessType=DOWNLOAD).
+
+The next step, a key step in every data analysis, is to validate the data. This
+data is stored in a giant csv table. To make working with the data easier,
+create an SQLite database and import the data from the file.
+
+### Inspect the file
+
+The csv file is about 375MB in size has just under 1.1 million rows. Use the
+`head` command to see the first few rows.
+
+<p align="center"><kbd><img src="./img/first-few-rows.jpg" border="5" width="800"
+alt="Head command output"></kbd></p>
+
+revealed a header
 row and some variety in the data encoded in the file.
 Running a few checks with grep highlighted some problems with the
 data. The file was uploaded in 2015, which made it easy to see that the
