@@ -37,122 +37,165 @@ alt="Dataset description page."></kbd></p>
 Download the [csv
 file](https://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv?accessType=DOWNLOAD).
 
-The next step, a key step in every data analysis, is to validate the data. This
-data is stored in a giant csv table. To make working with the data easier,
-create an SQLite database and import the data from the file.
+The next step, a key step in every data analysis, is to validate the data. The
+traffic ticket data is stored in a giant csv table. To make working with the
+data easier, create an SQLite database and import the data from the file.
 
 ### Inspect the file
 
-The csv file is about 375MB in size has just under 1.1 million rows. Use the
-`head` command to see the first few rows.
+The csv file is about 375MB in size has just under 1.1 million rows.
+
+- Use the `head` command to see the first few rows.
+
+```bash
+head Traffic_Violations.csv
+```
+
+The output looks like this:
 
 <p align="center"><kbd><img src="./img/first-few-rows.jpg" border="5" width="800"
 alt="Head command output"></kbd></p>
 
-revealed a header
-row and some variety in the data encoded in the file.
-Running a few checks with grep highlighted some problems with the
-data. The file was uploaded in 2015, which made it easy to see that the
-year field contained thousands of entries with obviously bad dates.
-There were missing dates, very early dates and too late dates. Rather
-than simply drop rows with improbable dates, I added some WHERE
-clauses to my SQL queries to restrict the results to ranges of dates that
-were at least plausible.
-There were other problems with the raw data. This was a csv file. The
-extension ‘csv’ (mostly) means ‘character separated values’ but often
-people change the ‘c’ to mean ‘comma’. When that happens, commas
-are considered reserved characters that are only used to separate the
-fields in each row. In this file, that didn’t happen. Commas were used
-both within fields as normal punctuation and as field separators. Even
-worse, use of commas within fields was inconsistent. That created a
-real mess for parsing the file. For example, in some rows the subagency (usually a geographic designation) had a comma in its name.
-Other fields occasionally had internal commas too. When they were
-present in a row, geographic coordinates were recorded as “(latitude,
-longitude)”
-And there were other problems. Many rows were too sparse, they were
-missing values in lots of fields. Rather than trying to guess what data
-should have been present in these cases, the rows with missing fields
-were just dropped. Here is the script that was used to set up the
-database, clean the incoming lines from the csv file, and then insert the
-rows into the database. After running the script to clean up the csv file,
-all but 1818 rows (about .1%) were successfully imported into the
-database.
-Working with the data—determining a
-date range
-How recent was this data? Did it cover a significant period of time?
-Some of the values for the year field were bad, so I had to define a
-range of data that looked reasonable before I could address the
-underlying question of ticket quotas. Since the file was last updated in
-2015, 2015 was a clear upper bound. Any dates that we more recent
-had to be errors. At the lower end of the range, the number of rows per
-year dropped off sharply before 1994, but there were still significant
-numbers going back to the early 1990’s. The period from 1990 to 2015
-was chosen as most likely to hold accurate values.
-sqlite> SELECT year, count(year) FROM alldata GROUP BY year;
+To spot check the data consistency, run some checks with your system utilities
+before you attempt to import the file. For example:
+
+- Check the number of lines in the file
+
+  ```bash
+  wc -l Traffic_Violations.csv
+  ```    `grep`.
+
+- Check for the range of years. The second field is `Date of Stop`. This check
+  was supposed to find the range of years in the file. Instead, it showed a large
+  number of bad data entries.
+
+  ```bash
+  cut -f 2 -d"," < Traffic_Violations.csv | cut -f3 -d'/' | sort -u
+  ```
+
+You could try to fix bad fields, you can drop those rows entirely, or you can
+code around the problems later. For this study, I added `WHERE` clauses to my
+SQL queries when I knew there were data problems.
+
+### File format issues
+
+The input file is a csv file. That could mean 'character separated values' or
+'comma separated values'.
+
+In this file, commas supposed to be reserved characters that separate the fields
+in each row. That didn’t happen. Commas are used within fields as normal
+punctuation and as field separators. Even worse, the use of commas within fields
+is inconsistent.
+
+That makes parsing the file tricky. For example, in some rows the subagency
+(usually a geographic designation) sometimes has a comma in its name.
+Geographic coordinates are sometimes reported as "(latitude, longitude)".
+
+There are other problems too. Many rows are too sparse, missing values in lots
+of their fields. Instead of guess what should be there, I dropped rows that are
+too sparse.
+
+This is the [Python script](./fix-and-load.py) that cleans the data and uploads
+it to the SQLite database. Cleanup drops about 1800 rows, a little less than 1%
+of the total.
+
+
+## Explore the data, set a date range
+
+The data cleaning step shows problem with the date field. Dates are an important
+element of this study, so it is important to handle the date field carefully.
+
+**NOTE**: There is a new csv file now, unfortunately it has new problems. The
+discussion here follows the data in the old file.
+
+### Set bounds
+
+What should the upper and lower bounds be for the date field?
+
+The last data update is in 2015. That sets an upper bound for the dates.
+
+To find the lower bound, run a `SELECT` query to check the possible values, then
+choose a year that has a significant number of tickets to avoid noise.
+
+At the lower end of the range, the number of rows per year drops off sharply
+before 1994. There are still significant numbers in the early 1990s. I set an
+arbitrary cut off at 1990. The study period runs from 1990 to 2015.
+
+```sql
+SELECT year, count(year) FROM alldata GROUP BY year;
+```
+
+The output looks like this:
+
+```
 0 809
 4 3
 5 1
 6 3
---- SNIP ---
-1986 778
-1987 1119
-1988 1509
-1989 1689
+
+<--SNIP-->
+
 1990 3005
 1991 3659
 1992 5651
 1993 6881
 1994 12017
 1995 16694
-1996 18729
-1997 25766
-1998 30632
-1999 39528
-2000 51483
-2001 51493
-2002 59170
-2003 64478
-2004 66794
-2005 67255
-2006 68922
-2007 68032
-2008 59877
-2009 44734
-2010 53482
-2011 54611
-2012 57094
-2013 51225
-2014 39097
+
+<--SNIP-->
+
 2015 29480
 2016 14522
 2017 2022
 2018 4
-2019 12
-2020 4
---- SNIP ---
-9382 1
-9510 1
+
+<--SNIP-->
+
 9563 1
 9867 1
 9999 29
-Parsing the date field into subfields
-When the Maryland released the citation data, the date was reported as
-a single field using the format: ‘mm/dd/yyyy’. That format was too
-coarse to answer my question. After adding additional columns for
-‘year’, ‘month’, ‘day’, and ‘day of the week’ to the data tables, it was easy
-to get a more granular view of events by parsing the original date field
-during import to split it into component pieces.
-Back to the question at hand …
-Now that it was possible to view the ticket data by day of the month, I
-could plot that to see if there were any obvious trends. If the police
-really do issue more citations at the end of the month to ‘meet quota’
-then the the graph should show an uptick in reported citations as the
-month progress. However, a first glance shows just the opposite, a
-serious drop at the end of the month.
-What’s going on? Well one reason is that while all months have 28 days
-in them, only some months have 29 or more. Here is another view that
-has been adjusted to eliminate that artifact by showing the number of
-citations per month-day.
+```
+
+### Parse the date field into subfields
+
+In the csv file the date is a single field that has the format `mm/dd/yyyy`.
+That format is too course for the hypothesis. Add columns for the `year`,
+`month` and `day`. Alternatively, use a database that has a `date` datatype.
+(SQLite doesn't have a `date` type)
+
+```python
+def parse_date(date_of_stop_field):
+    month, day, year = date_of_stop_field.split('/')
+    day_of_week = datetime.date(int(year), int(month), int(day)).weekday()
+
+    return "," + year + "," + month + "," + day + "," + str(day_of_week)
+```
+
+(See [the full source](fix-and-load.py).)
+
+## Visualize the data
+
+A plot of tickets by day should show ticketing trends over months. Here is a
+first attempt at plotting the data.
+
+<p align="center"><kbd><img src="./img/viz_01.jpg" border="5" width="800"
+alt="Tickets by day, version one"></kbd></p>
+
+Well! There is a serious downward trend at the end of the month.
+
+It the hypothesis is correct, tickets should trend upwards at the end of the
+month.
+
+What’s going on?
+
+Months don't have uniform length. All months are 28 days long, not all months
+are 31 days long. This view adjusts the graph to account for the different
+month lengths. It shows the number of tickets per `month-day`.
+
+<p align="center"><kbd><img src="./img/viz_02.jpg" border="5" width="800"
+alt="Tickets by month-day, version two"></kbd></p>
+
+
 The second graph is more balanced in terms of tickets per day. Men
 hover around 76.5 citations per day over the 15 years from 1990 to
 2015. Women average slightly more than half that figure, just 37.9
@@ -266,3 +309,4 @@ Thanks for reading this far, I hope these notes prove useful!
 
 Originally posted to [Medium](https://medium.com/) on February 9, 2019.
 Updated December, 20 2024.
+Updated March, 6 2025.
