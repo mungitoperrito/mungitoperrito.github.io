@@ -1,19 +1,21 @@
 # Ticket to Ride
-
+<br>
 <p align="center"><kbd><img src="./img/hero.jpg" border="5" width="800"
 alt="An open highway and a lego figure."></kbd></p>
+<br>
 
 It's the end of the month and I have a long drive ahead of me. Will the police
-out in force trying to meet monthly ticket quotas?
+be out in force trying to meet their monthly ticket quotas?
 
-Do the police really have ticket quotas? They say they don't. Most people don't
-believe them.
+Do the police really have ticket quotas? The police say they don't. Most people
+don't believe them.
 
-Luckily, there’s some data. The state Maryland has contributed a collection of
-traffic violation data to [data.gov](https://data.gov/). It’s one of 300,000
-data sets that you can explore for free.
+Luckily, there’s some data available to help settle the question. The state of
+Maryland has contributed a collection of traffic violation data to
+[data.gov](https://data.gov/). It’s one of 300,000 data sets on the Data.gov
+site that you can explore for free.
 
-Follow along and explore Maryland's Traffic Data.
+To find out more, follow along and explore the traffic ticket data set.
 
 ## Getting Started
 
@@ -22,12 +24,11 @@ A good study needs a hypothesis.
 **Hypothesis**: The police issue more tickets at the end of the month because
 they are trying to meet quotas.
 
-One way to check this hypothesis is to check the ticket-issue rate over several
-months. Data.gov has searchable metadata for the data sets in its collection.
-The metadata for the [Traffic
+One way to check this hypothesis is to compare daily ticketing rates over
+several months. The metadata for the [Traffic
 Violations](https://catalog.data.gov/dataset/traffic-violations) dataset says it
-is a csv file from Montgomery County that "contains traffic violation
-information from all electronic traffic violations issued in the County".
+"contains traffic violation information from all electronic traffic violations
+issued in the County". Sounds perfect.
 
 <p align="center"><kbd><img src="./img/csv_web_page.jpg" border="5" width="800"
 alt="Dataset description page."></kbd></p>
@@ -37,13 +38,18 @@ alt="Dataset description page."></kbd></p>
 Download the [csv
 file](https://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv?accessType=DOWNLOAD).
 
-The next step, a key step in every data analysis, is to validate the data. The
-traffic ticket data is stored in a giant csv table. To make working with the
-data easier, create an SQLite database and import the data from the file.
+Now that you have the file, the next step is to validate the data in it. This is
+a crucial step in any data analysis. The traffic ticket data is stored in a
+giant csv table. To make working with the data easier, create an SQLite database
+and import the data from the file.
+
+(The [Python script](./fix-and-load.py) that accompanies this post has the code
+to set up the database and load the data.)
 
 ### Inspect the file
 
-The csv file is about 375MB in size has just under 1.1 million rows.
+The csv file from Data.gov is about 375MB in size. It has just under 1.1 million
+rows.
 
 - Use the `head` command to see the first few rows.
 
@@ -56,8 +62,8 @@ The output looks like this:
 <p align="center"><kbd><img src="./img/first-few-rows.jpg" border="5" width="800"
 alt="Head command output"></kbd></p>
 
-To spot check the data consistency, run some checks with your system utilities
-before you attempt to import the file. For example:
+To spot check the data, run some checks with your system utilities before you
+attempt to import the file. For example:
 
 - Check the number of lines in the file
 
@@ -73,53 +79,53 @@ before you attempt to import the file. For example:
   cut -f 2 -d"," < Traffic_Violations.csv | cut -f3 -d'/' | sort -u
   ```
 
-You could try to fix bad fields, you can drop those rows entirely, or you can
-code around the problems later. For this study, I added `WHERE` clauses to my
-SQL queries when I knew there were data problems.
+When you encounter problems like this, you can try to fix the bad fields, you
+can drop those rows entirely, or you can code around the problems later. You
+will need to decide what's best based on your data and the questions you want to
+answer.
 
 ### File format issues
 
 The input file is a csv file. That could mean 'character separated values' or
 'comma separated values'.
 
-In this file, commas supposed to be reserved characters that separate the fields
-in each row. That didn’t happen. Commas are used within fields as normal
-punctuation and as field separators. Even worse, the use of commas within fields
-is inconsistent.
+In the traffic violations file, commas are supposed to be reserved characters
+that separate the fields in each row. But, commas are used within fields as
+normal punctuation and as field separators. Even worse, the use of commas within
+fields is inconsistent.
 
-That makes parsing the file tricky. For example, in some rows the subagency
-(usually a geographic designation) sometimes has a comma in its name.
-Geographic coordinates are sometimes reported as "(latitude, longitude)".
+The different usage makes parsing the file tricky. For example, in some rows the
+subagency (usually a geographic designation) sometimes has a comma in its name.
+Sometimes it doesn't.  Geographic coordinates are sometimes reported as
+"(latitude, longitude)". Sometimes they aren't.
 
-There are other problems too. Many rows are too sparse, missing values in lots
-of their fields. Instead of guess what should be there, I dropped rows that are
-too sparse.
+There are other problems too. Many rows are sparse. They are missing values in
+lots of their fields. Instead of trying to guess what should be there, the data
+cleaning script drops rows that are too sparse.
 
 This is the [Python script](./fix-and-load.py) that cleans the data and uploads
-it to the SQLite database. Cleanup drops about 1800 rows, a little less than 1%
-of the total.
-
+it to the SQLite database. Altogether the cleanup step drops about 1800 rows, a
+little less than 1% of the total.
 
 ## Explore the data, set a date range
 
-The data cleaning step shows problem with the date field. Dates are an important
-element of this study, so it is important to handle the date field carefully.
+The data cleaning step reveals some problems with the date field. Dates are an
+important element of this study, so it is important to handle the date field
+carefully.
 
-**NOTE**: There is a new csv file now, unfortunately it has new problems. The
-discussion here follows the data in the old file.
+**NOTE**: As of March 2025, there is a new csv file. Unfortunately, the new file
+has new problems. The discussion here follows the data in the old file.
 
 ### Set bounds
 
 What should the upper and lower bounds be for the date field?
 
-The last data update is in 2015. That sets an upper bound for the dates.
+The file metadata says the last data update is in 2015. That sets an upper bound
+for the dates.
 
 To find the lower bound, run a `SELECT` query to check the possible values, then
-choose a year that has a significant number of tickets to avoid noise.
-
-At the lower end of the range, the number of rows per year drops off sharply
-before 1994. There are still significant numbers in the early 1990s. I set an
-arbitrary cut off at 1990. The study period runs from 1990 to 2015.
+choose a year that has a significant number of tickets and ignore earlier years
+to avoid noise.
 
 ```sql
 SELECT year, count(year) FROM alldata GROUP BY year;
@@ -156,12 +162,21 @@ The output looks like this:
 9999 29
 ```
 
+There are still significant numbers of rows in the early 1990s. But, the number
+of rows per year drops off sharply before 1994. The study uses an arbitrary cut
+off at 1990.
+
+After combining the upper and lower bounds, the study period runs from 1990 to
+2015.
+
 ### Parse the date field into subfields
 
-In the csv file the date is a single field that has the format `mm/dd/yyyy`.
-That format is too course for the hypothesis. Add columns for the `year`,
-`month` and `day`. Alternatively, use a database that has a `date` datatype.
-(SQLite doesn't have a `date` type)
+In the csv file, the date is a single field that has the format `mm/dd/yyyy`.
+That format is too course. The solution is to break apart the date and add
+columns for the `year`, `month` and `day`.
+
+Alternatively, you could use a database that has a `date` datatype. (SQLite
+doesn't have a `date` data type.)
 
 ```python
 def parse_date(date_of_stop_field):
@@ -171,17 +186,17 @@ def parse_date(date_of_stop_field):
     return "," + year + "," + month + "," + day + "," + str(day_of_week)
 ```
 
-(See [the full source](fix-and-load.py).)
+(This is the [source code](fix-and-load.py).)
 
 ## Visualize the data
 
-A plot of tickets by day should show ticketing trends over months. Here is a
-first attempt at plotting the data.
+To see ticketing trends, plot the number of tickets per day over a month. Here
+is a first attempt at plotting the data.
 
 <p align="center"><kbd><img src="./img/viz_01.jpg" border="5" width="800"
 alt="Tickets by day, version one"></kbd></p>
 
-Well! There is a serious downward trend at the end of the month.
+There is a serious downward trend at the end of the month.
 
 It the hypothesis is correct, tickets should trend upwards at the end of the
 month.
@@ -189,19 +204,16 @@ month.
 What’s going on?
 
 Months don't have uniform length. All months are 28 days long, not all months
-are 31 days long. This view adjusts the graph to account for the different
-month lengths. It shows the number of tickets per `month-day`.
+are 31 days long. The first chart misrepresents the data.
+
+The next view adjusts the chart to account for the length of different months.
+It shows the number of tickets per `month-day`.
 
 <p align="center"><kbd><img src="./img/viz_02.jpg" border="5" width="800"
 alt="Tickets by month-day, version two"></kbd></p>
 
-In terms of tickets per day, this graph is pretty balanced. The ticket rates for
-men and women are more or less consistent. Over the 15 years of the study, men
-hover around 76.5 citations per day. Women get roughly 37.9 citations per day.
-Both averages are also consistent throughout the month.
-
-Strangely, even with this frequency weighted view, drops off towards the end of
-the month. That suggests the hypothesis is false.
+In terms of tickets per day, this graph is pretty even. It doesn't look like
+there is a spike in tickets at the end of the month.
 
 Perhaps the period is wrong. Maybe there is a weekly quota, or a yearly one.
 
@@ -234,16 +246,16 @@ It turns out there are some difficulties with the data set.
 
 ## Difficulties with the data
 
-A cursory look at these numbers shows men consistently getting twice as many
-tickets as women over the entire 15 year period. That's a surprising result.
+A cursory look at these charts shows men consistently getting twice as many
+tickets as women over the entire 15 year period. Men hover around 76 tickets per
+day. Women get about 38 tickets per day. That's a surprising result.
 
 The US Census website reports that Maryland has a slightly large proportion of
 women (51.5%) than men (48.5%).
 
 Still, the census figures are roughly equal. That suggests roughly numbers of
-male and female drivers. Perhaps there is a selection bias that skews the data.
-
-And, ...
+male and female drivers. Perhaps there is a selection bias that skews the data
+in the data set.
 
 There is.
 
@@ -251,20 +263,22 @@ All of the tickets in the data set are related to traffic accidents. The data
 isn't 'all tickets'. It is 'all tickets from accidents'. That is a very
 different data set.
 
-It is certainly interesting to see that men get tickets twice as often as women.
-It is also interesting to see that accident rates appear to be skewed towards
-beginning of each week and the beginning of each month.
+It is certainly interesting to see that men involved in accidents get tickets
+twice as often as women do. It is also interesting to see that accident rates
+appear to be skewed towards beginning of each week and the beginning of each
+month.
 
-Sadly this data sets turns out to be overly specific. As attractive as it may
-be, the data doesn't resolve the hypothesis. It is the wrong data set.
+As interesting as it may be, the data in this data set isn't a good way to test
+the hypothesis. This ticket data is overly specific, it's just a subset of all
+ticket data.
 
 ## Conclusion
 
-The Maryland traffic violations data set is very rich. Unfortunately it only
-contains a subset of tickets. That means it was a poor choice to answer the
-initial hypothesis.
+There is a lot of information to be has in publicly available data sets. It is
+important to verify the integrity of the data. It is also important to carefully
+match the scope of the data with the question being asked.
 
-That's disappointing.
+Now, it's time to find a better data set before my next road trip.
 
 ---
 
