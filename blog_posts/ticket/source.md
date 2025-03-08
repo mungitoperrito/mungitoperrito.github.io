@@ -195,117 +195,109 @@ month lengths. It shows the number of tickets per `month-day`.
 <p align="center"><kbd><img src="./img/viz_02.jpg" border="5" width="800"
 alt="Tickets by month-day, version two"></kbd></p>
 
+In terms of tickets per day, this graph is pretty balanced. The ticket rates for
+men and women are more or less consistent. Over the 15 years of the study, men
+hover around 76.5 citations per day. Women get roughly 37.9 citations per day.
+Both averages are also consistent throughout the month.
 
-The second graph is more balanced in terms of tickets per day. Men
-hover around 76.5 citations per day over the 15 years from 1990 to
-2015. Women average slightly more than half that figure, just 37.9
-citations per day. Both averages are pretty consistent throughout the
-month, however, even with this frequency weighted view, the number
-of citations per day drops off towards the end of the month. That result
-is the opposite of popular opinion and supports the oft repeated
-statement from law enforcement that there are no quotas. “But”, asks
-the skeptic in the room, “perhaps there is a yearly quota?”
-“Or a weekly one?”
-The data doesn’t support either of those suggestions. In all cases: day of
-the month, day of the week, and month of the year, there are more
-citations given out toward the beginning of the period rather than
-towards the end. Given these figures it is hard to conclude that there is
-a last minute drive to meet a quota each month.
-That settles the argument then. The data doesn’t lie. Or does it? It turns
-out there are some difficulties with the data set.
-Difficulties with the data
-Even a cursory look at these numbers show men consistently getting
-twice as many citations as women over the entire 15 year period which
-is a surprising result. People may debate just how surprising it is that
-men get more tickets than women, but it is at least a little surprising
-that men would be cited twice as often as women. The US Census
-website reports that Maryland has a slightly large proportion of females
-(51.5%) than males (48.5%).
-With roughly equal numbers of men and women, it seems reasonable to
-assume roughly equal numbers of male and female drivers. Perhaps
-there was an unreported selection process that skewed the data set. A
-few more queries and a closer look at the data indicate that there was,
-in fact, an additional selection criterion. All of the citations in the data
-set are related to traffic accidents.
-It is certainly interesting to see that men are ticketed in accidents twice
-as often as women, and that accident rates appear to be skewed
-towards the early parts of each week and month. Unfortunately since
-this data set only lists citations related to accidents and is silent on nonaccident ticket rates, it means that this data set, as attractive as it may
-be, is insufficient to answer the original question. Additional data on
-non-accident related tickets is required to see if non-accident related
-citations are also issued at the same rate as accident related tickets.
-Sadly, we don’t have that data.
-Unanswered questions
-So we don’t have much insight into the original question, “are there
-ticket quotas”. On the other hand we now have a few more topics for
-investigation. Do men really have twice as many accidents as women or
-do they just get ticketed twice as much for accidents they are involved
-in? Why are there spikes in the accident rate at the beginning of the
-week? Is there a significant number of accidents where tickets aren’t
-issued? Is there a way to determine how many people and or vehicles
-were involved in a given accident? And perhaps the biggest question for
-this audience—where can researchers find the data needed to answer
-these questions?
-Conclusion
-The Maryland data set is rich and can provide many interesting avenues
-of research. Unfortunately it only contains a subset of all citations
-issued and so it is insufficient to answer the question about quotas.
-However, working with this dataset has been a useful exercise, and it
-was especially valuable as an illustration of why it is critical to check
-data integrity, to clean incoming data, and to validate assumptions
-about the dataset before drawing conclusions from it.
-Additional notes and details
-For those curious about some of the more mechanical details of this
-investigation, the next sections discuss one or two points that didn’t
-really fit in the story but that may be of some interest.
-How to configure sqlite3 output
-The default output style in sqlite3 works for some parsing tasks, but it is
-not ideal for all purposes. When exploring data it may be helpful to
-change the output to columnar form and to add a header row.
-Use of SUM or COUNTin data assessment
-COUNT works well when field values are easily filtered. On the other
-hand, if the values in the dataset are encoded as 1s and 0s then using
-SUM can be better quick way to get an aggregate count over a field.
-There are two benefits to using SUM like this. The SQL is more compact
-with SUM (there’s no where clause) and rows are returned when the
-sum equals zero (COUNT doesn’t return the output row in sqlite).
-Here’s an example counting alcohol related citations issued to Male
-drivers.
-sqlite> SELECT year, COUNT(Alcohol)
-...> FROM alldata
-...> WHERE (year > '1989') AND (year < '2001')
+Strangely, even with this frequency weighted view, drops off towards the end of
+the month. That suggests the hypothesis is false.
+
+Perhaps the period is wrong. Maybe there is a weekly quota, or a yearly one.
+
+The weekly data:
+
+<p align="center"><kbd><img src="./img/viz_03.jpg" border="5" width="800"
+alt="Tickets by month-day, version two"></kbd></p>
+
+The yearly data:
+
+<p align="center"><kbd><img src="./img/viz_04.jpg" border="5" width="800"
+alt="Tickets by month-day, version two"></kbd></p>
+
+The data doesn’t support either of those suggestions. In all cases, more
+tickets are issued at the beginning of the period than at the end. This is true
+for all of these periods:
+
+- Day of the month
+- Day of the week
+- Month of the year
+
+It is difficult to conclude that the the police mount a last minute ticket blitz
+to meet quota each month.
+
+That settles the argument then. Data doesn’t lie.
+
+Or does it?
+
+It turns out there are some difficulties with the data set.
+
+## Difficulties with the data
+
+A cursory look at these numbers shows men consistently getting twice as many
+tickets as women over the entire 15 year period. That's a surprising result.
+
+The US Census website reports that Maryland has a slightly large proportion of
+women (51.5%) than men (48.5%).
+
+Still, the census figures are roughly equal. That suggests roughly numbers of
+male and female drivers. Perhaps there is a selection bias that skews the data.
+
+And, ...
+
+There is.
+
+All of the tickets in the data set are related to traffic accidents. The data
+isn't 'all tickets'. It is 'all tickets from accidents'. That is a very
+different data set.
+
+It is certainly interesting to see that men get tickets twice as often as women.
+It is also interesting to see that accident rates appear to be skewed towards
+beginning of each week and the beginning of each month.
+
+Sadly this data sets turns out to be overly specific. As attractive as it may
+be, the data doesn't resolve the hypothesis. It is the wrong data set.
+
+## Conclusion
+
+The Maryland traffic violations data set is very rich. Unfortunately it only
+contains a subset of tickets. That means it was a poor choice to answer the
+initial hypothesis.
+
+That's disappointing.
+
+If you have a good set of ticket data, please share!
+
+## Last thoughts
+
+The next sections discuss one or two points that didn't fit in the story.
+
+### Configure the sqlite3 output
+
+To see the difference between `SUM` and `COUNT` run this code:
+
+Count:
+
+```sql
+SELECT year, COUNT(Alcohol)
+FROM alldata
+WHERE (year > '1989') AND (year < '2001')
 AND gender = 'M' AND alcohol = 1
-...> GROUP BY year;
+GROUP BY year;
 Year COUNT(Alcohol)
 ---------- --------------
-1992 31
-1993 42
-1994 44
-1996 44
-1997 48
-1998 35
-1999 43
-2000 103
-sqlite> SELECT year, SUM(Alcohol)
-...> FROM alldata
-...> WHERE (year > '1989') AND (year < '2001')
+
+Sum:
+
+```sql
+SELECT year, SUM(Alcohol)
+FROM alldata
+WHERE (year > '1989') AND (year < '2001')
 AND gender = 'M'
-...> GROUP BY year;
+GROUP BY year;
 Year SUM(Alcohol)
----------- ------------
-1990 0
-1991 0
-1992 31
-1993 42
-1994 44
-1995 0
-1996 44
-1997 48
-1998 35
-1999 43
-2000 103
-sqlite>
-Thanks for reading this far, I hope these notes prove useful!
+```
+
 
 Originally posted to [Medium](https://medium.com/) on February 9, 2019.
 Updated December, 20 2024.
