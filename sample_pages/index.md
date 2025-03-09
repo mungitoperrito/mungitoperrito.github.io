@@ -1,10 +1,10 @@
 # Sample Pages
 
-These pdf files are copies of pages I wrote for work.
+These PDF files are copies of published pages that I wrote for work.
 
 Weaviate
 
-- [Technical discussion and
+- [Technical discussion and system
   recommendations](./weaviate..compression..2024-09-26..01.pdf)
 - [Internal
   procedures](./weaviate..release-note-update-steps..2024-07-05..01.pdf)

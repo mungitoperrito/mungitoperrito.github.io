@@ -31,7 +31,8 @@ These projects use Jupyter notebooks to combine explanatory text and code.
 
 ## Sample pages
 
-[Samples of published pages, saved as PDF files.](sample_pages/index.md)
+[Samples of published pages](sample_pages/index.md). The pages are saved as PDF
+files.
 
 ## Tech notes
 
