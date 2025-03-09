@@ -1,5 +1,25 @@
 Index for [R](../notes_pages/notes_r.md)
 
+- RAM disks
+  - Create and mount a RAM disk
+  - Create and mount a zeroed RAM disk
+  - Mount a RAM disk
+- rdesktop
+- RDP
+  - Send <ctrl><alt><del>
+  - Test connection
+- Redhat configuration
+  - Edit firewall, SELinux settings
+- Regular expressions
+  - Double letters
 - Rename files
   - Shorten file name
   - bash: rename files
+- RPM
+  - Install the Redhat signature file
+  - List changes to files
+  - List package info
+  - Unpack without installing
+- Run levels
+  - Check services
+  - Enable service

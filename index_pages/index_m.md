@@ -1,5 +1,7 @@
 Index for [M](../notes_pages/notes_m.md)
 
+- Mail servers
+  - Test connection
 - Math
   - Convert bases
   - Evaluate an expresion

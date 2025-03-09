@@ -8,10 +8,19 @@ ldd some_exe
 
 ## `ltrace`
 
-Trace libraries, child processes, time stamps, and time diffs in a
-binary.
+Trace library calls
+
+### Trace process library calls
+
+Trace libraries, child processes, time stamps, and time diffs in some_binary_file
 
 ``` bash
-ltrace -S -tt -r -f ./a.out
+ltrace -S -tt -r -f  some_binary_file
+```
+
+### Trace system library calls
+
+```bash
+ltrace -p PID
 ```
 

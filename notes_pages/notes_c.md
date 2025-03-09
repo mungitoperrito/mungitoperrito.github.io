@@ -16,10 +16,24 @@ catchsegv  someBinaryThatSegFaults
 ```
 
 
+## Change file creation date
+
+```bash
+touch -t 200612100606.06 /tmp/someFile
+```
+
+
 ## Convert bases
 
 ```bash
 echo 'obase=16; ibase=10; 255' | bc
+```
+
+
+## Convert case
+
+```bash
+echo 'SoMe StRiNg' | tr '[:lower:]' '[:upper:]'
 ```
 
 

@@ -1,4 +1,28 @@
 Index for [T](../notes_pages/notes_t.md)
 
+- `tc`
+  - Add qdisc to slow traffic
+  - Change qdisc to stop traffic
+  - Delete qdisc to restore eth0
+- `tee`
+  - Split process outputs
+- `telnet`
+  - Test RDP
 - Terminal
   - Reset the screen
+- `time`
+  - Windows equivalent
+- Time zones
+  - Get zone info
+  - Get the current time
+- `top`
+  - Track a process over time
+- `touch`
+  - Change file creation date
+- Trace system events
+  - Library calls
+  - Summarize system calls
+  - System calls
+- `tree`
+  - Show all
+  - Show directories only

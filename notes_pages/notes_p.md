@@ -21,3 +21,20 @@ Display open file descriptors
 ``` bash
 cat /proc/self
 ```
+
+
+## `ps`
+
+Process information
+
+### Top 10 processes, memory
+
+```bash
+ps aux | sort -n -k4 | cut -c -95 | tail -10
+```
+
+### Top 10 processes, cpu
+
+```bash
+ps aux | sort -n -k3 | cut -c -95 | tail -10
+```

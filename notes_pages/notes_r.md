@@ -37,6 +37,16 @@ chmod 7777 /ramdisk
 ```
 
 
+## rdesktop
+
+Use `rdesktop` on Linux to connect to Windows machines.
+
+```bash
+# Screen size, color depth, directory, user, remote IP, where to paly sound
+rdesktop -g 1152x921 -a 16 -d DIRECTORY -u USER_LOGIN 192.168.33.48 -r sound:remote
+```
+
+
 ## RDP
 
 Use Remote Desktop Protocol to connect Windows machines.
@@ -47,15 +57,12 @@ Use Remote Desktop Protocol to connect Windows machines.
 <ctrl><alt><end>
 ```
 
+### Test connection
 
-## rdesktop
+1. Connect to RDP on `10.0.0.1`: `telnet 10.0.0.1 3389`
+1. Get telnet command prompt: `<ctrl><]>`
+1. Disconnect: `close`
 
-Use `rdesktop` on Linux to connect to Windows machines.
-
-```bash
-# Screen size, color depth, directory, user, remote IP, where to paly sound
-rdesktop -g 1152x921 -a 16 -d DIRECTORY -u USER_LOGIN 192.168.33.48 -r sound:remote
-```
 
 ## Redhat configuration
 

@@ -1,12 +1,43 @@
 Index for [S](../notes_pages/notes_s.md)
 
+- Safari
+  - Turn on debug mode
+- SAMBA  (SMB) shares
+  - Find shares
+  - List shares
+  - Mount shares
+- `screen`
+  - Run a persistent remote process
 - `sdiff`
+- Secure log files
+- Send messages
+  - Send a message to all users logged into a machine
+  - Send a file to another console
+  - Send a message to another console
+- SMTP server
+  - Test connection
 - `source`
   - Reread config file
+- `ssh`
+  - Configure direct root access
+  - Connect to remote without login
+  - Create an ssh tunnel
+- SSL
+  - Read a certificate
+  - Test connections
 - `stderr`, `stout`, `stdin`
   - Redirects
+- `strace`
+  - Save `strace` output from a command
+  - Summarize system calls
+  - Trace execution in a running process.
 - `strings`
 - `strip`
 - `svn`
   - Check in a single file
   - Check out a single file
+  - Connect to a remote repo
+- System information
+  - Read the `proc` filesystem
+  - Top 10 processes, memory
+  - Top 10 processes, cpu
