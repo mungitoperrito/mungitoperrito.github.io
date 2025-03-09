@@ -12,7 +12,7 @@ don't believe them.
 
 Luckily, there’s some data available to help settle the question. The state of
 Maryland has contributed a collection of traffic violation data to
-[data.gov](https://data.gov/). It’s one of 300,000 data sets on the Data.gov
+[Data.gov](https://data.gov/). It’s one of 300,000 data sets on the Data.gov
 site that you can explore for free.
 
 To find out more, follow along and explore the traffic ticket data set.
@@ -39,9 +39,10 @@ Download the [csv
 file](https://data.montgomerycountymd.gov/api/views/4mse-ku6q/rows.csv?accessType=DOWNLOAD).
 
 Now that you have the file, the next step is to validate the data in it. This is
-a crucial step in any data analysis. The traffic ticket data is stored in a
-giant csv table. To make working with the data easier, create an SQLite database
-and import the data from the file.
+a crucial step in any data analysis.
+
+The traffic ticket data is stored in a giant csv table. To make working with the
+data easier, create an SQLite database and import the data from the file.
 
 (The [Python script](./fix-and-load.py) that accompanies this post has the code
 to set up the database and load the data.)
@@ -71,28 +72,29 @@ attempt to import the file. For example:
   wc -l Traffic_Violations.csv
   ```    `grep`.
 
-- Check for the range of years. The second field is `Date of Stop`. This check
-  was supposed to find the range of years in the file. Instead, it showed a large
-  number of bad data entries.
+- Check for the range of years.
 
   ```bash
   cut -f 2 -d"," < Traffic_Violations.csv | cut -f3 -d'/' | sort -u
   ```
 
+The second field is `Date of Stop`. This check was supposed to find the range of
+years in the file. Instead, it showed a large number of bad data entries.
+
 When you encounter problems like this, you can try to fix the bad fields, you
-can drop those rows entirely, or you can code around the problems later. You
-will need to decide what's best based on your data and the questions you want to
-answer.
+can drop those rows entirely, or you can code around the problems later. When
+you run your own study, you will need to decide which approach is best based on
+your data and the questions you want to answer.
 
 ### File format issues
 
-The input file is a csv file. That could mean 'character separated values' or
-'comma separated values'.
+The traffic violations file is a csv file. That csv could mean 'character
+separated values' or 'comma separated values'.
 
-In the traffic violations file, commas are supposed to be reserved characters
-that separate the fields in each row. But, commas are used within fields as
-normal punctuation and as field separators. Even worse, the use of commas within
-fields is inconsistent.
+In the traffic violations file, the commas are supposed to be reserved
+characters that separate the fields in each row. But, commas are used within
+fields as normal punctuation and as field separators. Even worse, the use of
+commas within fields is inconsistent.
 
 The different usage makes parsing the file tricky. For example, in some rows the
 subagency (usually a geographic designation) sometimes has a comma in its name.
@@ -109,8 +111,8 @@ little less than 1% of the total.
 
 ## Explore the data, set a date range
 
-The data cleaning step reveals some problems with the date field. Dates are an
-important element of this study, so it is important to handle the date field
+Remember, the data cleaning step reveals problems with the date field. Dates are
+a crucial element of this study, so it is important to handle the date field
 carefully.
 
 **NOTE**: As of March 2025, there is a new csv file. Unfortunately, the new file
@@ -118,7 +120,8 @@ has new problems. The discussion here follows the data in the old file.
 
 ### Set bounds
 
-What should the upper and lower bounds be for the date field?
+One approach is to drop rows that don't have legitimate dates. What should the
+upper and lower bounds be for the date field?
 
 The file metadata says the last data update is in 2015. That sets an upper bound
 for the dates.
@@ -167,13 +170,15 @@ of rows per year drops off sharply before 1994. The study uses an arbitrary cut
 off at 1990.
 
 After combining the upper and lower bounds, the study period runs from 1990 to
-2015.
+2015. The other rows, with questionable dates, are dropped from the study.
 
 ### Parse the date field into subfields
 
+Granularity is another concern.
+
 In the csv file, the date is a single field that has the format `mm/dd/yyyy`.
-That format is too course. The solution is to break apart the date and add
-columns for the `year`, `month` and `day`.
+That format is awkward to work with. The solution is to break apart the date and
+add columns for the `year`, `month` and `day`.
 
 Alternatively, you could use a database that has a `date` datatype. (SQLite
 doesn't have a `date` data type.)
@@ -238,7 +243,7 @@ for all of these periods:
 It is difficult to conclude that the the police mount a last minute ticket blitz
 to meet quota each month.
 
-That settles the argument then. Data doesn’t lie.
+That settles the argument. Data doesn’t lie.
 
 Or does it?
 
@@ -246,16 +251,16 @@ It turns out there are some difficulties with the data set.
 
 ## Difficulties with the data
 
-A cursory look at these charts shows men consistently getting twice as many
-tickets as women over the entire 15 year period. Men hover around 76 tickets per
-day. Women get about 38 tickets per day. That's a surprising result.
+A cursory look at these charts shows men consistently getting about twice as
+many tickets as women over the entire 15 year period. Men hover around 76
+tickets per day. Women get about 38 tickets per day. That's a surprising result.
 
 The US Census website reports that Maryland has a slightly large proportion of
 women (51.5%) than men (48.5%).
 
 Still, the census figures are roughly equal. That suggests roughly numbers of
-male and female drivers. Perhaps there is a selection bias that skews the data
-in the data set.
+male and female drivers so the ticket rates should be about the same. Perhaps
+there is a selection bias that skews the data in the data set.
 
 There is.
 
@@ -264,19 +269,20 @@ isn't 'all tickets'. It is 'all tickets from accidents'. That is a very
 different data set.
 
 It is certainly interesting to see that men involved in accidents get tickets
-twice as often as women do. It is also interesting to see that accident rates
-appear to be skewed towards beginning of each week and the beginning of each
-month.
+twice as often as women do.
 
-As interesting as it may be, the data in this data set isn't a good way to test
-the hypothesis. This ticket data is overly specific, it's just a subset of all
-ticket data.
+It is also interesting to see that accident rates appear to be skewed towards
+beginning of each week and the beginning of each month.
+
+But, as interesting as it may be, the data in this data set isn't a good way to
+test the hypothesis. This ticket data is overly specific, it's just a subset of
+all ticket data.
 
 ## Conclusion
 
-There is a lot of information to be has in publicly available data sets. It is
-important to verify the integrity of the data. It is also important to carefully
-match the scope of the data with the question being asked.
+While there is a lot of information to be had in publicly available data sets,
+it is important to verify the integrity of the data. It is also important to
+carefully match the scope of the data with the question being asked.
 
 Now, it's time to find a better data set before my next road trip.
 
