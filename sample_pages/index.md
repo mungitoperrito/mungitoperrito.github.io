@@ -1,32 +1,18 @@
-# Data Visualizations for Genetic Research
+# Sample Pages
 
-<p align="center"><img src="banner-notes-on-mutants.jpg" width="616"
-alt="Printout notes"></p>
+These pdf files are copies of pages I wrote for work.
 
-These are data explorations and visualizations I did in support of a genetic
-research project.
+Weaviate
 
-Dr. Juha P. Himanen did the underlying research. In 2018 he presented the
-results at the Second Congress on the Eph/Ephrin System in Parma, Italy. His
-paper was titled: "Functional Relevance of the Head-to-Head vs Head-to-Tail Eph-Eph
-Interactions for Receptor Activation."
+- [Technical discussion and
+  recommendations](./weaviate..compression..2024-09-26..01.pdf)
+- [Internal
+  procedures](./weaviate..release-note-update-steps..2024-07-05..01.pdf)
 
-I used Juypiter notebooks, matplotlib, numpy, pandas, and seaborn for the project.
+MongoDB
 
-These files are PDF versions of my rough, working copies of the notebooks.
-
-- [Data sets 2016, 2017: Cleaning and transformation](010..2017-07-26.pdf)
-- [Data set 2016: Analysis and visualization](020..2017-07-26.pdf)
-- [Data set 2016: Time data](020a..2017-07-26-time-by-number.pdf)
-- [Data set 2016: Miscellaneous charts](030..2017-07-26.pdf)
-- [Data set 2017: Data cleaning and transformation](040..2017-07-26.pdf)
-- [Data set 2017: Total Number x Total Area](050..2017-07-26.pdf)
-- [Data set 2017: Total Number x Total Intensity](060..2017-07-26.pdf)
-- [Data set 2017: Total Intensity by Total Area](070..2017-07-26.pdf)
-- [Data sets 2016, 2017: Total Number x Total Area](080..2017-07-26.pdf)
-- [Data sets 2016, 2017: Total Number x Total Intensity](090..2017-07-26.pdf)
-
-These files are somewhat cleaner summaries.
-
-- [Data cleaning and transformation](data-transformation.pdf)
-- [Data Analysis and Visualization](data-analysis..2017-07-14..01.pdf)
+- [Method description and examples](./mdb..mongosh..EJSON.stringify..2023-08-29..01.pdf)
+- [Method description and examples](./mdb..mongosh..EJSON.parse..2023-08-29..01.pdf)
+- [Method description and examples](./mdb..server..sampleRate..2022-03-04.pdf)
+- [System
+  configuration](./mdb..mongosh..snippets..registries-and-registry-configuration..2022-03-04.pdf)
