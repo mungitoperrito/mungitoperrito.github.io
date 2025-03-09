@@ -289,5 +289,5 @@ Now, it's time to find a better data set before my next road trip.
 ---
 
 Originally posted to [Medium](https://medium.com/) on February 9, 2019.
-Updated December, 20 2024.
-Updated March, 6 2025.
+<br>Updated December, 20 2024.
+<br>Updated March, 6 2025.
