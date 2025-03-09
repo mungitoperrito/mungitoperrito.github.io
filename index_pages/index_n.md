@@ -1,3 +1,4 @@
 Index for [N](../notes_pages/notes_n.md)
 
-- `nm`
+-  Netcat `nc`
+  - Send log files securely

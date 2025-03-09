@@ -205,10 +205,16 @@ cmd > fileName 2>&1
 strace -o output.file <command>
 ```
 
+### Summarize system calls
+
+```bash
+strace -c -p PID
+```
+
 ### Trace execution in a running process.
 
 ```bash
-starce -p <PID>
+starce -p PID
 ```
 
 
@@ -255,6 +261,8 @@ svn co -N  svn+ssh://username@svn.some_company.com/svn/trunk
 
 ## System information
 
+Gather system information
+
 ### Read the `proc` filesystem
 
 - CPU: `/proc/cpuinfo
@@ -262,3 +270,15 @@ svn co -N  svn+ssh://username@svn.some_company.com/svn/trunk
 - OS version: `proc/version`
 - Partition tables: `/proc/partions`
 - Swap system: `/proc/swaps`
+
+### Top 10 processes, memory
+
+```bash
+ps aux | sort -n -k4 | cut -c -95 | tail -10
+```
+
+### Top 10 processes, cpu
+
+```bash
+ps aux | sort -n -k3 | cut -c -95 | tail -10
+```

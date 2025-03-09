@@ -16,4 +16,5 @@ Index for [G](../notes_pages/notes_g.md)
   - Get commit stats
   - Get a commit
 - Google search
+  - Change default results display from All to Web
   - Export search history
