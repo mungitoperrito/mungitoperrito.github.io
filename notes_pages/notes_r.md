@@ -117,3 +117,19 @@ rpm -qip newPackage.rpm
 ```bash
 rpm2cpio newpackage-1-51.rpm | cpio -i --make-directories
 ```
+
+## Run levels
+
+`update-rc` replaces `chkconfig` on Ubuntu.
+
+### Check services
+
+```bash
+chkconfig --list some_service_name
+```
+
+### Enable service
+
+```bash
+chkconfig --level 35 some_service_name on
+```

@@ -106,7 +106,21 @@ curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your
 curl -i -H 'Authorization: token <auth-token>' https://api.github.com/repos/your-repo/application/commits/<commit-id>
 ```
 
+
 ## Google search
+
+### Change default results display from All to Web
+
+Create a new search engine for the browser.
+
+- Use web view
+- Show 25 results per page. (This is inconsistent)
+
+```
+{google:baseURL}/search?num=25&udm=14&q=%s
+```
+
+Set the new search engine as the browser default
 
 ### Export search history
 
