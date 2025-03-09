@@ -29,6 +29,11 @@ These projects use Jupyter notebooks to combine explanatory text and code.
 - Tutorial walkthrough
   - [Weaviate multi-tenancy walkthrough](jupyter/multi_tenant_walkthrough.ipynb)
 
+## Sample pages
+
+[Samples of published pages](sample_pages/index.md). The pages are saved as PDF
+files.
+
 ## Tech notes
 
 These are links to tech notes. I gathered these notes over the years. They come
