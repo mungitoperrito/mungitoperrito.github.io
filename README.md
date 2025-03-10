@@ -40,6 +40,9 @@ These are links to tech notes. I gathered these notes over the years. They come
 from a wide variety of projects and platforms. Some of them may be quaint or
 obsolete now.
 
+These pages are a work in progress. My goal is to organize my old notes and make
+the collection usable.
+
 To make things easier to find, the entries are sometimes duplicated under a
 functional description and a utility name.
 
