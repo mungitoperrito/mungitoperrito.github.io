@@ -23,6 +23,18 @@ touch -t 200612100606.06 /tmp/someFile
 ```
 
 
+### Compressed files
+
+See `zip` and `tar` files.
+
+
+### Uncompress .bz2 tarball
+
+``` bash
+tar -xjvf file.tar.bz2
+```
+
+
 ## Convert bases
 
 ```bash

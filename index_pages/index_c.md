@@ -5,6 +5,8 @@ Index for [C](../notes_pages/notes_c.md)
 - `catchsegv`
   - Get a backtrace for a segmentation fault on linux
 - Change file creation date
+  - Compressed files
+  - Uncompress .bz2 tarball
 - Convert bases
 - Convert case
 - `curl`
