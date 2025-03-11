@@ -181,6 +181,37 @@ openssl s_client -connect server.name.com:443 -crlf  # HTTPS
 ```
 
 
+## `stack`
+
+Haskell package manager and environment. If `ghc`and the other Haskell tools are
+installed under `stack` the command line calls are different.
+
+### Configuration
+
+The install bundle may not install a package that has valid upstream sources. To
+update the global config source:
+
+```bash
+stack upgrade --force-download
+```
+
+### Utilities
+
+**`stack`**
+
+- Version: `stack --version`
+
+**`ghc`**
+
+- Haskell compiler: `stack ghc`
+- Version:: `stack ghc -- --version`
+
+**`ghci`**
+- repl: `stack ghci`
+- repl: `stack repl`
+- Quit repl: `:quit`
+
+
 ## `stderr`, `stout`, `stdin`
 
 ### Redirects

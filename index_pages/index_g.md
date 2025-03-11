@@ -9,6 +9,8 @@ Index for [G](../notes_pages/notes_g.md)
   - Optimize the executable
   - PATH
   - Enable profiling
+- `ghc`
+- `ghci`
 - GitHub
   - Get git repos
   - Get last 100 commits

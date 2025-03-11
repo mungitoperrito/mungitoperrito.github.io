@@ -74,6 +74,28 @@ gcc -a -g -c source.c -o object.o
 ```
 
 
+## `ghc`
+
+The Haskell compiler. If `ghc`and the other Haskell tools are installed under
+`stack`, the command line calls are different.
+
+
+```bash
+stack ghc         # If installed via stack
+ghc               # If installed standalone
+```
+
+
+## `ghci`
+
+The Haskell interactive shell.
+
+```bash
+stack ghci         # If installed via stack
+ghci               # If installed standalone
+```
+
+
 ## GitHub
 
 ### Get git repos

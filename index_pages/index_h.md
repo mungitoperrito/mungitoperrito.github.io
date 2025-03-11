@@ -1,5 +1,10 @@
 Index for [H](../notes_pages/notes_h.md)
 
+- Haskell
+  - Configuration
+  - `ghc`
+  - `ghci`
+  - `stack`
 - `hexdump`
   - Search a file using hex values
   - Print the first n characters of a file in human readable form
