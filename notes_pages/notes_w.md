@@ -14,3 +14,13 @@ Get a file location
 ```bash
 whereis fileName
 ```
+
+## WSL Windows Subsystem for Linux
+
+### Current directory
+
+Get the current directory relative to windows.
+
+```bash
+explorer.exe .
+```

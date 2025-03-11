@@ -95,6 +95,23 @@ stack ghci         # If installed via stack
 ghci               # If installed standalone
 ```
 
+### Modules
+
+- Load: `:module SomeModule`
+- UNload: `:module -SomeModule`
+
+
+
+### Multiline entry
+
+Use `;` or colon-bracket syntax.
+
+```haskell
+:{
+  polynomial :: Double -> Double
+  polynomial x = x^2 -x -1
+:}
+```
 
 ## GitHub
 

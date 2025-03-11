@@ -11,6 +11,8 @@ Index for [G](../notes_pages/notes_g.md)
   - Enable profiling
 - `ghc`
 - `ghci`
+  - Modules
+  - Multiline entry
 - GitHub
   - Get git repos
   - Get last 100 commits
