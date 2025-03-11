@@ -25,6 +25,9 @@ Index for [S](../notes_pages/notes_s.md)
 - SSL
   - Read a certificate
   - Test connections
+- `stack`
+  - Configuration
+  - Utilities
 - `stderr`, `stout`, `stdin`
   - Redirects
 - `strace`
