@@ -103,6 +103,19 @@ docker stop CONTID
 ```
 
 
+## `du`
+
+Disk usage
+
+### Exclude directories
+
+Gather top level usage. Go down one directory. Skip `mnt`, `proc`, `sys`, `run`.
+
+```bash
+du -d1 -h --exclude={./mnt,proc,sys,run}
+```
+
+
 ## Duolingo web site volume
 
 Use dev-tools in the browser. Open the javascript console. Edit
