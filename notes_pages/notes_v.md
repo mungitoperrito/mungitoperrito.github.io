@@ -103,3 +103,18 @@ Setup a network:
 ### ThinESX
 
 - Add to `dd` command: `conv=notrunc`
+
+
+## `vmstat`
+
+System information
+
+- Wide format: `-w`
+- One header row: `-n`
+- Active and inactive memory: `-a`
+- Delay two seconds
+- Repeat three times
+
+```bash
+ vmstat  -w -n -a 2 3
+ ```

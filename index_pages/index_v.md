@@ -19,3 +19,4 @@ Index for [V](../notes_pages/notes_v.md)
   - Headless VM:
   - Networking
   - ThinESX
+- `vmstat`

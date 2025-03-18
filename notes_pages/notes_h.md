@@ -93,3 +93,24 @@ export SAVEHIST=$HISTSIZE
 
 - Get all of history: `history 1`
 - Last 10 commands: `history 1 | tail `
+
+
+## `host`
+
+Map a hostname to an IP address
+
+```bash
+host someDomain
+host -v someDomain                # Verbose mode
+```
+
+
+## `hostname`
+
+Get the machine name.
+
+```bash
+hostname                 # Machine name only
+hostname -i              # IP address
+hostname -d              # Domain name
+```

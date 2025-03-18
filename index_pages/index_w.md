@@ -1,9 +1,15 @@
 Index for [W](../notes_pages/notes_w.md)
 
+- `w`
+  - Show who is logged in and what they are doing
 - `wall`
 - `watch`
 - Web servers
 - `where`
+- `who`
+  - Show who is logged in
+- `whois`
+  - Domain lookup
 - Windows
   - Get MAC address
   - Run command as another user

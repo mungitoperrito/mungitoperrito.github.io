@@ -9,4 +9,5 @@ Index for [L](../notes_pages/notes_l.md)
   - Trace process library calls
   - Trace system library calls
 - `lsof`
+  - Get open files
   - Get open files used by a process

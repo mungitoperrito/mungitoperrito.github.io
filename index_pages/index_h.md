@@ -14,3 +14,5 @@ Index for [H](../notes_pages/notes_h.md)
   - `bash`
   - Environment variables
   - `zsh`
+- `host`
+- `hostname`
