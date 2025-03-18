@@ -5,6 +5,10 @@ Index for [B](../notes_pages/notes_b.md)
 - `base64`
   - Encode
   - Decode
+- `.bashrc`
+  - Environment settings
+  - History
+  - Reread `.bashrc`
 - Bash environment
   - List shell variables
   - Show commands
@@ -19,8 +23,6 @@ Index for [B](../notes_pages/notes_b.md)
   - Redirect stderr, stout, stdin
   - Special variables
   - Variable matching
-- `.bashrc`
-  - Reread config file
 - `bc`
   - Convert bases
 - Browsers
