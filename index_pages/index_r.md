@@ -8,6 +8,8 @@ Index for [R](../notes_pages/notes_r.md)
 - RDP
   - Send <ctrl><alt><del>
   - Test connection
+- `readelf`
+  - Disassemble an ELF file
 - Redhat configuration
   - Edit firewall, SELinux settings
 - Regular expressions

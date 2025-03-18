@@ -1,3 +1,20 @@
+## Packers
+
+### Common indicators
+
+-PE file only has GetProcAddress
+-PE file only has LoadLibrary
+
+### Common ID strings
+
+aspack, adata, NSP0, NSP1, NTkrnl, Orean.sys, PEC2,<br>
+PECompact2, Secure Suite, SFX, Themida, UPX0, UPX1, WinRAR
+
+### Tools
+
+`PEiD`, `LordPE`, Python `peutils`
+
+
 ## `PATH`
 
 ### Print linker search PATH
@@ -20,7 +37,6 @@ echo $LD_LIBRARY_PATH
 ### Documentation
 
 - Manual page for a function: `perldoc -f functionName`
-
 
 ### Match pattern
 
@@ -49,10 +65,10 @@ $pgrep -f program ; $sudocat/proc/<PROC ID>/stack
 
 ## Proc file system
 
-Display open file descriptors
+### Info on current system state
 
 ``` bash
-cat /proc/self
+ls /proc/self/*
 ```
 
 

@@ -1,6 +1,7 @@
 Index for [F](../notes_pages/notes_f.md)
 
 - Files
+  - Check filetype
   - Get a file location
   - Read a file into a script
   - Read a file into a variable

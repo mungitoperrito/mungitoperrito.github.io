@@ -1,5 +1,9 @@
 Index for [P](../notes_pages/notes_p.md)
 
+- Packers
+  - Common indicators
+  - Common ID strings
+  - Tools
 - `PATH`
   - Print linker search PATH
 - Penetration testing
@@ -12,6 +16,7 @@ Index for [P](../notes_pages/notes_p.md)
 - `pgrep`
   - Display the process stack
 - Proc file system
+  - Info on current system state
 - Processes
   - Get open files used by a process
 - `ps`

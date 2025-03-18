@@ -182,6 +182,19 @@ echo 'obase=16; ibase=10; 255' | bc
 ```
 
 
+## Binary analysis
+
+- Check filetype: `file FILENAME`
+- Debug binary execution: `dbg FILENAME`
+- Disassemble: `readelf -a FILENAME`
+- Disassemble an object file: `objdump -DaflSx FILENAME`
+- Dynamic trace libs: `dtrace FILENAME`
+- Get a hexdump: `od -Ax -tx1z -v FILENAME`
+- Get object symbols: `nm FILENAME`
+- Show shared libs: `lld FILENAME`
+- Show strings: `strings FILENAME`
+
+
 ## Browsers
 
 ### Export search history
@@ -204,6 +217,8 @@ sqlite3 History "SELECT datetime(last_visit_time/1000000-11644473600,'unixepoch'
 
 ### Build and install a binary from source
 
+As steps:
+
 ``` bash
 tar zxvf source.tgz
 cd source
@@ -213,4 +228,10 @@ cd build
 make
 make check
 make install
+```
+
+As one line:
+
+```bash
+tar zxvf source.tgz ; cd source ; mkdir build ; cd build ; ../configure ; make ; make check ; make install
 ```

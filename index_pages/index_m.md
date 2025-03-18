@@ -10,6 +10,7 @@ Index for [M](../notes_pages/notes_m.md)
   - Get slab memory usage
   - Search RAM in clear text
 - Monitoring
+  - Display the process stack
   - Get CPU loads, disk activity
   - Get open files used by a process
   - List currently mounted filesystems

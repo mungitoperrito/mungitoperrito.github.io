@@ -52,6 +52,12 @@ sudo hexdump -e '90/1 "%_p" "\n"' /dev/mem | less
 
 See memory above.
 
+### Display the process stack
+
+``` bash
+$pgrep -f program ; $sudocat/proc/<PROC ID>/stack
+```
+
 ### Get CPU loads, disk activity
 
 ```bash
