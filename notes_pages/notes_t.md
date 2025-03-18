@@ -1,3 +1,18 @@
+## `tar`
+
+### List files in the tarball
+
+```bash
+tar -tf tarfile.tar
+```
+
+### Uncompress .bz2 tarball
+
+``` bash
+tar -xjvf file.tar.bz2
+```
+
+
 ## `tc`
 
 Local network traffic controller
@@ -72,6 +87,21 @@ powershell Measure-Command {<command>}
 ```
 
 ## Time zones
+
+### Check local time
+
+```bash
+zdump /etc/localtime
+```
+
+### Check world times
+
+```bash
+zdump /usr/share/zoneinfo/*                  # All times around the world
+zdump /usr/share/zoneinfo/* | head           # First ten time zones
+zdump /usr/share/zoneinfo/* | grep EDT       # EDT time zone
+zdump /usr/share/zoneinfo/* | grep Mexico    # Time in Mexico
+```
 
 ### Get zone info
 

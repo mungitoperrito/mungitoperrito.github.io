@@ -28,8 +28,17 @@ echo $(( 3 + 4 ))
 
 ### Get memory usage information
 
+- Show in mebibytes: `m`
+- Show total usage: `t`
+
 ```bash
-free
+free -m -t
+```
+
+### Get slab memory usage
+
+```bash
+slabtop --once
 ```
 
 ### Search RAM in clear text
@@ -40,6 +49,26 @@ sudo hexdump -e '90/1 "%_p" "\n"' /dev/mem | less
 
 
 ## Monitoring
+
+See memory above.
+
+### Get CPU loads, disk activity
+
+```bash
+iostat -x
+```
+
+### Get open files used by a process
+
+```bash
+lsof -p <procId>
+```
+
+### List currently mounted filesystems
+
+```bash
+cat /etc/mtab
+```
 
 ### Watch command output
 

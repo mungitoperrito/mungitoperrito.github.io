@@ -22,6 +22,7 @@ Index for [S](../notes_pages/notes_s.md)
   - Configure direct root access
   - Connect to remote without login
   - Create an ssh tunnel
+  - Forward traffic
 - SSL
   - Read a certificate
   - Test connections
@@ -40,6 +41,8 @@ Index for [S](../notes_pages/notes_s.md)
   - Check in a single file
   - Check out a single file
   - Connect to a remote repo
+- Synch
+  - Force buffers to write to disk
 - System information
   - Read the `proc` filesystem
   - Top 10 processes, memory

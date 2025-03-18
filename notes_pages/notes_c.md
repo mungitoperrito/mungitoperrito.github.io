@@ -23,16 +23,51 @@ touch -t 200612100606.06 /tmp/someFile
 ```
 
 
-### Compressed files
+## Clean machines
+
+### Cache - set clearing priority
+
+The default is 100.
+
+```bash
+echo 1000 >  /proc/sys/vm/vfs_cache_pressure
+```
+### Cache - clear page cache
+
+Caution: This *may* be problematic for running processes
+
+```bash
+sync
+echo 1 > /proc/sys/vm/drop_caches
+```
+
+## Clear `dentries`, `inodes`
+
+```bash
+sync
+echo 2 > /proc/sys/vm/drop_caches
+```
+
+### Docker Clean UP
+
+1. Remove old containers
+
+   ```bash
+   docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+   ```
+
+1. Remove orphaned images
+
+   ```bash
+   docker image ls --all | wc -l         # Count images before
+   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+   docker image ls --all | wc -l         # Count images after
+   ```
+
+
+## Compressed files
 
 See `zip` and `tar` files.
-
-
-### Uncompress .bz2 tarball
-
-``` bash
-tar -xjvf file.tar.bz2
-```
 
 
 ## Convert bases

@@ -1,3 +1,12 @@
+## Zeros
+
+### Zero a file
+
+```bash
+cat > fileName <ctrl><c>           # Creates a 0 length file
+cat /dev/zero > fileName           # Overwrites a file with 0s
+```
+
 ## Zipped files
 
 ### Extract a file

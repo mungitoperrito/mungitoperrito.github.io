@@ -44,6 +44,42 @@ for fn in P?[LM]* ; do cp $fn prefix..${fn#PXL_}..postfix ; done
 ```
 
 
+## File systems
+
+### Force buffers to write to disk
+
+```bash
+sync
+```
+
+### List currently mounted filesystems
+
+```bash
+cat /etc/mtab
+```
+
+### List locked files
+
+```bash
+ls /var/lock/*
+```
+
+### Toggle swap
+
+```bash
+swapon                         # Turn on
+swapoff                        # Turn off
+```
+
+## Floppy disks
+
+### Create image file from floppy
+
+```bash
+dd if=/dev/fd of=floppyImage
+```
+
+
 ## Forensics
 
 ### Dump a dodgy website safely

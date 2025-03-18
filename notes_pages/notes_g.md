@@ -176,3 +176,11 @@ Extract the URLS to a text file.
 ``` bash
 sqlite3 History "SELECT datetime(last_visit_time/1000000-11644473600,'unixepoch'), url FROM  urls ORDER BY last_visit_time desc" > history_urls.txt
 ```
+
+## Groups
+
+### Add user to a group
+
+```bash
+sudo usermod -a -G someGroup someUser
+```
