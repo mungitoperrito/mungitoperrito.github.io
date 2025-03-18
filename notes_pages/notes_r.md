@@ -64,6 +64,15 @@ Use Remote Desktop Protocol to connect Windows machines.
 1. Disconnect: `close`
 
 
+## `readelf`
+
+### Disassemble an ELF file
+
+```bash
+readelf -a FILENAME
+```
+
+
 ## Redhat configuration
 
 ### Edit firewall, SELinux settings

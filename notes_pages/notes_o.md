@@ -1,10 +1,12 @@
 ## `objdump`
 
-Disassemble a binary and show source
+### Disassemble a binary and show source
 
 ``` bash
-objdump -d -S a.out | less
+objdump -d -S a.out | less           # Method one
+objdump -DaflSx a.out                # Method two
 ```
+
 
 ## `openssl`
 

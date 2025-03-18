@@ -1,6 +1,15 @@
-## Linked libraries
+## `ldd`
 
 List dynamically linked libraries
+
+``` bash
+ldd some_exe
+```
+
+
+## Linked libraries
+
+### List dynamically linked libraries
 
 ``` bash
 ldd some_exe
@@ -20,7 +29,10 @@ Trace library calls
 
 ### Trace process library calls
 
-Trace libraries, child processes, time stamps, and time diffs in some_binary_file
+- Trace libraries
+- Child processes
+- Time stamps
+- Time diffs
 
 ``` bash
 ltrace -S -tt -r -f  some_binary_file

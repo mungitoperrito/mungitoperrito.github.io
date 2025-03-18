@@ -25,6 +25,7 @@ Index for [B](../notes_pages/notes_b.md)
   - Variable matching
 - `bc`
   - Convert bases
+- Binary analysis
 - Browsers
   - Export search history
 - Build C programs

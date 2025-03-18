@@ -24,6 +24,8 @@ diff -y --width 60 hello.c hello.c~
 
 ## Disassemble a binary
 
+See also binary analysis.
+
 ### Disassemble a binary and show source
 
 ``` bash
@@ -131,6 +133,15 @@ docker start CONTID
 
 ```bash
 docker stop CONTID
+```
+
+
+## `dtrace`
+
+### Dynamically trace libraries
+
+```bash
+dtrace FILENAME`
 ```
 
 

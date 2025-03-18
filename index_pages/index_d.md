@@ -23,6 +23,8 @@ Index for [D](../notes_pages/notes_d.md)
   - Run a python script
   - Start a container
   - Stop a container
+- `dtrace`
+  - Dynamically trace libraries
 - `du`
   - Exclude directories
 - Duolingo web site volume

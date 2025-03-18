@@ -2,13 +2,17 @@ Index for [G](../notes_pages/notes_g.md)
 
 - `gcc`
   - Compile flags for different C versions
+  - Compile without linking
   - Debug level
+  - Enable profiling
   - Generate assembly code
   - Libraries
-  - Linking
   - Optimize the executable
   - PATH
-  - Enable profiling
+- `gdb`
+  - `catchpoints`
+  - Debug binary execution
+  - `watchpoints`
 - `ghc`
 - `ghci`
   - Modules

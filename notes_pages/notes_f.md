@@ -1,5 +1,12 @@
 ## Files
 
+
+### Check filetype
+
+```bash
+file FILENAME
+```
+
 ### Get a file location
 
 ```bash

@@ -3,16 +3,31 @@
 ### Compile flags for different C versions
 
 ``` bash
--ansi, -std=c89, -std=c99
+-ansi
+-std=c89
+-std=c99
+```
+
+### Compile without linking
+
+``` bash
+gcc -c source.c -o object.o
 ```
 
 ### Debug level
 
-Compile with level 3 debug information that includes macros. Debug level
-2 is the default.
+Compile with level 3 debug information that includes macros.
+
+Debug level 2 is the default.
 
 ``` bash
 gcc -g3 source.c
+```
+
+### Enable profiling
+
+``` bash
+gcc -a -g -c source.c -o object.o
 ```
 
 ### Generate assembly code
@@ -37,14 +52,6 @@ gcc -S source.c -o asm.s
     gcc -dynamic source.c
     ```
 
-### Linking
-
-Compile without linking
-
-``` bash
-gcc -c source.c -o object.o
-```
-
 ### Optimize the executable
 
 Compile for optimized output. Level 0 is unoptimized output.
@@ -67,11 +74,23 @@ gcc -O2 source.c
     echo $LD_LIBRARY_PATH
     ```
 
-### Enable profiling
 
-``` bash
-gcc -a -g -c source.c -o object.o
+## `gdb`
+
+### `catchpoints`
+
+- Alert when exec calls happen
+- Alert when library loads happen
+
+### Debug binary execution
+
+```bash
+gdb FILENAME`
 ```
+
+### `watchpoints`
+
+- Check if an expression changes value.
 
 
 ## `ghc`
