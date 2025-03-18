@@ -36,15 +36,12 @@ files.
 
 ## Tech notes
 
-These are links to tech notes. I gathered these notes over the years. They come
-from a wide variety of projects and platforms. Some of them may be quaint or
-obsolete now.
+This section is a work in progress. I'm sorting through and consolidating old tech
+notes and tips I've left for myself over the years. The topics cover a wide variety of 
+projects and platforms. Some of them could well be quaint or obsolete now.
 
-These pages are a work in progress. My goal is to organize my old notes and make
-the collection usable.
-
-To make things easier to find, the entries are sometimes duplicated under a
-functional description and a utility name.
+To make things easier to find, similar entries are sometimes duplicated under a functional
+description and a utility name.
 
 Click on a letter to see an index for that page.
 
