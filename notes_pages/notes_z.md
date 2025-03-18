@@ -1,5 +1,11 @@
 ## Zipped files
 
+### Extract a file
+
+```bash
+zcat filename.gz | someUtil
+```
+
 ### Get information
 
 - Field and value information: `zipdetails -v`
@@ -8,6 +14,12 @@
 ### Passwords
 
 Brute-force a zip password: `fcrackzip`
+
+### Read zip files
+
+```bash
+zless filename.gz
+```
 
 ### Repair broken zip file
 

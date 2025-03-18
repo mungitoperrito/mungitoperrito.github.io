@@ -56,3 +56,21 @@ echo 'SoMe StRiNg' | tr '[:lower:]' '[:upper:]'
 ```bash
 curl -s http://someWebSite.com | hexdump -C|less
 ```
+
+
+## `cygwin`
+
+### Proxies
+
+Configure proxy:
+
+```bash
+export http_proxy="http://proxy.vmware.com:3128"
+export ftp_proxy="http://proxy.vmware.com:3128"
+```
+
+Use `wget`:
+
+```bash
+wget --proxy-user "Wwall\JohnDoe" --proxy-passwd "SomePWD" http://someSite.net/someFile
+```

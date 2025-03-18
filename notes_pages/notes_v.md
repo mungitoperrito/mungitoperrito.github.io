@@ -69,6 +69,7 @@
   - `bios.bootDelay = "NUM_TICKS_TO_WAIT_AT_PRESS_F2_SCREEN"`
   - `bios.forceSetupOnce = "true"`
 - Don't recreate swap on reboot: `sched.swap.persist = "TRUE"`
+- Stop annoying beep: `mks.noBeep = "TRUE"`
 
 ### Documentation
 
@@ -91,11 +92,13 @@
 - Start VM: `/usr/lib/vmware/bin/vmware-vmx -qx /path/to/vmxFile.vmx`
 
 ### Networking
-- Setup network: create a switch -> esxcfg-vswitch -a vSwitch0
-- Setup network: create a portgroup -> esxcfg-vswitch -p "Service Console" vSwitch0
-- Setup network: assign a NIC -> esxcfg-vswitch -L vmnic0 vSwitch0
-- Setup network: config a vswif -> esxcfg-vswif -a vswif0 -p "Service Console" -i 192.xxx.xxx.xxx -n 255.xxx.xxx.xxx
-- Stop annoying beep: add 'mks.noBeep = "TRUE"' to .vmx file
+
+Setup a network:
+
+1. Create a switch: `esxcfg-vswitch -a vSwitch0`
+1. Create a portgroup: `esxcfg-vswitch -p "Service Console" vSwitch0`
+1. Assign a NIC: `esxcfg-vswitch -L vmnic0 vSwitch0`
+1. Configure a `vswif`: `esxcfg-vswif -a vswif0 -p "Service Console" -i 192.xxx.xxx.xxx -n 255.xxx.xxx.xxx`
 
 ### ThinESX
 

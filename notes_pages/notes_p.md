@@ -6,6 +6,15 @@
 echo $LD_LIBRARY_PATH
 ```
 
+
+## Penetration testing
+
+### Attack strings
+
+- `<script>alert("XSS");</script>`
+- `"searchTerm"><img src="x.x" onerror="alert('XSS')" />`
+
+
 ## `pgrep`
 
 ### Display the process stack
