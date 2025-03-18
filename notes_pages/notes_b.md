@@ -22,6 +22,40 @@ echo aGVsbG8gd29ybGQh | base64 -d
 ```
 
 
+## `.bashrc`
+
+Config file settings
+
+### Environment settings
+
+```bash
+export EDITOR=vi
+export LANG=C
+export LC_COLLATE=C                  # Ordering for sort and ls
+export PS1="\u@\h \w> "              # Main prompt
+export PS2=" ..> "                   # Additional prompt lines
+```
+
+### History
+
+```bash
+shopt -s histappend                  # Make bash append to disk
+export HISTCONTROL=ignoreboth        # ignore dups & initial space lines
+export HISTIGNORE="pwd:ls:ls -ltr:ll:exit:history"  # Ignore these commands
+export HISTSIZE=10000                          # Number of lines to keep
+export HISTFILESIZE=100000                     # Max file size
+export HISTTIMEFORMAT="%h %d %H:%M:%S "        # Format times
+export PROMPT_COMMAND="history -a"             # Save across sessions
+export SAVEHIST=$HISTSIZE
+```
+
+### Reread `.bashrc`
+
+```bash
+source ~/.bashrc
+```
+
+
 ## Bash environment
 
 ### List shell variables
@@ -136,15 +170,6 @@ varName=${ varName%%.* }
 
 # Drop everything up to last /
 varName=${0##*/}
-```
-
-
-## `.bashrc`
-
-### Reread config file
-
-```bash
-source ~/.bashrc
 ```
 
 
