@@ -36,7 +36,9 @@ files.
 
 ## Tech notes
 
-This section is a work in progress. I'm sorting through and consolidating old tech
+This section is a work in progress.
+
+I'm sorting through and consolidating old tech
 notes and tips I've left for myself over the years. The topics cover a wide variety of 
 projects and platforms. Some of them could well be quaint or obsolete now.
 
