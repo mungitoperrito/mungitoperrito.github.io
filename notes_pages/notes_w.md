@@ -1,3 +1,12 @@
+## `w`
+
+### Show who is logged in and what they are doing
+
+```bash
+w
+```
+
+
 ## `wall`
 
 Send a message to all users logged into a machine
@@ -27,6 +36,27 @@ Get a file location
 
 ```bash
 whereis fileName
+```
+
+
+## `who`
+
+### Show who is logged in
+
+```bash
+who
+```
+
+
+## `whois`
+
+### Domain lookup
+
+Return WHOIS directory information
+
+```bash
+whois 8.8.8.8                 # Search by IP
+whois someDomain.com          # Search by domain name
 ```
 
 

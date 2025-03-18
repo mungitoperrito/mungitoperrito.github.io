@@ -47,6 +47,12 @@ ltrace -p PID
 
 ## `lsof`
 
+### Get open files
+
+```bash
+lsof
+```
+
 ### Get open files used by a process
 
 ```bash

@@ -23,6 +23,7 @@ Index for [D](../notes_pages/notes_d.md)
   - Run a python script
   - Start a container
   - Stop a container
+- `dstat`
 - `dtrace`
   - Dynamically trace libraries
 - `du`

@@ -138,6 +138,15 @@ source ~/.bashrc
 ```
 
 
+## `ss`
+
+Get socket level statistics.
+
+```bash
+ss
+```
+
+
 ## `ssh`
 
 Secure shell
@@ -161,6 +170,13 @@ Tunnel from  port 80 on the local box to port 443 on the remote box.
 ```bash
 ssh -g -L 80:remote.machine:443 user@remote.machine
 ```
+
+### Enable login for someUser
+
+1. Edit: `vi /etc/ssh/sshd_config`
+1. Add: `AllowUsers someUser`
+1. Restart: `systemctl restart sshd`
+
 
 ### Forward traffic
 

@@ -12,6 +12,13 @@ Index for [M](../notes_pages/notes_m.md)
 - Monitoring
   - Display the process stack
   - Get CPU loads, disk activity
-  - Get open files used by a process
+  - Get CPU stats
+  - Get CPU stats for multiple CPUs
+  - Get memory usage for a process.
+  - Get open files
+  - Get socket level statistics.
+  - Get system information repeatedly: `vmstat`
   - List currently mounted filesystems
   - Watch command output
+- `mpstat`
+  - Get CPU stats

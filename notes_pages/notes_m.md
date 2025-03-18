@@ -64,10 +64,57 @@ $pgrep -f program ; $sudocat/proc/<PROC ID>/stack
 iostat -x
 ```
 
-### Get open files used by a process
+### Get CPU stats
 
 ```bash
-lsof -p <procId>
+mpstat
+```
+
+### Get CPU stats for multiple CPUs
+
+```bash
+mpstat -P ALL
+```
+
+### Get memory usage for a process.
+
+```bash
+pmap -X PID
+```
+
+### Get open files
+
+```bash
+lsof                            # All open files
+lsof -p <procId>                # Files used by procId
+```
+
+### Get socket level statistics.
+
+```bash
+ss
+```
+
+### Get system information repeatedly: `vmstat`
+
+- Wide format: `-w`
+- One header row: `-n`
+- Active and inactive memory: `-a`
+- Delay two seconds
+- Repeat three times
+
+```bash
+ vmstat  -w -n -a 2 3
+ ```
+
+ ## Get system information repeatedly: `dstat`
+
+- Memory: `-m`
+- Disk: `-d`
+- CPU: `-c`
+
+```bash
+dstat -mdc
 ```
 
 ### List currently mounted filesystems
@@ -80,3 +127,11 @@ cat /etc/mtab
 
 - Highlight diffs: `watch -d command`
 - Keep diffs: `watch -d --cumulative command`
+
+
+## `mpstat`
+
+### Get CPU stats
+
+- One CPU: `mpstat`
+- Multiple CPUs: `mpstat -P ALL`

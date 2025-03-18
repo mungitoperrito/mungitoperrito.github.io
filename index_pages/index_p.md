@@ -4,6 +4,7 @@ Index for [P](../notes_pages/notes_p.md)
   - Common indicators
   - Common ID strings
   - Tools
+- `pmap`
 - `PATH`
   - Print linker search PATH
 - Penetration testing
@@ -22,3 +23,4 @@ Index for [P](../notes_pages/notes_p.md)
 - `ps`
   - Top 10 processes, memory
   - Top 10 processes, cpu
+  - Output switches

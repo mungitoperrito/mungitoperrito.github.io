@@ -15,6 +15,15 @@ PECompact2, Secure Suite, SFX, Themida, UPX0, UPX1, WinRAR
 `PEiD`, `LordPE`, Python `peutils`
 
 
+## `pmap`
+
+Memory usage for a process.
+
+```bash
+pmap -X PID
+```
+
+
 ## `PATH`
 
 ### Print linker search PATH
@@ -96,3 +105,11 @@ ps aux | sort -n -k4 | cut -c -95 | tail -10
 ```bash
 ps aux | sort -n -k3 | cut -c -95 | tail -10
 ```
+
+### Output switches
+
+- Threads by process: `ps -AlLm`
+- Show process trees: `ps -ejH`
+- Show process trees: `ps axjf`       # Probably better
+- Show security tags: `ps -eM`
+- Show security tags: `ps axZ`       # Probably better

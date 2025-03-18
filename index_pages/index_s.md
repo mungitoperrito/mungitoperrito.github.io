@@ -18,10 +18,12 @@ Index for [S](../notes_pages/notes_s.md)
   - Test connection
 - `source`
   - Reread config file
+- `ss`
 - `ssh`
   - Configure direct root access
   - Connect to remote without login
   - Create an ssh tunnel
+  - Enable login for someUser
   - Forward traffic
 - SSL
   - Read a certificate

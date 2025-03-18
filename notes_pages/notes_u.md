@@ -1,3 +1,12 @@
+## `uptime`
+
+### Time since last reboot.
+
+```bash
+uptime
+```
+
+
 ## Unzip files
 
 ### Unzip .bz2 tarball
@@ -5,6 +14,7 @@
 ``` bash
 tar -xjvf file.tar.bz2
 ```
+
 
 ## URL shorteners
 

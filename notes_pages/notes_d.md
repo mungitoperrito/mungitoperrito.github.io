@@ -136,6 +136,19 @@ docker stop CONTID
 ```
 
 
+## `dstat`
+
+Ongoing system monitor
+
+- Memory: `-m`
+- Disk: `-d`
+- CPU: `-c`
+
+```bash
+dstat -mdc
+```
+
+
 ## `dtrace`
 
 ### Dynamically trace libraries
