@@ -36,12 +36,15 @@ ls -aS | tee -a someFile
 
 Plain text connection utility
 
-
 ### Test RDP
 
 1. Connect to RDP on `10.0.0.1`: `telnet 10.0.0.1 3389`
 1. Get telnet command prompt: `<ctrl><]>`
 1. Disconnect: `close`
+
+### Test Web server
+
+Test http connection: `telnet www.example.com 80`
 
 
 ## Terminal

@@ -11,3 +11,5 @@ Index for [C](../notes_pages/notes_c.md)
 - Convert case
 - `curl`
   - Dump a dodgy website safely
+- `cygwin`
+  - Proxies

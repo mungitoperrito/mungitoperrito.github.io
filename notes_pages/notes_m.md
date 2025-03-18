@@ -37,3 +37,11 @@ free
 ```bash
 sudo hexdump -e '90/1 "%_p" "\n"' /dev/mem | less
 ```
+
+
+## Monitoring
+
+### Watch command output
+
+- Highlight diffs: `watch -d command`
+- Keep diffs: `watch -d --cumulative command`

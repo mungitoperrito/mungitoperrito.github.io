@@ -8,6 +8,7 @@ Index for [T](../notes_pages/notes_t.md)
   - Split process outputs
 - `telnet`
   - Test RDP
+  - Test Web server
 - Terminal
   - Reset the screen
 - `time`
