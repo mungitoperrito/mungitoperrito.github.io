@@ -11,3 +11,11 @@ Index for [V](../notes_pages/notes_v.md)
   - Select text
   - Replace text
   - Yank text to and from buffers
+- VMware
+  - Change to another virtual terminal (vt 1-6)
+  - Config file `machine.vmx`
+  - Documentation
+  - Guest OS specific tweaks
+  - Headless VM:
+  - Networking
+  - ThinESX

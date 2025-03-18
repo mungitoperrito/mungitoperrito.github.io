@@ -8,3 +8,5 @@ Index for [M](../notes_pages/notes_m.md)
 - Memory
   - Get memory usage information
   - Search RAM in clear text
+- Monitoring
+  - Watch command output
