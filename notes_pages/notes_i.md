@@ -8,3 +8,12 @@
 ### Compare image files
 
 Compare images, detect steganography: `imagemagik compare`
+
+
+## `iostat`
+
+### Get CPU loads, disk activity
+
+```bash
+iostat -x
+```

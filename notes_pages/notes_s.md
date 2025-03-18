@@ -162,6 +162,16 @@ Tunnel from  port 80 on the local box to port 443 on the remote box.
 ssh -g -L 80:remote.machine:443 user@remote.machine
 ```
 
+### Forward traffic
+
+- From: local 3306
+- To: someTarget 3306
+- Via someMachine.org
+
+```bash
+ssh -L 3306:someTarget.com:3306 username@someMachine.org
+```
+
 
 ## SSL
 
@@ -287,6 +297,15 @@ svn up master.cfg
 
 ```bash
 svn co -N  svn+ssh://username@svn.some_company.com/svn/trunk
+```
+
+
+## Synch
+
+### Force buffers to write to disk
+
+```bash
+sync
 ```
 
 

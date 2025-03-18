@@ -15,6 +15,30 @@ echo $LD_LIBRARY_PATH
 - `"searchTerm"><img src="x.x" onerror="alert('XSS')" />`
 
 
+## Perl
+
+### Documentation
+
+- Manual page for a function: `perldoc -f functionName`
+
+
+### Match pattern
+
+```
+$string =~ /match/    # TRUE if a match
+$string !~ /match/    # TRUE if not a match
+```
+
+
+## Permissions
+
+### Add user to a group
+
+```bash
+sudo usermod -a -G someGroup someUser
+```
+
+
 ## `pgrep`
 
 ### Display the process stack
@@ -29,6 +53,15 @@ Display open file descriptors
 
 ``` bash
 cat /proc/self
+```
+
+
+## Processes
+
+### Get open files used by a process
+
+```bash
+lsof -p <procId>
 ```
 
 

@@ -1,5 +1,8 @@
 Index for [D](../notes_pages/notes_d.md)
 
+- `dd`
+  - Create image of floppy
+- Device files
 - `diff`
   - Show output side by side
 - Disassemble a binary
@@ -10,6 +13,7 @@ Index for [D](../notes_pages/notes_d.md)
 - Display processes
   - Display the process stack
 - Docker
+  - Clean up
   - Get shell stdin, stdio from log file
   - List all containers, running and stopped
   - Open a shell inside a container

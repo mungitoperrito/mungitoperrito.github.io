@@ -1,3 +1,18 @@
+## `dd`
+
+### Create image of floppy
+
+```bash
+dd if=/dev/fd of=floppyImage
+```
+
+
+## Device files
+
+- Stream random numbers: `/dev/random`
+- Stream zeros: `/dev/zero`
+
+
 ## `diff`
 
 ### Show output side by side
@@ -47,6 +62,22 @@ $pgrep -f program ; $sudocat/proc/<PROC ID>/stack
 
 
 ## Docker
+
+### Clean up
+
+1. Remove old containers
+
+   ```bash
+   docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+   ```
+
+1. Remove orphaned images
+
+   ```bash
+   docker image ls --all | wc -l         # Count images
+   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+   docker image ls --all | wc -l         # Count images
+   ```
 
 ### Get shell stdin, stdio from log file
 

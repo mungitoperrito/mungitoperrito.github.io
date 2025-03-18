@@ -1,5 +1,8 @@
 Index for [T](../notes_pages/notes_t.md)
 
+- `tar`
+  - List files in the tarball
+  - Uncompress .bz2 tarball
 - `tc`
   - Add qdisc to slow traffic
   - Change qdisc to stop traffic
@@ -14,6 +17,8 @@ Index for [T](../notes_pages/notes_t.md)
 - `time`
   - Windows equivalent
 - Time zones
+  - Check local time
+  - Check world times
   - Get zone info
   - Get the current time
 - `top`

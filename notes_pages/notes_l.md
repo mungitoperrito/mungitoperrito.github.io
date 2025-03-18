@@ -6,6 +6,14 @@ List dynamically linked libraries
 ldd some_exe
 ```
 
+
+## Linux
+
+### Boot in single user mode
+
+Enter `single` at boot prompt.
+
+
 ## `ltrace`
 
 Trace library calls
@@ -22,5 +30,14 @@ ltrace -S -tt -r -f  some_binary_file
 
 ```bash
 ltrace -p PID
+```
+
+
+## `lsof`
+
+### Get open files used by a process
+
+```bash
+lsof -p <procId>
 ```
 

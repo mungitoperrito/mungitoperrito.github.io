@@ -22,3 +22,5 @@ Index for [G](../notes_pages/notes_g.md)
 - Google search
   - Change default results display from All to Web
   - Export search history
+- Groups
+  - Add user to a group
