@@ -6,7 +6,7 @@ Index for [R](../notes_pages/notes_r.md)
   - Mount a RAM disk
 - rdesktop
 - RDP
-  - Send <ctrl><alt><del>
+  - Send \<ctrl>\<alt>\<del>
   - Test connection
 - `readelf`
   - Disassemble an ELF file

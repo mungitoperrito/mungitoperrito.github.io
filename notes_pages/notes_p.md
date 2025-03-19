@@ -2,17 +2,19 @@
 
 ### Common indicators
 
--PE file only has GetProcAddress
--PE file only has LoadLibrary
+- PE file only has `GetProcAddress`
+- PE file only has `LoadLibrary`
 
 ### Common ID strings
 
-aspack, adata, NSP0, NSP1, NTkrnl, Orean.sys, PEC2,<br>
-PECompact2, Secure Suite, SFX, Themida, UPX0, UPX1, WinRAR
+`aspack`, `adata`, `NSP0`, `NSP1`, `NTkrnl`, `Orean.sys`, `PEC2`,<br>
+`P`ECompact2`, `Secure Suite`, `SFX`, `Themida`, `UPX0`, `UPX1`, `WinRAR`
 
 ### Tools
 
-`PEiD`, `LordPE`, Python `peutils`
+- `PEiD`
+- `LordPE`
+- Python `peutils`
 
 
 ## `pmap`

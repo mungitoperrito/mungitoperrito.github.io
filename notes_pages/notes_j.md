@@ -14,14 +14,14 @@ assignee in membersOf("Inactive Users") AND project = App AND type = Story and s
 
 ## `jvm`
 
-For garbage collection, heap stats: `-XX:+PrintHeapAtGC`
+### Garbage collection
 
-For garbage collection tenuring stats: `-XX:+PrintTenuringDistribution`
-The memory size should decline quickly across ages.
+Add these switches
 
-For the memory footprint use: `-verbosegc`
-Check the values reported
+- Heap stats: `-XX:+PrintHeapAtGC`
+- Tenuring stats: `-XX:+PrintTenuringDistribution`
+  The memory size should decline quickly across ages.
 
-```bash
-[Full GC $before->$after($total), $time secs]
-```
+### Memory usage
+
+- Footprint `-verbosegc`

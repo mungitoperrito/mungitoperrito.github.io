@@ -1,7 +1,7 @@
 ## Haskell
 
-If `ghc`and the other Haskell tools are installed under `stack` the command line
-calls are different.
+If `ghc`and the other Haskell tools are installed under `stack`, the command
+line calls are different.
 
 ### Configuration
 

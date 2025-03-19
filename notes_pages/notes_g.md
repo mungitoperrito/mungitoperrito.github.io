@@ -182,11 +182,13 @@ Set the new search engine as the browser default
 
 ### Export search history
 
-The history database file is likely to be soemwhere like this (Chrome):
+The history database file PATH is like one of these (Chrome):
 
 ```
 ~/Library/Application Support/Google/Chrome/Default\History
+
 %LocalAppData%\Google\Chrome\User Data\Default\History
+
 C:\Users\USERNAME\AppData\Local\Google\Chrome\User Data\Default
 ```
 

@@ -22,7 +22,7 @@ These go in `~/.bashrc` (Linux), `~/.zshrc` (Mac)
 
 ### Connections
 
-- `alias rdtop='rdesktop -g 1270x1000 -a 16 -d someDir -u someUser 192.168.33.48 -r sound:remote'
+- `alias rdtop='rdesktop -g 1270x1000 -a 16 -d someDir -u someUser 192.168.33.48 -r sound:remote'`
 
 ### `git` aliases
 
@@ -34,8 +34,8 @@ These go in `~/.bashrc` (Linux), `~/.zshrc` (Mac)
 
 ### `zsh` specific (OSX)
 
-- alias h='history 1'                        # Get all of history
-- alias hgr='history 1|grep'                 # Grep history for a string
+- `alias h='history 1'`                        # Get all of history
+- `alias hgr='history 1|grep'`                 # Grep history for a string
 
 
 ## Artifactory

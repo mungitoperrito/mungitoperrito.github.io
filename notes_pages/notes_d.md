@@ -59,7 +59,8 @@ ltrace -S -tt -r -f ./a.out
 ### Display the process stack
 
 ``` bash
-$pgrep -f program ; $sudocat/proc/<PROC ID>/stack
+pgrep -f program                          # Get process ID
+sudo cat/proc/<PROC ID>/stack            # Search for PID
 ```
 
 
@@ -154,7 +155,7 @@ dstat -mdc
 ### Dynamically trace libraries
 
 ```bash
-dtrace FILENAME`
+dtrace FILENAME
 ```
 
 

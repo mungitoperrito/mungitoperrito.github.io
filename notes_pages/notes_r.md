@@ -51,7 +51,7 @@ rdesktop -g 1152x921 -a 16 -d DIRECTORY -u USER_LOGIN 192.168.33.48 -r sound:rem
 
 Use Remote Desktop Protocol to connect Windows machines.
 
-### Send <ctrl><alt><del>
+### Send \<ctrl>\<alt>\<del>
 
 ```
 <ctrl><alt><end>
@@ -93,17 +93,18 @@ system-config-securitylevel
 
 ## Rename files
 
+### Bash one liner
+
+```bash
+for fn in $(ls) ; do  mv "${fn}" "${fn/patternToMatch/replacementPattern}" ; done
+```
+
 ### Shorten file name
 
 ```bash
 for fn in `ls` ; do new="$( echo $fn | cut -c 5- )" ; mv $fn $new ; done
 ```
 
-### bash: rename files
-
-```bash
-for fn in $(ls) ; do  mv "${fn}" "${fn/patternToMatch/replacementPattern}" ; done
-```
 
 ## RPM
 

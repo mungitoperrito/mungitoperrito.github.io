@@ -59,8 +59,8 @@ run_some_command
 
 Disconnect:
 
-- ctrl+a ctrl+d
-- <logout>
+- \<ctrl>\<a> \<ctrl>\<d>
+- \<logout>
 
 Reconnect:
 
