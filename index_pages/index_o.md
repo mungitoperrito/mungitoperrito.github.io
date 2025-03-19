@@ -1,7 +1,7 @@
-# Index for [O](target_page)
--  [`objdump`](../notes_pages/notes_o.md/#objdump)
-  -  [Disassemble a binary and show source](../notes_pages/notes_o.md/#disassemble-a-binary-and-show-source)
--  [`openssl`](../notes_pages/notes_o.md/#openssl)
-  -  [Test connections](../notes_pages/notes_o.md/#test-connections)
+# Index for [O](../notes_pages/notes_o.md)
+-  [`objdump`](../notes_pages/notes_o.md#objdump)
+    -  [Disassemble a binary and show source](../notes_pages/notes_o.md#disassemble-a-binary-and-show-source)
+-  [`openssl`](../notes_pages/notes_o.md#openssl)
+    -  [Test connections](../notes_pages/notes_o.md#test-connections)
 <br><br>
 <p align="center">[Home](../README.md#tech-notes)</p>

@@ -27,7 +27,7 @@ def create_anchor_link(heading_text):
 def write_index_page(headings_list, current_letter, output_target):
     o = output_target
     target_page = f'../notes_pages/notes_{current_letter}.md'
-    o.write(f'# Index for [{current_letter.upper()}](target_page)')
+    o.write(f'# Index for [{current_letter.upper()}]({target_page})')
     o.write('\n')
     for heading in headings_list:
         anchor_link = create_anchor_link(heading[0])
@@ -35,13 +35,13 @@ def write_index_page(headings_list, current_letter, output_target):
         if heading[1] == 2:
             start_line = '- '
         elif  heading[1] == 3:
-            start_line = '  - '
+            start_line = '    - '          # Indent 4 spaces for sub list
         elif  heading[1] == 4:
-            start_line = '    - '
+            start_line = '        - '      # Indent 8 spaces for sub, sub list
         else:
             print(f"ERROR: Unhandled heading: {heading[0]} Letter: {current_letter}")
 
-        link_line = f"{start_line} [{heading[0]}]({target_page}/{anchor_link})"
+        link_line = f"{start_line} [{heading[0]}]({target_page}{anchor_link})"
         o.write(link_line)
         o.write('\n')
         # # Uncomment to debug
