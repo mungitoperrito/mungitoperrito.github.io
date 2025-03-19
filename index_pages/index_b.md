@@ -26,6 +26,9 @@ Index for [B](../notes_pages/notes_b.md)
 - `bc`
   - Convert bases
 - Binary analysis
+- Brew
+  - Install a package
+  - Turn off analytics
 - Browsers
   - Export search history
 - Build C programs

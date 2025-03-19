@@ -114,3 +114,20 @@ Get the current directory relative to windows.
 ```bash
 explorer.exe .
 ```
+
+### Mount usb drive
+
+```bash
+sudo mkdir /mnt/e                # Once. Create a mount point
+sudo mount -t drvfs e: /mnt/e    # Each time
+```
+
+### Turn off `bash` bell
+
+1. `sudo vi /etc/inputrc`
+1. Uncomment: `set bell-style none`
+
+### Turn off `vim` bell
+
+1. `vi ~/.vimrc`
+1. Add: `set visualbell`

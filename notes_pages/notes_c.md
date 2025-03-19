@@ -84,6 +84,45 @@ echo 'SoMe StRiNg' | tr '[:lower:]' '[:upper:]'
 ```
 
 
+## Crontab
+
+### Display `crontab`
+
+```bash
+crontab -l
+```
+
+### Edit `crontab`
+
+```bash
+crontab -e
+```
+
+### Find and remove old Docker images
+
+- 0 minutes
+- 23 hours
+- Any day
+- Any month
+- On Sunday (0)
+
+```bash
+00 23 * * 0 docker system prune -f && docker system prune -f
+```
+
+### Find and remove temporary files
+
+- 18 minutes
+- 3 hours
+- Any day
+- Any month
+- Any day of the week
+
+```bash
+18 3 * * * find /tmp \( -name "tmp*" -or -name "pytest*" \) -mtime +8 -exec rm -rf {} \;
+```
+
+
 ## `curl`
 
 ### Dump a dodgy website safely
@@ -108,4 +147,10 @@ Use `wget`:
 
 ```bash
 wget --proxy-user "Wwall\JohnDoe" --proxy-passwd "SomePWD" http://someSite.net/someFile
+```
+
+### Show Windows PATH
+
+```bash
+cypath -m /path/to/some/file
 ```
