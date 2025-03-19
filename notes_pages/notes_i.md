@@ -7,7 +7,11 @@
 
 ### Compare image files
 
-Compare images, detect steganography: `imagemagik compare`
+Compare images or detect steganography
+
+```bash
+imagemagik compare
+```
 
 
 ## `iostat`

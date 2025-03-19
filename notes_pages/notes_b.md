@@ -73,13 +73,13 @@ export -p
 
 ### Show commands
 
-Enable: `set -x`
-Disable: `set +x`
+- Enable: `set -x`
+- Disable: `set +x`
 
 ### Warnings
 
-Enable: `set -u`
-Disable: `set +u`
+- Enable: `set -u`
+- Disable: `set +u`
 
 
 ## Bash scripting
@@ -216,11 +216,13 @@ brew analytics off
 
 ### Export search history
 
-The history database file is likely to be soemwhere like this (Chrome):
+The history database file PATH is like one of these (Chrome):
 
 ```
 ~/Library/Application Support/Google/Chrome/Default\History
+
 %LocalAppData%\Google\Chrome\User Data\Default\History
+
 C:\Users\USERNAME\AppData\Local\Google\Chrome\User Data\Default
 ```
 

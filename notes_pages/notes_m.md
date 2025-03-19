@@ -1,12 +1,13 @@
 ## Mail servers
 
-SMTP, IMAP servers
+`SMTP`, `IMAP` servers
 
 ### Test connection
 
 1. Connect to the server: `telnet somemailserver.domain 25`
 1. After the banner type: `HELO yourdomain`
-1. Check other commands: MAIL, RCPT, DATA, QUIT
+1. Check other commands: `MAIL`, `RCPT`, `DATA`
+1. Exit: `QUIT`
 
 
 ## Math
@@ -17,7 +18,7 @@ SMTP, IMAP servers
 echo 'obase=16; ibase=10; 255' | bc
 ```
 
-### Evaluate an expresion
+### Evaluate an expression
 
 ```bash
 echo $(( 3 + 4 ))
