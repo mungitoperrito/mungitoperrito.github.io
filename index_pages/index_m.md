@@ -1,24 +1,26 @@
-Index for [M](../notes_pages/notes_m.md)
-
-- Mail servers
-  - Test connection
-- Math
-  - Convert bases
-  - Evaluate an expresion
-- Memory
-  - Get memory usage information
-  - Get slab memory usage
-  - Search RAM in clear text
-- Monitoring
-  - Display the process stack
-  - Get CPU loads, disk activity
-  - Get CPU stats
-  - Get CPU stats for multiple CPUs
-  - Get memory usage for a process.
-  - Get open files
-  - Get socket level statistics.
-  - Get system information repeatedly: `vmstat`
-  - List currently mounted filesystems
-  - Watch command output
-- `mpstat`
-  - Get CPU stats
+# Index for [M](target_page)
+-  [Mail servers](../notes_pages/notes_m.md/#mail-servers)
+  -  [Test connection](../notes_pages/notes_m.md/#test-connection)
+-  [Math](../notes_pages/notes_m.md/#math)
+  -  [Convert bases](../notes_pages/notes_m.md/#convert-bases)
+  -  [Evaluate an expression](../notes_pages/notes_m.md/#evaluate-an-expression)
+-  [Memory](../notes_pages/notes_m.md/#memory)
+  -  [Get memory usage information](../notes_pages/notes_m.md/#get-memory-usage-information)
+  -  [Get slab memory usage](../notes_pages/notes_m.md/#get-slab-memory-usage)
+  -  [Search RAM in clear text](../notes_pages/notes_m.md/#search-ram-in-clear-text)
+-  [Monitoring](../notes_pages/notes_m.md/#monitoring)
+  -  [Display the process stack](../notes_pages/notes_m.md/#display-the-process-stack)
+  -  [Get CPU loads, disk activity](../notes_pages/notes_m.md/#get-cpu-loads-disk-activity)
+  -  [Get CPU stats](../notes_pages/notes_m.md/#get-cpu-stats)
+  -  [Get CPU stats for multiple CPUs](../notes_pages/notes_m.md/#get-cpu-stats-for-multiple-cpus)
+  -  [Get memory usage for a process.](../notes_pages/notes_m.md/#get-memory-usage-for-a-process)
+  -  [Get open files](../notes_pages/notes_m.md/#get-open-files)
+  -  [Get socket level statistics.](../notes_pages/notes_m.md/#get-socket-level-statistics)
+  -  [Get system information repeatedly: `vmstat`](../notes_pages/notes_m.md/#get-system-information-repeatedly-vmstat)
+-  [Get system information repeatedly: `dstat`](../notes_pages/notes_m.md/#get-system-information-repeatedly-dstat)
+  -  [List currently mounted filesystems](../notes_pages/notes_m.md/#list-currently-mounted-filesystems)
+  -  [Watch command output](../notes_pages/notes_m.md/#watch-command-output)
+-  [`mpstat`](../notes_pages/notes_m.md/#mpstat)
+  -  [Get CPU stats](../notes_pages/notes_m.md/#get-cpu-stats)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

@@ -1,35 +1,36 @@
-Index for [B](../notes_pages/notes_b.md)
-
-- Backtraces
-  - Get a backtrace for a segmentation fault on linux
-- `base64`
-  - Encode
-  - Decode
-- `.bashrc`
-  - Environment settings
-  - History
-  - Reread `.bashrc`
-- Bash environment
-  - List shell variables
-  - Show commands
-  - Warnings
-- Bash scripting
-  - Create an infinite loop
-  - Evaluate an expresion
-  - Initialize an array
-  - Multiple files
-  - Read a file into a script
-  - Read a file into a variable
-  - Redirect stderr, stout, stdin
-  - Special variables
-  - Variable matching
-- `bc`
-  - Convert bases
-- Binary analysis
-- Brew
-  - Install a package
-  - Turn off analytics
-- Browsers
-  - Export search history
-- Build C programs
-  - Build and install a binary from source
+# Index for [B](target_page)
+-  [Backtraces](../notes_pages/notes_b.md/#backtraces)
+  -  [Get a backtrace for a segmentation fault on linux](../notes_pages/notes_b.md/#get-a-backtrace-for-a-segmentation-fault-on-linux)
+-  [`base64`](../notes_pages/notes_b.md/#base)
+  -  [Encode](../notes_pages/notes_b.md/#encode)
+  -  [Decode](../notes_pages/notes_b.md/#decode)
+-  [`.bashrc`](../notes_pages/notes_b.md/#bashrc)
+  -  [Environment settings](../notes_pages/notes_b.md/#environment-settings)
+  -  [History](../notes_pages/notes_b.md/#history)
+  -  [Reread `.bashrc`](../notes_pages/notes_b.md/#reread-bashrc)
+-  [Bash environment](../notes_pages/notes_b.md/#bash-environment)
+  -  [List shell variables](../notes_pages/notes_b.md/#list-shell-variables)
+  -  [Show commands](../notes_pages/notes_b.md/#show-commands)
+  -  [Warnings](../notes_pages/notes_b.md/#warnings)
+-  [Bash scripting](../notes_pages/notes_b.md/#bash-scripting)
+  -  [Create an infinite loop](../notes_pages/notes_b.md/#create-an-infinite-loop)
+  -  [Evaluate an expresion](../notes_pages/notes_b.md/#evaluate-an-expresion)
+  -  [Initialize an array](../notes_pages/notes_b.md/#initialize-an-array)
+  -  [Multiple files](../notes_pages/notes_b.md/#multiple-files)
+  -  [Read a file into a script](../notes_pages/notes_b.md/#read-a-file-into-a-script)
+  -  [Read a file into a variable](../notes_pages/notes_b.md/#read-a-file-into-a-variable)
+  -  [Redirect stderr, stout, stdin](../notes_pages/notes_b.md/#redirect-stderr-stout-stdin)
+  -  [Special variables](../notes_pages/notes_b.md/#special-variables)
+  -  [Variable matching](../notes_pages/notes_b.md/#variable-matching)
+-  [`bc`](../notes_pages/notes_b.md/#bc)
+  -  [Convert bases](../notes_pages/notes_b.md/#convert-bases)
+-  [Binary analysis](../notes_pages/notes_b.md/#binary-analysis)
+-  [Brew](../notes_pages/notes_b.md/#brew)
+  -  [Install a package](../notes_pages/notes_b.md/#install-a-package)
+  -  [Turn off analytics](../notes_pages/notes_b.md/#turn-off-analytics)
+-  [Browsers](../notes_pages/notes_b.md/#browsers)
+  -  [Export search history](../notes_pages/notes_b.md/#export-search-history)
+-  [Build C programs](../notes_pages/notes_b.md/#build-c-programs)
+  -  [Build and install a binary from source](../notes_pages/notes_b.md/#build-and-install-a-binary-from-source)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

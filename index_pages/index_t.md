@@ -1,34 +1,35 @@
-Index for [T](../notes_pages/notes_t.md)
-
-- `tar`
-  - List files in the tarball
-  - Uncompress .bz2 tarball
-- `tc`
-  - Add qdisc to slow traffic
-  - Change qdisc to stop traffic
-  - Delete qdisc to restore eth0
-- `tee`
-  - Split process outputs
-- `telnet`
-  - Test RDP
-  - Test Web server
-- Terminal
-  - Reset the screen
-- `time`
-  - Windows equivalent
-- Time zones
-  - Check local time
-  - Check world times
-  - Get zone info
-  - Get the current time
-- `top`
-  - Track a process over time
-- `touch`
-  - Change file creation date
-- Trace system events
-  - Library calls
-  - Summarize system calls
-  - System calls
-- `tree`
-  - Show all
-  - Show directories only
+# Index for [T](target_page)
+-  [`tar`](../notes_pages/notes_t.md/#tar)
+  -  [List files in the tarball](../notes_pages/notes_t.md/#list-files-in-the-tarball)
+  -  [Uncompress .bz2 tarball](../notes_pages/notes_t.md/#uncompress-bz-tarball)
+-  [`tc`](../notes_pages/notes_t.md/#tc)
+  -  [Add qdisc to slow traffic](../notes_pages/notes_t.md/#add-qdisc-to-slow-traffic)
+  -  [Change qdisc to stop traffic](../notes_pages/notes_t.md/#change-qdisc-to-stop-traffic)
+  -  [Delete qdisc to restore eth0](../notes_pages/notes_t.md/#delete-qdisc-to-restore-eth)
+-  [`tee`](../notes_pages/notes_t.md/#tee)
+  -  [Split process outputs](../notes_pages/notes_t.md/#split-process-outputs)
+-  [`telnet`](../notes_pages/notes_t.md/#telnet)
+  -  [Test RDP](../notes_pages/notes_t.md/#test-rdp)
+  -  [Test Web server](../notes_pages/notes_t.md/#test-web-server)
+-  [Terminal](../notes_pages/notes_t.md/#terminal)
+  -  [Reset the screen](../notes_pages/notes_t.md/#reset-the-screen)
+-  [`time`](../notes_pages/notes_t.md/#time)
+  -  [Windows equivalent](../notes_pages/notes_t.md/#windows-equivalent)
+-  [Time zones](../notes_pages/notes_t.md/#time-zones)
+  -  [Check local time](../notes_pages/notes_t.md/#check-local-time)
+  -  [Check world times](../notes_pages/notes_t.md/#check-world-times)
+  -  [Get zone info](../notes_pages/notes_t.md/#get-zone-info)
+  -  [Get the current time](../notes_pages/notes_t.md/#get-the-current-time)
+-  [`top`](../notes_pages/notes_t.md/#top)
+  -  [Track a process over time](../notes_pages/notes_t.md/#track-a-process-over-time)
+-  [`touch`](../notes_pages/notes_t.md/#touch)
+  -  [Change file creation date](../notes_pages/notes_t.md/#change-file-creation-date)
+-  [Trace system events](../notes_pages/notes_t.md/#trace-system-events)
+  -  [Library calls](../notes_pages/notes_t.md/#library-calls)
+  -  [Summarize system calls](../notes_pages/notes_t.md/#summarize-system-calls)
+  -  [System calls](../notes_pages/notes_t.md/#system-calls)
+-  [`tree`](../notes_pages/notes_t.md/#tree)
+  -  [Show all](../notes_pages/notes_t.md/#show-all)
+  -  [Show directories only](../notes_pages/notes_t.md/#show-directories-only)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

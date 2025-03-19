@@ -1,18 +1,19 @@
-Index for [F](../notes_pages/notes_f.md)
-
-- Files
-  - Check filetype
-  - Get a file location
-  - Read a file into a script
-  - Read a file into a variable
-  - Rename files
-- File systems
-  - Force buffers to write to disk
-  - List currently mounted filesystems
-  - List locked files
-  - Toggle swap
-- Floppy disks
-  - Create image file from floppy
-- Forensics
-  - Dump a dodgy website safely
-- `free`
+# Index for [F](target_page)
+-  [Files](../notes_pages/notes_f.md/#files)
+  -  [Check filetype](../notes_pages/notes_f.md/#check-filetype)
+  -  [Get a file location](../notes_pages/notes_f.md/#get-a-file-location)
+  -  [Read a file into a script](../notes_pages/notes_f.md/#read-a-file-into-a-script)
+  -  [Read a file into a variable](../notes_pages/notes_f.md/#read-a-file-into-a-variable)
+  -  [Rename files](../notes_pages/notes_f.md/#rename-files)
+-  [File systems](../notes_pages/notes_f.md/#file-systems)
+  -  [Force buffers to write to disk](../notes_pages/notes_f.md/#force-buffers-to-write-to-disk)
+  -  [List currently mounted filesystems](../notes_pages/notes_f.md/#list-currently-mounted-filesystems)
+  -  [List locked files](../notes_pages/notes_f.md/#list-locked-files)
+  -  [Toggle swap](../notes_pages/notes_f.md/#toggle-swap)
+-  [Floppy disks](../notes_pages/notes_f.md/#floppy-disks)
+  -  [Create image file from floppy](../notes_pages/notes_f.md/#create-image-file-from-floppy)
+-  [Forensics](../notes_pages/notes_f.md/#forensics)
+  -  [Dump a dodgy website safely](../notes_pages/notes_f.md/#dump-a-dodgy-website-safely)
+-  [`free`](../notes_pages/notes_f.md/#free)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

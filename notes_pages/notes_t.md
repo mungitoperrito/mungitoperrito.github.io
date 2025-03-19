@@ -69,7 +69,7 @@ Test http connection: `telnet www.example.com 80`
 Reset if the display is confused after runing `cat someBinary`
 
 ```bash
-# method one
+# Method one
 reset
 
 # Method two

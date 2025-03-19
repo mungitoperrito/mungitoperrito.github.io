@@ -1,30 +1,31 @@
-Index for [G](../notes_pages/notes_g.md)
-
-- `gcc`
-  - Compile flags for different C versions
-  - Compile without linking
-  - Debug level
-  - Enable profiling
-  - Generate assembly code
-  - Libraries
-  - Optimize the executable
-  - PATH
-- `gdb`
-  - `catchpoints`
-  - Debug binary execution
-  - `watchpoints`
-- `ghc`
-- `ghci`
-  - Modules
-  - Multiline entry
-- GitHub
-  - Get git repos
-  - Get last 100 commits
-  - Get commit activity
-  - Get commit stats
-  - Get a commit
-- Google search
-  - Change default results display from All to Web
-  - Export search history
-- Groups
-  - Add user to a group
+# Index for [G](target_page)
+-  [`gcc`](../notes_pages/notes_g.md/#gcc)
+  -  [Compile flags for different C versions](../notes_pages/notes_g.md/#compile-flags-for-different-c-versions)
+  -  [Compile without linking](../notes_pages/notes_g.md/#compile-without-linking)
+  -  [Debug level](../notes_pages/notes_g.md/#debug-level)
+  -  [Enable profiling](../notes_pages/notes_g.md/#enable-profiling)
+  -  [Generate assembly code](../notes_pages/notes_g.md/#generate-assembly-code)
+  -  [Libraries](../notes_pages/notes_g.md/#libraries)
+  -  [Optimize the executable](../notes_pages/notes_g.md/#optimize-the-executable)
+  -  [PATH](../notes_pages/notes_g.md/#path)
+-  [`gdb`](../notes_pages/notes_g.md/#gdb)
+  -  [`catchpoints`](../notes_pages/notes_g.md/#catchpoints)
+  -  [Debug binary execution](../notes_pages/notes_g.md/#debug-binary-execution)
+  -  [`watchpoints`](../notes_pages/notes_g.md/#watchpoints)
+-  [`ghc`](../notes_pages/notes_g.md/#ghc)
+-  [`ghci`](../notes_pages/notes_g.md/#ghci)
+  -  [Modules](../notes_pages/notes_g.md/#modules)
+  -  [Multiline entry](../notes_pages/notes_g.md/#multiline-entry)
+-  [GitHub](../notes_pages/notes_g.md/#github)
+  -  [Get git repos](../notes_pages/notes_g.md/#get-git-repos)
+  -  [Get last 100 commits](../notes_pages/notes_g.md/#get-last--commits)
+  -  [Get commit activity](../notes_pages/notes_g.md/#get-commit-activity)
+  -  [Get commit stats](../notes_pages/notes_g.md/#get-commit-stats)
+  -  [Get a commit](../notes_pages/notes_g.md/#get-a-commit)
+-  [Google search](../notes_pages/notes_g.md/#google-search)
+  -  [Change default results display from All to Web](../notes_pages/notes_g.md/#change-default-results-display-from-all-to-web)
+  -  [Export search history](../notes_pages/notes_g.md/#export-search-history)
+-  [Groups](../notes_pages/notes_g.md/#groups)
+  -  [Add user to a group](../notes_pages/notes_g.md/#add-user-to-a-group)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

@@ -1,22 +1,23 @@
-Index for [V](../notes_pages/notes_v.md)
-
-- `vim`
-  - Block mode
-  - Configuration
-  - Delete
-  - Enable features
-  - Execute command
-  - Find text
-  - Movement
-  - Select text
-  - Replace text
-  - Yank text to and from buffers
-- VMware
-  - Change to another virtual terminal (vt 1-6)
-  - Config file `machine.vmx`
-  - Documentation
-  - Guest OS specific tweaks
-  - Headless VM:
-  - Networking
-  - ThinESX
-- `vmstat`
+# Index for [V](target_page)
+-  [`vim`](../notes_pages/notes_v.md/#vim)
+  -  [Block mode](../notes_pages/notes_v.md/#block-mode)
+  -  [Configuration](../notes_pages/notes_v.md/#configuration)
+  -  [Delete](../notes_pages/notes_v.md/#delete)
+  -  [Enable features](../notes_pages/notes_v.md/#enable-features)
+  -  [Execute command](../notes_pages/notes_v.md/#execute-command)
+  -  [Find text](../notes_pages/notes_v.md/#find-text)
+  -  [Movement](../notes_pages/notes_v.md/#movement)
+  -  [Select text](../notes_pages/notes_v.md/#select-text)
+  -  [Replace text](../notes_pages/notes_v.md/#replace-text)
+  -  [Yank text to and from buffers](../notes_pages/notes_v.md/#yank-text-to-and-from-buffers)
+-  [VMware](../notes_pages/notes_v.md/#vmware)
+  -  [Change to another virtual terminal (vt 1-6)](../notes_pages/notes_v.md/#change-to-another-virtual-terminal-vt)
+  -  [Config file `machine.vmx`](../notes_pages/notes_v.md/#config-file-machinevmx)
+  -  [Documentation](../notes_pages/notes_v.md/#documentation)
+  -  [Guest OS specific tweaks](../notes_pages/notes_v.md/#guest-os-specific-tweaks)
+  -  [Headless VM:](../notes_pages/notes_v.md/#headless-vm)
+  -  [Networking](../notes_pages/notes_v.md/#networking)
+  -  [ThinESX](../notes_pages/notes_v.md/#thinesx)
+-  [`vmstat`](../notes_pages/notes_v.md/#vmstat)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

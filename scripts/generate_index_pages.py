@@ -7,15 +7,48 @@ from string import ascii_lowercase
 NOTES_PATH = os.path.join('..', 'notes_pages')
 INDEXES_PATH = os.path.join('..', 'index_pages')
 
+
+def isLinkChar(c):
+    if (c in ascii_lowercase) or (c == ' '):
+        return True
+    return False
+
+
+def create_anchor_link(heading_text):
+    link_chars = filter(isLinkChar, list(heading_text.lower()))
+    link = ''.join(link_chars)
+    link = link.strip()
+    link = link.replace(' ', '-')
+    link = "#" + link
+
+    return link
+
+
 def write_index_page(headings_list, current_letter, output_target):
     o = output_target
-    o.write(f'Index for [{current_letter.upper()}](../notes_pages/notes_{current_letter}.md)')
-    o.write('\n\n')
+    target_page = f'../notes_pages/notes_{current_letter}.md'
+    o.write(f'# Index for [{current_letter.upper()}](target_page)')
+    o.write('\n')
     for heading in headings_list:
-        o.write(heading)
+        anchor_link = create_anchor_link(heading[0])
+
+        if heading[1] == 2:
+            start_line = '- '
+        elif  heading[1] == 3:
+            start_line = '  - '
+        elif  heading[1] == 4:
+            start_line = '    - '
+        else:
+            print(f"ERROR: Unhandled heading: {heading[0]} Letter: {current_letter}")
+
+        link_line = f"{start_line} [{heading[0]}]({target_page}/{anchor_link})"
+        o.write(link_line)
         o.write('\n')
         # # Uncomment to debug
         # print(heading)
+    o.write("<br><br>")
+    o.write('\n')
+    o.write(f'<p align="center">[Home](../README.md#tech-notes)</p>')
 
 
 def get_headings_list(file_path):
@@ -28,20 +61,13 @@ def get_headings_list(file_path):
         try:
             with open(input_file, encoding='utf8') as f:
                 for line in f.readlines():
-
-                    # Get the subheadings
-                    if line.startswith('###'):
-                        line = line.strip()
-                        tmp, body = line.split(' ', maxsplit=1)
-                        heading = '  - ' + body
-                        headings.append(heading)
-
-                    # Get the main headings
-                    elif line.startswith('##'):
-                        line = line.strip()
-                        tmp, body = line.split(' ', maxsplit=1)
-                        heading = '- ' + body
-                        headings.append(heading)
+                    line = line.strip()
+                    heading_count = 0
+                    if line.startswith('#'):
+                        heading_count = line.count('#', 0, 7)
+                        if heading_count > 1:        # Ignore code comment lines
+                            tmp, body = line.split(' ', maxsplit=1)
+                            headings.append((body, heading_count))
                     else:
                         pass
         except Exception as e:

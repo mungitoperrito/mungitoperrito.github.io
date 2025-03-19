@@ -1,25 +1,26 @@
-Index for [W](../notes_pages/notes_w.md)
-
-- `w`
-  - Show who is logged in and what they are doing
-- `wall`
-- `watch`
-- Web servers
-- `where`
-- `who`
-  - Show who is logged in
-- `whois`
-  - Domain lookup
-- Windows
-  - Get MAC address
-  - Run command as another user
-  - Restart the network
-  - Restart the machine
-  - Shortcuts
-  - Shutdown
-  - Windows XP
-- WSL Windows Subsystem for Linux
-  - Current directory
-  - Mount usb drive
-  - Turn off `bash` bell
-  - Turn off `vim` bell
+# Index for [W](target_page)
+-  [`w`](../notes_pages/notes_w.md/#w)
+  -  [Show who is logged in and what they are doing](../notes_pages/notes_w.md/#show-who-is-logged-in-and-what-they-are-doing)
+-  [`wall`](../notes_pages/notes_w.md/#wall)
+-  [`watch`](../notes_pages/notes_w.md/#watch)
+-  [Web servers](../notes_pages/notes_w.md/#web-servers)
+-  [`where`](../notes_pages/notes_w.md/#where)
+-  [`who`](../notes_pages/notes_w.md/#who)
+  -  [Show who is logged in](../notes_pages/notes_w.md/#show-who-is-logged-in)
+-  [`whois`](../notes_pages/notes_w.md/#whois)
+  -  [Domain lookup](../notes_pages/notes_w.md/#domain-lookup)
+-  [Windows](../notes_pages/notes_w.md/#windows)
+  -  [Get MAC address](../notes_pages/notes_w.md/#get-mac-address)
+  -  [Run command as another user](../notes_pages/notes_w.md/#run-command-as-another-user)
+  -  [Restart the network](../notes_pages/notes_w.md/#restart-the-network)
+  -  [Restart the machine](../notes_pages/notes_w.md/#restart-the-machine)
+  -  [Shortcuts](../notes_pages/notes_w.md/#shortcuts)
+  -  [Shutdown](../notes_pages/notes_w.md/#shutdown)
+  -  [Windows XP](../notes_pages/notes_w.md/#windows-xp)
+-  [WSL Windows Subsystem for Linux](../notes_pages/notes_w.md/#wsl-windows-subsystem-for-linux)
+  -  [Current directory](../notes_pages/notes_w.md/#current-directory)
+  -  [Mount usb drive](../notes_pages/notes_w.md/#mount-usb-drive)
+  -  [Turn off `bash` bell](../notes_pages/notes_w.md/#turn-off-bash-bell)
+  -  [Turn off `vim` bell](../notes_pages/notes_w.md/#turn-off-vim-bell)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>
