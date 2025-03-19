@@ -20,3 +20,6 @@ Index for [W](../notes_pages/notes_w.md)
   - Windows XP
 - WSL Windows Subsystem for Linux
   - Current directory
+  - Mount usb drive
+  - Turn off `bash` bell
+  - Turn off `vim` bell

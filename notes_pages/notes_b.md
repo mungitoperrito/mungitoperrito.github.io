@@ -195,6 +195,23 @@ echo 'obase=16; ibase=10; 255' | bc
 - Show strings: `strings FILENAME`
 
 
+## Brew
+
+Third party, community OSX package manager.
+
+### Install a package
+
+```bash
+brew install somePackage
+```
+
+### Turn off analytics
+
+```bash
+brew analytics off
+```
+
+
 ## Browsers
 
 ### Export search history

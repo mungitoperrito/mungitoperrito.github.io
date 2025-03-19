@@ -13,7 +13,13 @@ Index for [C](../notes_pages/notes_c.md)
 - Compressed files
 - Convert bases
 - Convert case
+- Crontab
+  - Display `crontab`
+  - Edit `crontab`
+  - Find and remove old Docker images
+  - Find and remove temporary files
 - `curl`
   - Dump a dodgy website safely
 - `cygwin`
   - Proxies
+  - Show Windows PATH
