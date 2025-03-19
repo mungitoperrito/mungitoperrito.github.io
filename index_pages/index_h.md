@@ -16,4 +16,4 @@
 -  [`host`](../notes_pages/notes_h.md#host)
 -  [`hostname`](../notes_pages/notes_h.md#hostname)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

@@ -23,4 +23,4 @@
 -  [`mpstat`](../notes_pages/notes_m.md#mpstat)
     -  [Get CPU stats](../notes_pages/notes_m.md#get-cpu-stats)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

@@ -23,4 +23,4 @@
     -  [Proxies](../notes_pages/notes_c.md#proxies)
     -  [Show Windows PATH](../notes_pages/notes_c.md#show-windows-path)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

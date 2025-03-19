@@ -49,4 +49,4 @@
     -  [Top 10 processes, memory](../notes_pages/notes_s.md#top--processes-memory)
     -  [Top 10 processes, cpu](../notes_pages/notes_s.md#top--processes-cpu)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

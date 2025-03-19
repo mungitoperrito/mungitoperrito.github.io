@@ -32,4 +32,4 @@
     -  [Show all](../notes_pages/notes_t.md#show-all)
     -  [Show directories only](../notes_pages/notes_t.md#show-directories-only)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

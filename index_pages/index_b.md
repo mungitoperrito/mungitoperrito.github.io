@@ -33,4 +33,4 @@
 -  [Build C programs](../notes_pages/notes_b.md#build-c-programs)
     -  [Build and install a binary from source](../notes_pages/notes_b.md#build-and-install-a-binary-from-source)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

@@ -28,4 +28,4 @@
 -  [Groups](../notes_pages/notes_g.md#groups)
     -  [Add user to a group](../notes_pages/notes_g.md#add-user-to-a-group)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

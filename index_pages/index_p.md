@@ -24,4 +24,4 @@
     -  [Top 10 processes, cpu](../notes_pages/notes_p.md#top--processes-cpu)
     -  [Output switches](../notes_pages/notes_p.md#output-switches)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

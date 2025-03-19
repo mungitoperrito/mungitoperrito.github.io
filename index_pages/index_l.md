@@ -11,4 +11,4 @@
     -  [Get open files](../notes_pages/notes_l.md#get-open-files)
     -  [Get open files used by a process](../notes_pages/notes_l.md#get-open-files-used-by-a-process)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

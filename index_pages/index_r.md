@@ -25,4 +25,4 @@
     -  [Check services](../notes_pages/notes_r.md#check-services)
     -  [Enable service](../notes_pages/notes_r.md#enable-service)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

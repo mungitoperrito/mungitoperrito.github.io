@@ -4,4 +4,4 @@
 -  [`openssl`](../notes_pages/notes_o.md#openssl)
     -  [Test connections](../notes_pages/notes_o.md#test-connections)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

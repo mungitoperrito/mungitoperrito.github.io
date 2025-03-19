@@ -9,4 +9,4 @@
     -  [Repair broken zip file](../notes_pages/notes_z.md#repair-broken-zip-file)
     -  [Uncompress](../notes_pages/notes_z.md#uncompress)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

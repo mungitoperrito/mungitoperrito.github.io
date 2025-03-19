@@ -3,4 +3,4 @@
     -  [Restart server](../notes_pages/notes_x.md#restart-server)
     -  [Login blocked](../notes_pages/notes_x.md#login-blocked)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

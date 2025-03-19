@@ -20,4 +20,4 @@
     -  [ThinESX](../notes_pages/notes_v.md#thinesx)
 -  [`vmstat`](../notes_pages/notes_v.md#vmstat)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

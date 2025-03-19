@@ -16,4 +16,4 @@
     -  [Dump a dodgy website safely](../notes_pages/notes_f.md#dump-a-dodgy-website-safely)
 -  [`free`](../notes_pages/notes_f.md#free)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

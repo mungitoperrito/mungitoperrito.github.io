@@ -6,4 +6,4 @@
     -  [Garbage collection](../notes_pages/notes_j.md#garbage-collection)
     -  [Memory usage](../notes_pages/notes_j.md#memory-usage)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)
