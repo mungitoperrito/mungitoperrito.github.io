@@ -1,27 +1,28 @@
-Index for [R](../notes_pages/notes_r.md)
-
-- RAM disks
-  - Create and mount a RAM disk
-  - Create and mount a zeroed RAM disk
-  - Mount a RAM disk
-- rdesktop
-- RDP
-  - Send \<ctrl>\<alt>\<del>
-  - Test connection
-- `readelf`
-  - Disassemble an ELF file
-- Redhat configuration
-  - Edit firewall, SELinux settings
-- Regular expressions
-  - Double letters
-- Rename files
-  - Shorten file name
-  - bash: rename files
-- RPM
-  - Install the Redhat signature file
-  - List changes to files
-  - List package info
-  - Unpack without installing
-- Run levels
-  - Check services
-  - Enable service
+# Index for [R](target_page)
+-  [RAM disks](../notes_pages/notes_r.md/#ram-disks)
+  -  [Create and mount a RAM disk](../notes_pages/notes_r.md/#create-and-mount-a-ram-disk)
+  -  [Create and mount a zeroed RAM disk](../notes_pages/notes_r.md/#create-and-mount-a-zeroed-ram-disk)
+  -  [Mount a RAM disk](../notes_pages/notes_r.md/#mount-a-ram-disk)
+-  [rdesktop](../notes_pages/notes_r.md/#rdesktop)
+-  [RDP](../notes_pages/notes_r.md/#rdp)
+  -  [Send \<ctrl>\<alt>\<del>](../notes_pages/notes_r.md/#send-ctrlaltdel)
+  -  [Test connection](../notes_pages/notes_r.md/#test-connection)
+-  [`readelf`](../notes_pages/notes_r.md/#readelf)
+  -  [Disassemble an ELF file](../notes_pages/notes_r.md/#disassemble-an-elf-file)
+-  [Redhat configuration](../notes_pages/notes_r.md/#redhat-configuration)
+  -  [Edit firewall, SELinux settings](../notes_pages/notes_r.md/#edit-firewall-selinux-settings)
+-  [Regular expressions](../notes_pages/notes_r.md/#regular-expressions)
+  -  [Double letters](../notes_pages/notes_r.md/#double-letters)
+-  [Rename files](../notes_pages/notes_r.md/#rename-files)
+  -  [Bash one liner](../notes_pages/notes_r.md/#bash-one-liner)
+  -  [Shorten file name](../notes_pages/notes_r.md/#shorten-file-name)
+-  [RPM](../notes_pages/notes_r.md/#rpm)
+  -  [Install the Redhat signature file](../notes_pages/notes_r.md/#install-the-redhat-signature-file)
+  -  [List changes to files](../notes_pages/notes_r.md/#list-changes-to-files)
+  -  [List package info](../notes_pages/notes_r.md/#list-package-info)
+  -  [Unpack without installing](../notes_pages/notes_r.md/#unpack-without-installing)
+-  [Run levels](../notes_pages/notes_r.md/#run-levels)
+  -  [Check services](../notes_pages/notes_r.md/#check-services)
+  -  [Enable service](../notes_pages/notes_r.md/#enable-service)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

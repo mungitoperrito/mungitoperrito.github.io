@@ -1,11 +1,12 @@
-Index for [Z](../notes_pages/notes_z.md)
-
-- Zeros
-  - Zero a file
-- Zipped files
-  - Extract a file
-  - Get information
-  - Passwords
-  - Read zip files
-  - Repair broken zip file
-  - Uncompress
+# Index for [Z](target_page)
+-  [Zeros](../notes_pages/notes_z.md/#zeros)
+  -  [Zero a file](../notes_pages/notes_z.md/#zero-a-file)
+-  [Zipped files](../notes_pages/notes_z.md/#zipped-files)
+  -  [Extract a file](../notes_pages/notes_z.md/#extract-a-file)
+  -  [Get information](../notes_pages/notes_z.md/#get-information)
+  -  [Passwords](../notes_pages/notes_z.md/#passwords)
+  -  [Read zip files](../notes_pages/notes_z.md/#read-zip-files)
+  -  [Repair broken zip file](../notes_pages/notes_z.md/#repair-broken-zip-file)
+  -  [Uncompress](../notes_pages/notes_z.md/#uncompress)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>

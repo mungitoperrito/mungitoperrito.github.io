@@ -1,4 +1,6 @@
-Index for [N](../notes_pages/notes_n.md)
-
--  Netcat `nc`
-  - Send log files securely
+# Index for [N](target_page)
+-  [ Netcat `nc`](../notes_pages/notes_n.md/#netcat-nc)
+  -  [Send log files securely](../notes_pages/notes_n.md/#send-log-files-securely)
+-  [`nm`](../notes_pages/notes_n.md/#nm)
+<br><br>
+<p align="center">[Home](../README.md#tech-notes)</p>
