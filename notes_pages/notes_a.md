@@ -13,7 +13,7 @@ These go in `~/.bashrc` (Linux), `~/.zshrc` (Mac)
 
 ### `bash` specific (Linux)
 
-- `alias h='history | tail -n 20'    # Show last 20 commands (bash)
+- `alias h='history | tail -n 20'`    # Show last 20 commands (bash)
 - `alias hgr='history | grep '`      # Grep history for a string
 
 ### Build aliases
