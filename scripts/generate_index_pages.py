@@ -48,7 +48,7 @@ def write_index_page(headings_list, current_letter, output_target):
         # print(heading)
     o.write("<br><br>")
     o.write('\n')
-    o.write(f'<p align="center">[Home](../README.md#tech-notes)</p>')
+    o.write(f'[Home](../README.md#tech-notes)')
 
 
 def get_headings_list(file_path):

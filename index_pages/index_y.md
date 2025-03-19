@@ -3,4 +3,4 @@
     -  [Delete packages post install](../notes_pages/notes_y.md#delete-packages-post-install)
     -  [Upgrade Fedora major version](../notes_pages/notes_y.md#upgrade-fedora-major-version)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

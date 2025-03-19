@@ -5,4 +5,4 @@
 -  [`iostat`](../notes_pages/notes_i.md#iostat)
     -  [Get CPU loads, disk activity](../notes_pages/notes_i.md#get-cpu-loads-disk-activity)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

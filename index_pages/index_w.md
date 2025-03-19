@@ -23,4 +23,4 @@
     -  [Turn off `bash` bell](../notes_pages/notes_w.md#turn-off-bash-bell)
     -  [Turn off `vim` bell](../notes_pages/notes_w.md#turn-off-vim-bell)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

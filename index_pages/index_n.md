@@ -3,4 +3,4 @@
     -  [Send log files securely](../notes_pages/notes_n.md#send-log-files-securely)
 -  [`nm`](../notes_pages/notes_n.md#nm)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

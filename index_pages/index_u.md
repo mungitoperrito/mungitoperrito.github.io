@@ -6,4 +6,4 @@
 -  [URL shorteners](../notes_pages/notes_u.md#url-shorteners)
     -  [Get the real URL and stats](../notes_pages/notes_u.md#get-the-real-url-and-stats)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)

@@ -11,4 +11,4 @@
 -  [`as`](../notes_pages/notes_a.md#as)
     -  [Assemble an executable](../notes_pages/notes_a.md#assemble-an-executable)
 <br><br>
-<p align="center">[Home](../README.md#tech-notes)</p>
+[Home](../README.md#tech-notes)
