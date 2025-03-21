@@ -18,6 +18,7 @@
     -  [Multiline entry](../notes_pages/notes_g.md#multiline-entry)
 -  [`git`](../notes_pages/notes_g.md#git)
     -  [Aliases](../notes_pages/notes_g.md#aliases)
+    -  [Clean up repo](../notes_pages/notes_g.md#clean-up-repo)
     -  [Compare two branches](../notes_pages/notes_g.md#compare-two-branches)
     -  [`gitconfig`](../notes_pages/notes_g.md#gitconfig)
     -  [See commit history](../notes_pages/notes_g.md#see-commit-history)

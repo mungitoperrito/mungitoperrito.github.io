@@ -64,6 +64,12 @@ echo 2 > /proc/sys/vm/drop_caches
    docker image ls --all | wc -l         # Count images after
    ```
 
+### Find largest files
+
+```bash
+du -a /var | sort -n -r | head -n 10
+```
+
 
 ## Compressed files
 

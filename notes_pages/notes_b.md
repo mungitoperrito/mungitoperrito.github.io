@@ -195,6 +195,22 @@ echo 'obase=16; ibase=10; 255' | bc
 - Show strings: `strings FILENAME`
 
 
+## BIOS
+
+### Common memory locations
+
+- HD BIOS usually at 0xC8000
+- System BIOS usually at 0xFFFF0
+- Video BIOS usually at 0xC000
+
+### Startup order
+
+1. `BIOS`
+1. `start_kernel()`
+1. `init()`
+1. `[load kernel modules: kexec, ksplice]`
+
+
 ## Brew
 
 Third party, community OSX package manager.

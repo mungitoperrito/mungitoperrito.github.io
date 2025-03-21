@@ -171,6 +171,12 @@ Gather top level usage. Go down one directory. Skip `mnt`, `proc`, `sys`, `run`.
 du -d1 -h --exclude={./mnt,proc,sys,run}
 ```
 
+### Find largest files
+
+```bash
+du -a /var | sort -n -r | head -n 10
+```
+
 
 ## Duolingo web site volume
 
