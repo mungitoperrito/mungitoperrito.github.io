@@ -14,8 +14,6 @@
 -  [Regular expressions](../notes_pages/notes_r.md#regular-expressions)
     -  [Double letters](../notes_pages/notes_r.md#double-letters)
 -  [Rename files](../notes_pages/notes_r.md#rename-files)
-    -  [Bash one liner](../notes_pages/notes_r.md#bash-one-liner)
-    -  [Shorten file name](../notes_pages/notes_r.md#shorten-file-name)
 -  [RPM](../notes_pages/notes_r.md#rpm)
     -  [Install the Redhat signature file](../notes_pages/notes_r.md#install-the-redhat-signature-file)
     -  [List changes to files](../notes_pages/notes_r.md#list-changes-to-files)

@@ -7,6 +7,8 @@
     -  [Mount shares](../notes_pages/notes_s.md#mount-shares)
 -  [`screen`](../notes_pages/notes_s.md#screen)
     -  [Run a persistent remote process](../notes_pages/notes_s.md#run-a-persistent-remote-process)
+-  [Screen shots](../notes_pages/notes_s.md#screen-shots)
+    -  [Change where screen shots are saved on OSX](../notes_pages/notes_s.md#change-where-screen-shots-are-saved-on-osx)
 -  [`sdiff`](../notes_pages/notes_s.md#sdiff)
 -  [Secure log files](../notes_pages/notes_s.md#secure-log-files)
 -  [Send messages](../notes_pages/notes_s.md#send-messages)
