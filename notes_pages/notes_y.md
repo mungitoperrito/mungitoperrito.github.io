@@ -1,3 +1,16 @@
+## `yarn`
+
+### Google tags error
+
+**window.gtag is not a function**<br>
+**TypeError: window.gtag is not a function**
+
+```bash
+npm update --legacy-peer-deps
+npm --legacy-peer-deps i @docusaurus/plugin-google-gtag
+```
+
+
 ## `yum`
 
 ### Delete packages post install

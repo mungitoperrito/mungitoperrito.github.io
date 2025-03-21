@@ -140,6 +140,11 @@ Use `;` or colon-bracket syntax.
 - alias `gst='git status'`                        # Current status
 - alias `lsgit='git log --pretty=format:"%h %as %ae %s" | head -n 10'`  # History
 
+### Clean up repo
+
+ - Clean and compress repo: `git gc`
+ - Remove unsed objects: `git prune`     # Included in `git gc`
+
 ### Compare two branches
 
 ```bash

@@ -1,3 +1,14 @@
+## `venv`
+
+#### Create virtual environment
+
+```bash
+python3 -m venv someVirtualEnvironment
+cd someVirtualEnvironment                     # Switch to venv
+source ./bin/activate                         # Activate venv
+```
+
+
 ## `vim`
 
 ### Block mode
@@ -49,7 +60,33 @@
 - Yank all text up to `#` into buffer `a`: `"ayt#`
 - Yank all text up to `#`, append into buffer `a`:  `"Ayt#`
 
+
+## `virtualenv`
+
+Outdated. Use `venv`.
+
+```bash
+# Install package
+pip install virtualenv --user              # Only once
+
+# Create virtual environment
+virtualenv virt_env_name
+cd virt_env_name
+source bin/activate
+
+# Use virtual environment
+pip install some_packages
+```
+
 ## VMware
+
+### Add shared drive
+
+- Add the shared drive in the VMware Workstation UI.
+- Mount it in the VM
+  - Get the share name in the vm: `vmware-hgfsclient`
+  - Create a mount point: `sudo mkdir /mnt/hgfs`
+  - Mount the drive: `sudo vmhgfs-fuse .host:/sharedDrive /mnt/hgfs/ -o allow_other -o uid=1000`
 
 ### Change to another virtual terminal (vt 1-6)
 
@@ -90,6 +127,15 @@
   - `remoteDisplay.vnc.enabled = TRUE`
   - `remoteDisplay.vnc.port = 5910`
 - Start VM: `/usr/lib/vmware/bin/vmware-vmx -qx /path/to/vmxFile.vmx`
+
+
+### Install tools on Debian
+
+To fix cut and paste and other issues.
+
+```bash
+sudo apt install  open-vm-tools-desktop
+```
 
 ### Networking
 

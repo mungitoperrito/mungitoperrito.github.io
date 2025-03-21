@@ -9,6 +9,7 @@
     -  [Cache - clear page cache](../notes_pages/notes_c.md#cache--clear-page-cache)
 -  [Clear `dentries`, `inodes`](../notes_pages/notes_c.md#clear-dentries-inodes)
     -  [Docker Clean UP](../notes_pages/notes_c.md#docker-clean-up)
+    -  [Find largest files](../notes_pages/notes_c.md#find-largest-files)
 -  [Compressed files](../notes_pages/notes_c.md#compressed-files)
 -  [Convert bases](../notes_pages/notes_c.md#convert-bases)
 -  [Convert case](../notes_pages/notes_c.md#convert-case)

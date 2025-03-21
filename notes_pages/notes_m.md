@@ -108,7 +108,7 @@ ss
  vmstat  -w -n -a 2 3
  ```
 
- ## Get system information repeatedly: `dstat`
+### Get system information repeatedly: `dstat`
 
 - Memory: `-m`
 - Disk: `-d`
@@ -116,6 +116,18 @@ ss
 
 ```bash
 dstat -mdc
+```
+
+### Get threads per user
+
+```bash
+for USR in $(ps aux | awk '{print substr($1, 1, length($1)-1)}' | sort -u) ; do echo -n "${USR}  " ; ps -efT |grep "^${USR}" |wc -l ; done
+```
+
+### Get total number of process threads
+
+```bash
+ps -eo nlwp | tail -n +2 | awk '{ num_threads += $1 } END { print num_threads }'
 ```
 
 ### List currently mounted filesystems

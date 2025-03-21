@@ -27,6 +27,7 @@
     -  [Dynamically trace libraries](../notes_pages/notes_d.md#dynamically-trace-libraries)
 -  [`du`](../notes_pages/notes_d.md#du)
     -  [Exclude directories](../notes_pages/notes_d.md#exclude-directories)
+    -  [Find largest files](../notes_pages/notes_d.md#find-largest-files)
 -  [Duolingo web site volume](../notes_pages/notes_d.md#duolingo-web-site-volume)
 <br><br>
 [Home](../README.md#tech-notes)
