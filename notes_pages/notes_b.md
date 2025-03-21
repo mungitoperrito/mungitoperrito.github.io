@@ -24,7 +24,7 @@ echo aGVsbG8gd29ybGQh | base64 -d
 
 ## `.bashrc`
 
-Config file settings
+Config file settings. See [`aliases`](./notes_a.md#alias)
 
 ### Environment settings
 

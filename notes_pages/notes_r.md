@@ -93,17 +93,51 @@ system-config-securitylevel
 
 ## Rename files
 
-### Bash one liner
+**Change to lower case**
+
+```bash
+for i in $(ls) ; do  mv $i $(echo $i | tr [:upper:] [:lower:]) ; done
+```
+
+**Change .#. to .0#.**
+
+```bash
+for i in $(seq 1 5) ; do rename .${i}. .0${i}. *.jpg ; done
+```
+
+**Select, copy & rename multiple files**
+
+- `?` matches one character
+- `[XYZ]` matches X or Y or Z
+- `${var#pattern}` deletes the shortest length of `pattern` from the start of `var`
+- `${var##pattern}` deletes the longest length of `pattern` from the start of `var`
+
+The `for` section expands to file names. The copy section changes the
+beginning of the file names.
+
+```bash
+# Change PXL_20241212_03.jpg to prefix.._20241212_03.jpg..postfix
+for fn in P?[LM]* ; do cp $fn prefix..${fn#PXL_}..postfix ; done
+```
+
+**Match pattern**
 
 ```bash
 for fn in $(ls) ; do  mv "${fn}" "${fn/patternToMatch/replacementPattern}" ; done
 ```
 
-### Shorten file name
+**Shorten file name**
 
 ```bash
 for fn in `ls` ; do new="$( echo $fn | cut -c 5- )" ; mv $fn $new ; done
 ```
+
+**Use `rename` script**
+
+```bash
+rename ".."  "..1962-00-00.." *.jpg
+```
+
 
 
 ## RPM

@@ -68,6 +68,16 @@ Reconnect:
 screen -r
 ```
 
+
+## Screen shots
+
+### Change where screen shots are saved on OSX
+
+```bash
+defaults write com.apple.screencapture location /Users/yourHomedirectory/some/path/captures
+```
+
+
 ## `sdiff`
 
 Interactively compare and merge two files.
@@ -176,7 +186,6 @@ ssh -g -L 80:remote.machine:443 user@remote.machine
 1. Edit: `vi /etc/ssh/sshd_config`
 1. Add: `AllowUsers someUser`
 1. Restart: `systemctl restart sshd`
-
 
 ### Forward traffic
 

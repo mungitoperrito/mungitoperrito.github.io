@@ -18,3 +18,13 @@ SSL and TLS utilities
 openssl s_client -connect server.name.com:993 -crlf  # IMAP
 openssl s_client -connect server.name.com:443 -crlf  # HTTPS
 ```
+
+## OSX
+
+### Screen shots
+
+Change where screen shots are saved.
+
+```bash
+defaults write com.apple.screencapture location /Users/yourHomedirectory/some/path/captures
+```

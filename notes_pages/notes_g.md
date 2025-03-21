@@ -98,7 +98,6 @@ gdb FILENAME`
 The Haskell compiler. If `ghc`and the other Haskell tools are installed under
 `stack`, the command line calls are different.
 
-
 ```bash
 stack ghc         # If installed via stack
 ghc               # If installed standalone
@@ -119,8 +118,6 @@ ghci               # If installed standalone
 - Load: `:module SomeModule`
 - UNload: `:module -SomeModule`
 
-
-
 ### Multiline entry
 
 Use `;` or colon-bracket syntax.
@@ -131,6 +128,50 @@ Use `;` or colon-bracket syntax.
   polynomial x = x^2 -x -1
 :}
 ```
+
+
+## `git`
+
+### Aliases
+
+- alias `gac='git add . ; git commit -m' `        # Add to commit, needs message
+- alias `gbr='git branch | grep -i '`             # Search for branchName
+- alias `gcm='git checkout main'`                 # Switch to main branch
+- alias `gst='git status'`                        # Current status
+- alias `lsgit='git log --pretty=format:"%h %as %ae %s" | head -n 10'`  # History
+
+### Compare two branches
+
+```bash
+git show-branch –sha1-name newFeature main
+```
+
+### `gitconfig`
+
+- Use rebase rather than merge in all repos: `git config --global pull.rebase true`
+
+### See commit history
+
+- Author, relative time, subject: `git log --pretty=format:"%h  %an, %ar: %s"`
+- Branch info, subject: `git log --decorate --pretty=format:"%h %s"`
+- Commit graph, subject: `git log --graph --pretty=format:"%h %s"`
+- Commit graph, author email, subject: `git log --graph --pretty=format:"%h %ae %s"`
+- Last commit message`: `git log -1 -p`
+- Last five commits: `git log -5 --oneline`
+
+### Shortcuts
+
+- Adds files to commit, adds comment: `git commit -a -m 'made some changes'`
+- Create newBranch, check out: `git checkout -b newBranch`
+
+### Use a different `ssh` key
+
+It can be any git command.
+
+```bash
+ ssh-agent bash -c 'ssh-add ../other-id_rsa-key ; git push'
+```
+
 
 ## GitHub
 
@@ -197,6 +238,12 @@ Extract the URLS to a text file.
 ``` bash
 sqlite3 History "SELECT datetime(last_visit_time/1000000-11644473600,'unixepoch'), url FROM  urls ORDER BY last_visit_time desc" > history_urls.txt
 ```
+
+### Search operators
+
+- Search one site: `site:someSite.com`
+- Logical operators: `"termOne" AND ("termTwo" OR "A specific phrase")`
+
 
 ## Groups
 

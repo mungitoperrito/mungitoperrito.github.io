@@ -1,4 +1,5 @@
 # Index for [L](../notes_pages/notes_l.md)
+-  [Latency comparisons](../notes_pages/notes_l.md#latency-comparisons)
 -  [`ldd`](../notes_pages/notes_l.md#ldd)
 -  [Linked libraries](../notes_pages/notes_l.md#linked-libraries)
     -  [List dynamically linked libraries](../notes_pages/notes_l.md#list-dynamically-linked-libraries)
