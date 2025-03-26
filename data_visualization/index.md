@@ -30,3 +30,9 @@ These files are somewhat cleaner summaries.
 
 - [Data cleaning and transformation](data-transformation.pdf)
 - [Data Analysis and Visualization](data-analysis..2017-07-14..01.pdf)
+
+These Python snippets are additional charts that were dropped from the project.
+
+ - [Chart: area by time step](snippet_chart_area_at_each_time_step.py)
+ - [Chart: protein receptor by mutants](snippet_compare_receptor_with_mutants.py)
+ - [Summary statistics](summary_statistics.py)
