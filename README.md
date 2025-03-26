@@ -12,13 +12,6 @@ exploration with Twitter, AWS Lambda, Elasticsearch, and Kibana.
 
 [Data visualizations for genetic research](data_visualization)
 
-## Python coding
-
-This repo has an assortment of Python projects and code samples. There
-are practice exercises from learning sites, scripts, and some demo files.
-
-[Python projects](https://github.com/mungitoperrito/python-projects)
-
 ## Jupyter notebooks
 
 These projects use Jupyter notebooks to combine explanatory text and code.
@@ -28,6 +21,19 @@ These projects use Jupyter notebooks to combine explanatory text and code.
   - [Online, Cohere API version](jupyter/xword_online/crossword_online.md)
 - Tutorial walkthrough
   - [Weaviate multi-tenancy walkthrough](jupyter/multi_tenant_walkthrough.ipynb)
+
+## Python coding
+
+This repo has an assortment of Python projects and code samples. There
+are practice exercises from learning sites, scripts, and some demo files.
+
+[Python projects](https://github.com/mungitoperrito/python-projects)
+
+## Rust coding
+
+This repo has practice exercises from learning sites.
+
+[Rust](https://github.com/mungitoperrito/rust)
 
 ## Sample pages
 
