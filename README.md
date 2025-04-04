@@ -58,7 +58,7 @@ tools.
 
 - [Bash](index_pages/scripts_index_bash.md)
 - [Perl](index_pages/scripts_index_perl.md)
-- [Python]index_pages/scripts_index_python.md)
+- [Python](index_pages/scripts_index_python.md)
 
 ## Zine posts
 
