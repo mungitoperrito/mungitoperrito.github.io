@@ -56,9 +56,9 @@ These scripts are helpers and short pieces of automation that I've written. Some
 of them are quite old. Most of them are specific solutions rather than general
 tools.
 
-- [Bash](scripts_bash/)
-- [Perl](scripts_perl/)
-- [Python](https://github.com/mungitoperrito/python-projects/scripts)
+- [Bash](index_pages/scripts_index_bash.md)
+- [Perl](index_pages/scripts_index_perl.md)
+- [Python]index_pages/scripts_index_python.md)
 
 ## Zine posts
 
