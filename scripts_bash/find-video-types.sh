@@ -1,6 +1,6 @@
 # -x
 
-SAVE_ROOT=/Users/davecuthbert/tmp/fotos
+SAVE_ROOT=/Users/tmp/fotos
 
 # Run this in the videos directory to sort the different video types
 

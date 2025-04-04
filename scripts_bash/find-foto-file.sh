@@ -1,7 +1,7 @@
 # -x
 
 # Start at the top level directory
-SAVE_ROOT=/Users/davecuthbert/tmp/fotos
+SAVE_ROOT=/Users/tmp/fotos
 
 DIR_LIST=$(ls -d */)
 # echo ${DIR_LIST} # DEBUG
