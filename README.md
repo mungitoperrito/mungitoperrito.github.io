@@ -28,12 +28,13 @@ These repos have an assortment of code from learning projects and courses.
 
 - [Python](https://github.com/mungitoperrito/python-projects)
 - [Rust](https://github.com/mungitoperrito/rust)
-- [Haskell](https://github.com/mungitoperrito/rust)
+- [Haskell](https://github.com/mungitoperrito/haskell)
 
 ## Sample pages
 
-[Samples of published pages](sample_pages/index.md). The pages are saved as PDF
-files.
+The pages are saved as PDF files.
+
+- [Samples of published pages](sample_pages/index.md).
 
 ## Tech notes
 
