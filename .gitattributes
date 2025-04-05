@@ -1,0 +1,22 @@
+# default: self-detect the content type (text vs. binary)
+*                 text=auto
+
+# enforce content type "text" to fix mixed line-endings in the repo
+*.c               text
+*.cpp             text
+*.css             text
+*.js              text
+*.json            text
+*.php             text
+*.pl              text
+*.py              text
+*.sh              text
+*.sql             text
+*.ts              text
+*.txt             text
+*.xml             text
+*.yml             text
+
+
+# set content encodings
+*                 encoding=UTF-8
