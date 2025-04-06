@@ -2,7 +2,7 @@
 
 This repo contains various utility scripts.
 
-- [AI Typing assistant](python-projects/scripts/ai_typing_assistant.py)
+- [AI Typing assistant](python-projects/blob/main/scripts/ai_typing_assistant.py)
 - [Arithmetic worksheet generator](python-projects/scripts/simple_arithmetic.py)
 - [Birthday paradox stats generator](python-projects/scripts/paradox.py)
 - Bug investigation
