@@ -8,7 +8,7 @@ This repo contains various utility scripts.
 - Bug investigation
   - [Bug reproducer - code](https://github.com/mungitoperrito/python-projects/blob/main/scripts/recreate_tenant_removal_error.py)
   - [Bug reproducer - debugging
-    code]([python-projects/](https://github.com/mungitoperrito/python-projects/blob/main/scripts/recreate_tenant_removal_error_full_script.py)
+    code](https://github.com/mungitoperrito/python-projects/blob/main/scripts/recreate_tenant_removal_error_full_script.py)
 - GitLab
   - [Scrape snippets](https://github.com/mungitoperrito/python-projects/blob/main/scripts/gitlab_collect_and_move_snippets.py)
   - [Scrape usernames](https://github.com/mungitoperrito/python-projects/blob/main/scripts/gitlab_get_usernames.py)
