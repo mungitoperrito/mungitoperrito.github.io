@@ -30,7 +30,7 @@ These repos have an assortment of code from learning projects and courses.
 - [Rust](https://github.com/mungitoperrito/rust)
 - [Haskell](https://github.com/mungitoperrito/haskell)
 
-## Sample pages
+## Sample documentation pages
 
 The pages are saved as PDF files.
 
