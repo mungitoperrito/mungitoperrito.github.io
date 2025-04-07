@@ -8,7 +8,7 @@ This repo contains various utility scripts.
 - Bug investigation
   - [Bug reproducer - code](https://github.com/mungitoperrito/python-projects/blob/main/scripts/recreate_tenant_removal_error.py)
   - [Bug reproducer - debugging
-    code]([python-projects/](https://github.com/mungitoperrito/python-projects/blob/main/)scripts/recreate_tenant_removal_error_full_script.py)
+    code]([python-projects/](https://github.com/mungitoperrito/python-projects/blob/main/scripts/recreate_tenant_removal_error_full_script.py)
 - GitLab
   - [Scrape snippets](https://github.com/mungitoperrito/python-projects/blob/main/scripts/gitlab_collect_and_move_snippets.py)
   - [Scrape usernames](https://github.com/mungitoperrito/python-projects/blob/main/scripts/gitlab_get_usernames.py)
@@ -19,5 +19,5 @@ This repo contains various utility scripts.
   - [Simple tests](https://github.com/mungitoperrito/python-projects/blob/main/scripts/selenium_pyorg.01.py)
   - [Connection basic](https://github.com/mungitoperrito/python-projects/blob/main/scripts/test_python_org_search_basic.py)
   - [Connection unittest](https://github.com/mungitoperrito/python-projects/blob/main/scripts/test_python_org_search.py)
-- [Statement execution order]https://github.com/mungitoperrito/python-projects/blob/main/scripts/order_of_execution.py)
+- [Statement execution order](https://github.com/mungitoperrito/python-projects/blob/main/scripts/order_of_execution.py)
 - [SVN usage statistics](https://github.com/mungitoperrito/python-projects/blob/main/scripts/gather_svn_stats.py)
