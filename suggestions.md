@@ -23,6 +23,19 @@
 - [Test in production](https://www.abtasty.com/wp-content/uploads/test-in-production-meme-1.jpg)
 - [Worked fine in dev](https://ngeor.com/assets/2016/worked-in-dev.jpg)
 
+## JavaScript courses
+
+- [JavaScript Course for Beginners](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+- [Learn JavaScript](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
+
+This book is an updated version of a classic learning resource:
+
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
+
+This is a useful TypeScript course if you are already comfortable with JavaScript:
+
+- [No BS TS](https://www.youtube.com/watch?v=LKVHFHJsiO0&list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n)
+
 ## Job search sites
 
 Be sure to use the filters on the job site. However, you have to be careful. LinkedIn, for example
@@ -35,7 +48,7 @@ sometimes excludes postings when the filter requires a value, but the posting do
 - [Trueup](https://trueup.io/jobs)
 
 
-## Python skills
+## Python courses
 
 There are thousands of python learning videos and channels. Here are a
 few high quality sites:
@@ -54,8 +67,8 @@ few high quality sites:
 ## QA user groups
 
 Your milage may vary with community groups. They can be very helpful. They can
-also be overwhelming or even toxic. Ease into a group. Get a feel for the
-community. If it works for you, contribute and become a part of the community.
+also be overwhelming. Ease into a group and get a feel for the community. If it
+works for you, contribute and become a part of the community.
 
 - Slack: [Indie Testing Community](https://www.indie-testing.community/)
 - Discord: [The Test Tribe](https://www.thetesttribe.com/community/)
