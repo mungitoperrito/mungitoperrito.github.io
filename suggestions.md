@@ -63,6 +63,8 @@ few high quality sites:
 - [Automation on multiple platforms](https://www.browserstack.com/guide/differences-between-mobile-application-testing-and-web-application-testing)
 - [Requirements analysis 01](https://www.lambdatest.com/learning-hub/requirement-analysis)
 - [Requirements analysis 02](https://gavstech.com/blogs/requirements-analysis-in-qa/)
+- [User stories and acceptance testing](https://blog.testlodge.com/writing-test-cases-from-user-stories-acceptance-criteria/)
+- [User stories and test cases](https://testsigma.com/blog/user-stories-in-testing/)
 
 ## QA user groups
 
