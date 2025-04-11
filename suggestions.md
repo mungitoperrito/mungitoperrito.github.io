@@ -38,10 +38,10 @@ This is a useful TypeScript course if you are already comfortable with JavaScrip
 
 ## Job search sites
 
-Be sure to use the filters on the job site. However, you have to be careful. LinkedIn, for example
-sometimes excludes postings when the filter requires a value, but the posting doesn't specify one.
+Be sure to use the filters on the job site. 
 
-(For example, LinkedIn won't show you a job posting if you list filter on salary as $X but the post doesn't list a salary.)
+However, be careful to check that the filters work the way you expect. LinkedIn, for example,
+sometimes excludes postings if the job posting doesn't specify the value you want to filter on.
 
 - [Indeed](https://www.indeed.com/)
 - [LinkedIn](https://www.linkedin.com/jobs/)
