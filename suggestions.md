@@ -27,6 +27,7 @@
 
 - [JavaScript Course for Beginners](https://www.youtube.com/watch?v=W6NZfCO5SIk)
 - [Learn JavaScript](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
+- [17 New JavaScript Projects for Beginners](https://www.youtube.com/watch?v=AGeRXBW9vsg)
 
 This book is an updated version of a classic learning resource:
 
