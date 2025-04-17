@@ -26,6 +26,7 @@ These projects use Jupyter notebooks to combine explanatory text and code.
 
 These repos have an assortment of code from learning projects and courses.
 
+- [JavaScript / TypeScript](https://github.com/mungitoperrito/js_ts)
 - [Python](https://github.com/mungitoperrito/python-projects)
 - [Rust](https://github.com/mungitoperrito/rust)
 - [Haskell](https://github.com/mungitoperrito/haskell)
