@@ -6,6 +6,7 @@
 - [API and UI testing - striking a balance](https://crediblesoft.com/ui-testing-vs-api-testing-striking-the-perfect-balance/)
 - [Architectural differences - mobile apps v web apps](https://smartbear.com/blog/how-is-mobile-app-testing-different-from-web-app/)
 - [Combinatorial explosion](https://www.bomberbot.com/javascript/combinatorial-explosions-explained-with-ice-cream-how-to-add-a-little-and-get-a-lot/)
+- [Cookies](https://www.kaspersky.com/resource-center/definitions/cookies)
 - [Exploratory testing](https://www.f22labs.com/blogs/what-is-exploratory-testing-and-when-to-use-it/)
 - [Regression testing](https://softesting.com/eng/what-is-regression-testing-types-approach-and-more/)
 - [Test case design](https://www.testim.io/blog/test-case-design-guide-for-qa-engineers/)
