@@ -38,7 +38,11 @@ This is a useful TypeScript course if you are already comfortable with JavaScrip
 
 - [No BS TS](https://www.youtube.com/watch?v=LKVHFHJsiO0&list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n)
 
-## Job search sites
+## Job search 
+
+These links are to sites and blog posts. 
+
+### Search sites
 
 Be sure to use the filters on the job site. 
 
@@ -49,6 +53,9 @@ sometimes excludes postings if the job posting doesn't specify the value you wan
 - [LinkedIn](https://www.linkedin.com/jobs/)
 - [Trueup](https://trueup.io/jobs)
 
+### Blog posts
+
+- [LinkedIn profiles](https://www.kdnuggets.com/step-by-step-linkedin-profile-optimisation-to-land-a-job)
 
 ## Python courses
 
