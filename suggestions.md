@@ -20,6 +20,7 @@
 ## Humor
 
 - [Devs vs. QA](https://www.youtube.com/watch?v=baY3SaIhfl0)
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/418)
 - [Production](https://cdn.prod.website-files.com/62294553e9aeea20d15d7bc2/66fe582bc6931aa7f5f7e619_649c8f69c9ea30718f07194a_Austin%2520Powers%2520Quality%2520Assurance%2520Meme.webp)
 - [Test in production](https://www.abtasty.com/wp-content/uploads/test-in-production-meme-1.jpg)
 - [Worked fine in dev](https://ngeor.com/assets/2016/worked-in-dev.jpg)
