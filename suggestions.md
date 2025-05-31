@@ -1,5 +1,8 @@
 # Suggestions for further study
 
+## APIs
+- [REST API course](https://idratherbewriting.com/learnapidoc/docapis_course_videos.html)
+
 ## Blogs
 
 - [API v UI testing - strengths and weaknesses](https://testsigma.com/blog/api-vs-ui-testing/)
