@@ -1,7 +1,7 @@
 # Suggestions for further study
 
 ## APIs
-- [REST API course](https://idratherbewriting.com/learnapidoc/docapis_course_videos.html)
+- [REST API course](https://idratherbewriting.com/learnapidoc/docapis_course_videos.html) The focus is Tech Writing, but the API examples are very strong. 
 
 ## Blogs
 
