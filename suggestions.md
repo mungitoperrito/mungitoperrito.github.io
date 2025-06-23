@@ -1,6 +1,7 @@
 # Suggestions for further study
 
 ## APIs
+- [Postman online acadmey](https://academy.postman.com/page/self-study-learning)
 - [REST API course](https://idratherbewriting.com/learnapidoc/docapis_course_videos.html) The focus is Tech Writing, but the API examples are very strong. 
 
 ## Blogs
