@@ -62,7 +62,8 @@ sometimes excludes postings if the job posting doesn't specify the value you wan
 ### Blog posts
 
 - [LinkedIn profiles](https://www.kdnuggets.com/step-by-step-linkedin-profile-optimisation-to-land-a-job)
-
+- [STAR method for interviews](https://www.vawizard.org/wiz-pdf/STAR_Method_Interviews.pdf)
+  
 ## Python courses
 
 There are thousands of python learning videos and channels. Here are a
