@@ -94,3 +94,14 @@ works for you, contribute and become a part of the community.
 - Ministry of testing: [Link](https://www.ministryoftesting.com/)
 - Redit: [r/Quality Assurance](https://www.reddit.com/r/QualityAssurance)
 
+## Security testing
+
+Software and systems security is a huge field. There are many, many specialized sub-fields. 
+QA testing skills are a good entry point for penetration testing. 
+
+- [Cybersecurity analyst](https://www.netacad.com/career-paths/cybersecurity?courseLang=en-US) Cisco sponsored course. 
+- [HackTheBox](https://www.hackthebox.com/cybersecurity-resources) Huge collection of free and paid training materials.
+- [Over the Wire](https://overthewire.org/wargames/) Not much instruction, good hints and practical challenges.
+- [OWASP: APIs](https://www.youtube.com/watch?v=YYe0FdfdgDU) Course: Check the security of APIs.
+- [OWASP: Web top 10](https://owasp.org/www-project-top-ten/) Reference: Most common vulnerabilities for 2025.
+- [Web security](https://portswigger.net/web-security) General web security from the makers of BURP. 
