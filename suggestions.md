@@ -77,6 +77,7 @@ few high quality sites:
 ## QA skills
 
 - [Automation on multiple platforms](https://www.browserstack.com/guide/differences-between-mobile-application-testing-and-web-application-testing)
+- [Command lines and utilities](https://missing.csail.mit.edu/) MIT's missing semester short course.
 - [More requirements analysis](https://gavstech.com/blogs/requirements-analysis-in-qa/)
 - [Requirements analysis](https://www.lambdatest.com/learning-hub/requirement-analysis)
 - [Testing practice sites](https://github.com/BMayhew/awesome-sites-to-test-on)
