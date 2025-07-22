@@ -21,6 +21,7 @@
 - [Types of testing](https://www.virtuosoqa.com/testing-guides/types-of-software-testing)
 - [Use cases](https://www.wrike.com/blog/what-is-a-use-case/)
 - [Web app v. mobile](https://www.testscenario.com/difference-between-mobile-and-web-app-testing/)
+- [Web apps](https://aws.amazon.com/what-is/web-application/)
 
 ## Humor
 
