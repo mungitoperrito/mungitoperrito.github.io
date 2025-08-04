@@ -14,6 +14,7 @@
 -  [Terminal](../notes_pages/notes_t.md#terminal)
     -  [Reset the screen](../notes_pages/notes_t.md#reset-the-screen)
 -  [`time`](../notes_pages/notes_t.md#time)
+    -  [Pipe output to `grep`](../notes_pages/notes_t.md#pipe-output-to-grep)
     -  [Windows equivalent](../notes_pages/notes_t.md#windows-equivalent)
 -  [Time zones](../notes_pages/notes_t.md#time-zones)
     -  [Check local time](../notes_pages/notes_t.md#check-local-time)
