@@ -80,6 +80,12 @@ echo <ctrl><v> <esc><c> <enter>
 
 Time execution time for a process.
 
+### Pipe output to `grep`
+
+```bash
+for i in 1 2 3 ; do (time ./something${i} data_file)  |& grep real ; done
+```
+
 ### Windows equivalent
 
 ```bash
