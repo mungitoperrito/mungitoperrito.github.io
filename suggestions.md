@@ -13,6 +13,7 @@
 - [Combinatorial explosion](https://www.bomberbot.com/javascript/combinatorial-explosions-explained-with-ice-cream-how-to-add-a-little-and-get-a-lot/)
 - [Cookies](https://www.kaspersky.com/resource-center/definitions/cookies)
 - [Exploratory testing](https://www.f22labs.com/blogs/what-is-exploratory-testing-and-when-to-use-it/)
+- [QA roles](https://www.thoughtworks.com/insights/blog/agile-engineering-practices/quality-roles-evolve-in-agile-transformation)
 - [Regression testing](https://softesting.com/eng/what-is-regression-testing-types-approach-and-more/)
 - [Test case design](https://www.testim.io/blog/test-case-design-guide-for-qa-engineers/)
 - [Test cases](https://keploy.io/blog/community/a-guide-to-test-cases-in-software-testing)
