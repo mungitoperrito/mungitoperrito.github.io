@@ -72,6 +72,7 @@ sometimes excludes postings if the job posting doesn't specify the value you wan
 There are thousands of python learning videos and channels. Here are a
 few high quality sites:
 
+- [Python, University of Helsinki](https://programming-24.mooc.fi/)
 - [Python for everybody](https://www.py4e.com/)
 - [Python for beginners (short course)](https://www.youtube.com/watch?v=kqtD5dpn9C8 )
 - [Python for beginners (full course)](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
