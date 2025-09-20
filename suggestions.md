@@ -90,7 +90,7 @@ few high quality sites:
 - [Command lines and utilities](https://missing.csail.mit.edu/) MIT's missing semester short course.
 - [More requirements analysis](https://gavstech.com/blogs/requirements-analysis-in-qa/)
 - [Requirements analysis](https://www.lambdatest.com/learning-hub/requirement-analysis)
-- [Testing practice sites](https://github.com/BMayhew/awesome-sites-to-test-on)
+- [Testing practice sites](https://github.com/BMayhew/awesome-sites-to-test-on) This is a very, very useful list a practice sites.
 - [User stories and acceptance testing](https://blog.testlodge.com/writing-test-cases-from-user-stories-acceptance-criteria/)
 - [User stories and test cases](https://testsigma.com/blog/user-stories-in-testing/)
 
