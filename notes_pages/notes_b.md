@@ -94,7 +94,7 @@ while [ 1 ] ; do someStuff ; done
 while : ; do someStuff ; done
 ```
 
-### Evaluate an expresion
+### Evaluate an expression
 
 ```bash
 echo $(( 3 + 4 ))
@@ -161,6 +161,20 @@ cmd > fileName 2>&1
 ```bash
 echo $?
 ```
+
+### Strip a filename prefix
+
+```bash
+# Set the prefix
+export PREFIX='some-string-to-remove'
+
+# Check the output
+for OLD in $(ls ${PREFIX}*) ; do echo -n "${OLD}  " ; echo ${OLD#${PREFIX}} ; done
+
+# Uncomment to make the change
+# for OLD in $(ls ${PREFIX}*) ; do mv ${OLD} ${OLD#${PREFIX}} ; done
+```
+
 
 ### Variable matching
 
