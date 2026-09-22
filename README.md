@@ -2,10 +2,10 @@
 
 This section is a work in progress.
 
-I'm sorting through and consolidating old tech notes and tips I've left for myself over the years. The topics cover a wide variety of
-projects and platforms. Some of them could well be quaint or obsolete now.
+These are old tech notes and tips. They cover a wide variety of
+projects and platforms, many of them could be obsolete now.
 
-To make things easier to find, similar entries are sometimes duplicated under a functional
+To make things easier to find, entries are sometimes duplicated under a functional
 description and a utility name.
 
 Click on a letter to see an index for that page.
